@@ -10,14 +10,14 @@ interface TestimonialCardProps {
 const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   const isMobile = useIsMobile();
   
-  // Determine text length based on screen size
-  const maxQuoteLength = isMobile ? 120 : 200;
+  // Determine text length based on screen size - shorter on mobile
+  const maxQuoteLength = isMobile ? 100 : 200;
   const truncatedQuote = testimonial.quote.length > maxQuoteLength 
     ? `${testimonial.quote.substring(0, maxQuoteLength)}...` 
     : testimonial.quote;
   
   return (
-    <div className="h-full flex flex-col glass-card rounded-2xl p-4 sm:p-5 md:p-8">
+    <div className="w-full h-full flex flex-col glass-card rounded-2xl p-4 sm:p-5 md:p-8">
       <div className="flex justify-between items-start">
         <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
           <div className="h-8 sm:h-10 md:h-12 w-8 sm:w-10 md:w-12 rounded-full bg-primary/20 flex items-center justify-center">
@@ -50,8 +50,8 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
           ))}
         </div>
       </div>
-      <div className="mt-3 sm:mt-4 md:mt-6 flex-grow">
-        <p className="text-xs sm:text-sm md:text-md text-foreground/90 leading-relaxed break-words whitespace-normal">
+      <div className="mt-3 sm:mt-4 md:mt-6 flex-grow overflow-hidden">
+        <p className="text-xs sm:text-sm md:text-md text-foreground/90 leading-relaxed break-words overflow-hidden">
           "{truncatedQuote}"
         </p>
       </div>

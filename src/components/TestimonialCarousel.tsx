@@ -47,31 +47,29 @@ const TestimonialCarousel = () => {
         loop: true,
         dragFree: true,
       }}
-      className="w-full max-w-full px-4 md:px-6"
+      className="w-full max-w-full px-2 sm:px-4 md:px-6"
       setApi={setApi}
       onMouseEnter={pauseAutoplay}
       onMouseLeave={resumeAutoplay}
     >
-      <ScrollArea className="w-full">
-        <CarouselContent className="-ml-4">
-          {testimonials.map((testimonial) => (
-            <CarouselItem 
-              key={testimonial.id} 
-              className={`pl-4 ${
-                itemsPerView === 1 
-                  ? 'basis-full max-h-fit' 
-                  : itemsPerView === 2 
-                    ? 'basis-1/2 md:basis-1/2' 
-                    : 'basis-full sm:basis-1/2 lg:basis-1/3'
-              }`}
-            >
-              <div className="h-full">
-                <TestimonialCard testimonial={testimonial} />
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </ScrollArea>
+      <CarouselContent className="-ml-2 sm:-ml-4">
+        {testimonials.map((testimonial) => (
+          <CarouselItem 
+            key={testimonial.id} 
+            className={`pl-2 sm:pl-4 ${
+              itemsPerView === 1 
+                ? 'basis-full' 
+                : itemsPerView === 2 
+                  ? 'basis-1/2 md:basis-1/2' 
+                  : 'basis-full sm:basis-1/2 lg:basis-1/3'
+            }`}
+          >
+            <div className="h-full">
+              <TestimonialCard testimonial={testimonial} />
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
       <div className="flex justify-center mt-6 md:mt-8">
         <CarouselPrevious className="relative static -left-0 translate-y-0 mr-2" />
         <CarouselNext className="relative static -right-0 translate-y-0 ml-2" />
