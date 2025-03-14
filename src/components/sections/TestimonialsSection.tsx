@@ -10,9 +10,9 @@ const TestimonialsSection = ({ sectionRef }: TestimonialsSectionProps) => {
     <section 
       id="testimonials"
       ref={sectionRef}
-      className="section-padding px-0 opacity-0"
+      className="pb-24 pt-12 px-0 opacity-0"
     >
-      <div className="max-w-7xl mx-auto mb-12 px-6 md:px-10">
+      <div className="max-w-7xl mx-auto mb-8 px-6 md:px-10">
         <div className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6">
           Client Success Stories
         </div>

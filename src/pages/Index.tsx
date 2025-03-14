@@ -14,18 +14,18 @@ const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
   // Create individual refs for each section
+  const testimonialsSectionRef = useRef<HTMLElement>(null);
   const servicesSectionRef = useRef<HTMLElement>(null);
   const technologiesSectionRef = useRef<HTMLElement>(null);
   const partnersSectionRef = useRef<HTMLElement>(null);
-  const testimonialsSectionRef = useRef<HTMLElement>(null);
   const ctaSectionRef = useRef<HTMLElement>(null);
 
   // Collect all refs for the intersection observer
   const sectionRefs = [
+    testimonialsSectionRef,
     servicesSectionRef,
     technologiesSectionRef,
     partnersSectionRef,
-    testimonialsSectionRef,
     ctaSectionRef
   ];
 
@@ -63,10 +63,10 @@ const Index = () => {
       <Navbar />
       
       <HeroSection />
+      <TestimonialsSection sectionRef={testimonialsSectionRef} />
       <ServicesSection sectionRef={servicesSectionRef} />
       <TechnologiesSection sectionRef={technologiesSectionRef} />
       <PartnersSection sectionRef={partnersSectionRef} />
-      <TestimonialsSection sectionRef={testimonialsSectionRef} />
       <CTASection sectionRef={ctaSectionRef} />
       
       <Footer />
