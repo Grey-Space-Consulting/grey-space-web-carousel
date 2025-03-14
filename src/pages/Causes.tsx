@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Heart, Leaf, Users, HandHeart } from "lucide-react";
+import { Heart, Users, HandHeart } from "lucide-react";
 
 const Causes = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -51,7 +51,7 @@ const Causes = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
             {causes.map((cause, index) => (
               <div 
                 key={cause.name} 
@@ -118,14 +118,6 @@ const causes = [
     description: "The AFSP is dedicated to saving lives and bringing hope to those affected by suicide. They fund scientific research, provide educational programs, advocate for public policy, and support survivors of suicide loss.",
     image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&auto=format&fit=crop",
     link: "https://afsp.org/",
-  },
-  {
-    name: "Environmental Sustainability Initiatives",
-    category: "Environment",
-    icon: Leaf,
-    description: "Our commitment to sustainability extends beyond our business practices. We actively support and participate in reforestation projects, clean energy adoption, and plastic reduction initiatives.",
-    image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&auto=format&fit=crop",
-    link: "#environmental-initiatives",
   },
 ];
 
