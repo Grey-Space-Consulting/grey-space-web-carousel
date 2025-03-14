@@ -10,12 +10,6 @@ interface TestimonialCardProps {
 const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   const isMobile = useIsMobile();
   
-  // Determine text length based on screen size - shorter on mobile
-  const maxQuoteLength = isMobile ? 100 : 200;
-  const truncatedQuote = testimonial.quote.length > maxQuoteLength 
-    ? `${testimonial.quote.substring(0, maxQuoteLength)}...` 
-    : testimonial.quote;
-  
   return (
     <div className="w-full h-full flex flex-col glass-card rounded-2xl p-4 sm:p-5 md:p-8">
       <div className="flex justify-between items-start">
@@ -50,9 +44,9 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
           ))}
         </div>
       </div>
-      <div className="mt-3 sm:mt-4 md:mt-6 flex-grow overflow-hidden">
-        <p className="text-xs sm:text-sm md:text-md text-foreground/90 leading-relaxed break-words overflow-hidden">
-          "{truncatedQuote}"
+      <div className="mt-3 sm:mt-4 md:mt-6 flex-grow">
+        <p className="text-xs sm:text-sm md:text-md text-foreground/90 leading-relaxed break-words">
+          "{testimonial.quote}"
         </p>
       </div>
     </div>

@@ -9,7 +9,6 @@ import {
 import { testimonials } from "@/data/testimonials";
 import TestimonialCard from "./TestimonialCard";
 import { useState, useEffect } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { useCarouselAutoplay } from "@/hooks/useCarouselAutoplay";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -64,7 +63,7 @@ const TestimonialCarousel = () => {
                   : 'basis-full sm:basis-1/2 lg:basis-1/3'
             }`}
           >
-            <div className="h-full">
+            <div className="h-auto min-h-[300px] sm:min-h-[250px]">
               <TestimonialCard testimonial={testimonial} />
             </div>
           </CarouselItem>
