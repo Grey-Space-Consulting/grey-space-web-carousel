@@ -12,7 +12,22 @@ import CTASection from "@/components/sections/CTASection";
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const sectionRefs = useRef<(HTMLElement | null)[]>([]);
+  
+  // Create individual refs for each section
+  const testimonialsSectionRef = useRef<HTMLElement>(null);
+  const servicesSectionRef = useRef<HTMLElement>(null);
+  const technologiesSectionRef = useRef<HTMLElement>(null);
+  const partnersSectionRef = useRef<HTMLElement>(null);
+  const ctaSectionRef = useRef<HTMLElement>(null);
+
+  // Collect all refs for the intersection observer
+  const sectionRefs = [
+    testimonialsSectionRef,
+    servicesSectionRef,
+    technologiesSectionRef,
+    partnersSectionRef,
+    ctaSectionRef
+  ];
 
   useEffect(() => {
     setIsLoaded(true);
@@ -30,13 +45,15 @@ const Index = () => {
       });
     }, observerOptions);
 
-    sectionRefs.current.forEach(section => {
-      if (section) observer.observe(section);
+    // Observe all section refs
+    sectionRefs.forEach(ref => {
+      if (ref.current) observer.observe(ref.current);
     });
 
     return () => {
-      sectionRefs.current.forEach(section => {
-        if (section) observer.unobserve(section);
+      // Cleanup: unobserve all section refs
+      sectionRefs.forEach(ref => {
+        if (ref.current) observer.unobserve(ref.current);
       });
     };
   }, []);
@@ -46,11 +63,11 @@ const Index = () => {
       <Navbar />
       
       <HeroSection />
-      <TestimonialsSection sectionRef={(el) => (sectionRefs.current[0] = el)} />
-      <ServicesSection sectionRef={(el) => (sectionRefs.current[1] = el)} />
-      <TechnologiesSection sectionRef={(el) => (sectionRefs.current[2] = el)} />
-      <PartnersSection sectionRef={(el) => (sectionRefs.current[3] = el)} />
-      <CTASection sectionRef={(el) => (sectionRefs.current[4] = el)} />
+      <TestimonialsSection sectionRef={testimonialsSectionRef} />
+      <ServicesSection sectionRef={servicesSectionRef} />
+      <TechnologiesSection sectionRef={technologiesSectionRef} />
+      <PartnersSection sectionRef={partnersSectionRef} />
+      <CTASection sectionRef={ctaSectionRef} />
       
       <Footer />
     </div>
