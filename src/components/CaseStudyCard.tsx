@@ -23,14 +23,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
     
     const stats = [];
     
-    // Common stats that most case studies have
-    if (detailedStudy.timeframe) {
-      stats.push({
-        icon: <Clock size={16} className="text-primary" />,
-        text: detailedStudy.timeframe
-      });
-    }
-    
+    // Only include results, not timeframes
     if (detailedStudy.results) {
       stats.push({
         icon: <DollarSign size={16} className="text-primary" />,
@@ -40,7 +33,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
     
     // Case-specific stats
     if (study.id === "turo") {
-      // Turo-specific stats already covered by timeframe and results
+      // No additional Turo-specific stats needed
     } else if (study.id === "sweetgreen") {
       stats.push({
         icon: <BarChart size={16} className="text-primary" />,
