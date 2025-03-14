@@ -165,6 +165,64 @@ const ServicePackagesSection: React.FC = () => {
         <p className="text-lg text-muted-foreground mb-6">
           Our packages are designed to be flexible and can be combined to create a custom program that aligns with your specific needs.
         </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6 text-left">
+          <div className="bg-background/70 p-6 rounded-lg">
+            <h4 className="text-xl font-medium mb-3 text-primary">Mix & Match for Complete Solutions</h4>
+            <p className="mb-4">
+              Combine packages from different categories to create a comprehensive solution that addresses all aspects of your business needs.
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Pair <strong>Platform & Tooling Advisory</strong> with <strong>Technology Implementation</strong> for end-to-end solutions.</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Add <strong>Fractional Leadership</strong> to any technical implementation for strategic oversight.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-background/70 p-6 rounded-lg">
+            <h4 className="text-xl font-medium mb-3 text-primary">Package Discounts</h4>
+            <p className="mb-4">
+              When you combine multiple services or choose long-term engagements, we offer significant cost advantages.
+            </p>
+            <ul className="space-y-2">
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Save up to <strong>15%</strong> when bundling advisory and implementation services together.</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Long-term partnerships receive <strong>preferential rates</strong> and additional support hours.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="bg-background/70 p-6 rounded-lg text-left mb-6">
+          <h4 className="text-xl font-medium mb-3 text-primary">Custom Tailoring</h4>
+          <p className="mb-4">
+            Every business has unique requirements. We can customize any package to perfectly align with your specific situation.
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>Adjust service components, delivery timelines, and engagement levels to match your budget and priorities.</span>
+            </li>
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>Scale services up or down based on your evolving needs and organizational growth.</span>
+            </li>
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>We'll work with you to create the perfect solution - no cookie-cutter approaches.</span>
+            </li>
+          </ul>
+        </div>
+        
         <ul className="text-left max-w-3xl mx-auto space-y-2">
           <li className="flex items-start">
             <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
