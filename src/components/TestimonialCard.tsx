@@ -28,7 +28,10 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
           <div>
             <h4 className="font-semibold text-sm sm:text-base md:text-lg">{testimonial.name}</h4>
             <p className="text-muted-foreground text-xs md:text-sm">
-              {isMobile ? testimonial.company : `${testimonial.role}, ${testimonial.company}`}
+              {testimonial.role}
+            </p>
+            <p className="text-muted-foreground text-xs md:text-sm">
+              {testimonial.company}
             </p>
           </div>
         </div>
