@@ -1,7 +1,8 @@
 
 import React from "react";
-import { Users, Cog, Lightbulb, ArrowRight, ListChecks, Clipboard, BadgeAlert, BarChart, Database, Cpu } from "lucide-react";
+import { Users, Cog, Lightbulb, ArrowRight, ListChecks, BarChart, Database, Cpu } from "lucide-react";
 import ServicePackageCard, { ServicePackage } from "@/components/ServicePackageCard";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Define the service packages
 const leadershipPackages: ServicePackage[] = [
@@ -117,31 +118,40 @@ const ServicePackagesSection: React.FC = () => {
         Our service packages are designed to deliver exactly what you need, whether it's strategic guidance or hands-on technical implementation.
       </p>
       
-      {/* Leadership & Advisory Packages */}
-      <div className="mb-16">
-        <h3 className="text-2xl font-semibold mb-6">Leadership & Advisory</h3>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-          Strategic advisory services to help optimize your operations, tools, and customer experience initiatives.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {leadershipPackages.map((pkg, index) => (
-            <ServicePackageCard key={pkg.title} pkg={pkg} index={index} />
-          ))}
-        </div>
-      </div>
-      
-      {/* Technology Services Packages */}
-      <div>
-        <h3 className="text-2xl font-semibold mb-6">Technology Implementation</h3>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-          Hands-on technical implementation to build out your tools, integrations, and intelligent automation solutions.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {technologyPackages.map((pkg, index) => (
-            <ServicePackageCard key={pkg.title} pkg={pkg} index={index + leadershipPackages.length} />
-          ))}
-        </div>
-      </div>
+      <Tabs defaultValue="leadership" className="w-full mb-10">
+        <TabsList className="mx-auto mb-8">
+          <TabsTrigger value="leadership" className="px-6">
+            <Users className="mr-2 h-4 w-4" />
+            Leadership & Advisory
+          </TabsTrigger>
+          <TabsTrigger value="technology" className="px-6">
+            <Database className="mr-2 h-4 w-4" />
+            Technology Implementation
+          </TabsTrigger>
+        </TabsList>
+        
+        <TabsContent value="leadership" className="mt-6">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+            Strategic advisory services to help optimize your operations, tools, and customer experience initiatives.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {leadershipPackages.map((pkg, index) => (
+              <ServicePackageCard key={pkg.title} pkg={pkg} index={index} />
+            ))}
+          </div>
+        </TabsContent>
+        
+        <TabsContent value="technology" className="mt-6">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+            Hands-on technical implementation to build out your tools, integrations, and intelligent automation solutions.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+            {technologyPackages.map((pkg, index) => (
+              <ServicePackageCard key={pkg.title} pkg={pkg} index={index} />
+            ))}
+          </div>
+        </TabsContent>
+      </Tabs>
       
       {/* How These Packages Work Together */}
       <div className="mt-8 bg-secondary/50 p-8 rounded-xl">
