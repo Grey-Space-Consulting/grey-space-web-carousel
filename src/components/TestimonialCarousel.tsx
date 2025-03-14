@@ -15,7 +15,7 @@ import { useCarouselAutoplay } from "@/hooks/useCarouselAutoplay";
 const TestimonialCarousel = () => {
   const [api, setApi] = useState<{ scrollNext: () => void } | null>(null);
   const { pauseAutoplay, resumeAutoplay } = useCarouselAutoplay(api, {
-    interval: 5000,
+    interval: 3000,
     initialAutoPlay: true
   });
 
