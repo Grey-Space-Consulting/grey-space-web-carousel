@@ -1,39 +1,48 @@
 
+import React from 'react';
+import { 
+  BarChart, Database, MessageCircle, Cloud, Server, 
+  Phone, Headphones, Zap, Network, Bot, Layers, 
+  PieChart, BarChartHorizontal, Activity, LineChart, 
+  Users, HelpCircle, Code, MessageSquare, Slack
+} from 'lucide-react';
+
 interface TechCardProps {
   name: string;
   category: string;
-  icon: string;
+  icon: React.ReactNode;
   index: number;
 }
 
+// Define technologies with proper icon components
 const technologies = [
-  { name: "Zendesk", category: "CRM", icon: "Ze" },
-  { name: "Salesforce", category: "CRM", icon: "Sa" },
-  { name: "Kustomer", category: "CRM", icon: "Ku" },
-  { name: "Gladly", category: "CRM", icon: "Gl" },
-  { name: "Gorgias", category: "CRM", icon: "Go" },
-  { name: "Intercom", category: "CRM", icon: "In" },
-  { name: "Rudderstack", category: "Analytics", icon: "Ru" },
-  { name: "Segment", category: "Analytics", icon: "Se" },
-  { name: "Mixpanel", category: "Analytics", icon: "Mi" },
-  { name: "GA4", category: "Analytics", icon: "GA" },
-  { name: "Amplitude", category: "Analytics", icon: "Am" },
-  { name: "Kodif", category: "AI", icon: "Ko" },
-  { name: "Siena", category: "AI", icon: "Si" },
-  { name: "Netomi", category: "AI", icon: "Ne" },
-  { name: "AWS", category: "Cloud", icon: "AW" },
-  { name: "Google Cloud", category: "Cloud", icon: "GC" },
-  { name: "Snowflake", category: "Data", icon: "Sn" },
-  { name: "Ada", category: "AI", icon: "Ad" },
-  { name: "Twilio", category: "Communications", icon: "Tw" },
-  { name: "Talkdesk", category: "Communications", icon: "Ta" },
-  { name: "Aircall", category: "Communications", icon: "Ai" },
-  { name: "Dialpad", category: "Communications", icon: "Di" },
-  { name: "Assembled", category: "Operations", icon: "As" },
-  { name: "Mavenoid", category: "Support", icon: "Ma" },
-  { name: "AmazonConnect", category: "Communications", icon: "AC" },
-  { name: "ZoomPhone", category: "Communications", icon: "ZP" },
-  { name: "NiceIncontact", category: "Communications", icon: "NI" },
+  { name: "Zendesk", category: "CRM", icon: <MessageCircle size={24} /> },
+  { name: "Salesforce", category: "CRM", icon: <Cloud size={24} /> },
+  { name: "Kustomer", category: "CRM", icon: <Users size={24} /> },
+  { name: "Gladly", category: "CRM", icon: <MessageSquare size={24} /> },
+  { name: "Gorgias", category: "CRM", icon: <MessageCircle size={24} /> },
+  { name: "Intercom", category: "CRM", icon: <MessageSquare size={24} strokeWidth={1.5} /> },
+  { name: "Rudderstack", category: "Analytics", icon: <BarChart size={24} /> },
+  { name: "Segment", category: "Analytics", icon: <PieChart size={24} /> },
+  { name: "Mixpanel", category: "Analytics", icon: <BarChartHorizontal size={24} /> },
+  { name: "GA4", category: "Analytics", icon: <LineChart size={24} /> },
+  { name: "Amplitude", category: "Analytics", icon: <Activity size={24} /> },
+  { name: "Kodif", category: "AI", icon: <Bot size={24} /> },
+  { name: "Siena", category: "AI", icon: <Zap size={24} /> },
+  { name: "Netomi", category: "AI", icon: <Bot size={24} strokeWidth={1.5} /> },
+  { name: "AWS", category: "Cloud", icon: <Cloud size={24} /> },
+  { name: "Google Cloud", category: "Cloud", icon: <Cloud size={24} strokeWidth={1.5} /> },
+  { name: "Snowflake", category: "Data", icon: <Database size={24} /> },
+  { name: "Ada", category: "AI", icon: <Bot size={24} /> },
+  { name: "Twilio", category: "Communications", icon: <Phone size={24} /> },
+  { name: "Talkdesk", category: "Communications", icon: <Headphones size={24} /> },
+  { name: "Aircall", category: "Communications", icon: <Phone size={24} strokeWidth={1.5} /> },
+  { name: "Dialpad", category: "Communications", icon: <Phone size={24} /> },
+  { name: "Assembled", category: "Operations", icon: <Layers size={24} /> },
+  { name: "Mavenoid", category: "Support", icon: <HelpCircle size={24} /> },
+  { name: "AmazonConnect", category: "Communications", icon: <Headphones size={24} /> },
+  { name: "ZoomPhone", category: "Communications", icon: <Phone size={24} /> },
+  { name: "NiceIncontact", category: "Communications", icon: <Headphones size={24} strokeWidth={1.5} /> },
 ];
 
 const TechCard = ({ name, category, icon, index }: TechCardProps) => {
@@ -42,8 +51,8 @@ const TechCard = ({ name, category, icon, index }: TechCardProps) => {
       className="glass-card rounded-xl p-6 flex flex-col items-center text-center hover:translate-y-[-5px] transition-all duration-300 animate-fade-in"
       style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className="h-16 w-16 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center">
-        <div className="text-xl font-bold text-primary">{icon}</div>
+      <div className="h-16 w-16 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center text-primary">
+        {icon}
       </div>
       <h3 className="font-medium text-lg mb-1">{name}</h3>
       <p className="text-sm text-muted-foreground">{category}</p>
