@@ -59,7 +59,7 @@ const TestimonialCarousel = () => {
               key={testimonial.id} 
               className={`pl-4 ${
                 itemsPerView === 1 
-                  ? 'basis-full min-h-[280px]' 
+                  ? 'basis-full max-h-fit' 
                   : itemsPerView === 2 
                     ? 'basis-1/2 md:basis-1/2' 
                     : 'basis-full sm:basis-1/2 lg:basis-1/3'

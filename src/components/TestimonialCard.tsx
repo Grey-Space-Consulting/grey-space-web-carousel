@@ -51,7 +51,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         </div>
       </div>
       <div className="mt-3 sm:mt-4 md:mt-6 flex-grow">
-        <p className="text-xs sm:text-sm md:text-md text-foreground/90 leading-relaxed">
+        <p className="text-xs sm:text-sm md:text-md text-foreground/90 leading-relaxed break-words whitespace-normal">
           "{truncatedQuote}"
         </p>
       </div>
