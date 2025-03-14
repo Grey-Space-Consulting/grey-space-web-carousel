@@ -13,7 +13,7 @@ const consultingPackages: ServicePackage[] = [
     icon: <Clipboard className="h-8 w-8 text-primary mb-3" />,
     services: [
       "Discovery session to understand business goals and pain points",
-      "High-level QA strategy for customer service",
+      "High-level strategy for operational improvement",
       "Policy alignment and recommended best practices"
     ],
     deliverables: [
@@ -25,17 +25,17 @@ const consultingPackages: ServicePackage[] = [
   },
   {
     title: "Operational Consulting",
-    description: "Process design, policy development, and workflow optimization for teams with basic QA approaches.",
+    description: "Process design, policy development, and workflow optimization for teams with basic operational approaches.",
     price: "$10,000 - $20,000",
     duration: "4-6 weeks",
     icon: <BarChart className="h-8 w-8 text-primary mb-3" />,
     services: [
-      "In-depth review of existing QA processes and policies",
-      "Custom QA framework creation or refinement",
-      "Recommendations for integrating QA metrics into business reporting"
+      "In-depth review of existing processes and policies",
+      "Custom operational framework creation or refinement",
+      "Recommendations for integrating metrics into business reporting"
     ],
     deliverables: [
-      "Custom QA framework documentation",
+      "Custom framework documentation",
       "Technology recommendations with guided RFP",
       "Process optimization plan"
     ],
@@ -50,7 +50,7 @@ const consultingPackages: ServicePackage[] = [
     services: [
       "All Operational Consulting deliverables",
       "Ongoing advisory sessions (monthly or quarterly)",
-      "Review of QA performance metrics over time",
+      "Review of performance metrics over time",
       "High-level stakeholder presentations to align leadership"
     ],
     deliverables: [
@@ -71,9 +71,9 @@ const technologyPackages: ServicePackage[] = [
     duration: "4-6 weeks",
     icon: <Database className="h-8 w-8 text-primary mb-3" />,
     services: [
-      "Initial setup and configuration of QA tool with one CRM",
+      "Initial setup and configuration with your primary CRM",
       "Basic authentication and data piping from one data source",
-      "Simple Slack channel alert integration for flagged tickets"
+      "Simple alert integration for critical business events"
     ],
     deliverables: [
       "Working production or staging environment",
@@ -84,21 +84,21 @@ const technologyPackages: ServicePackage[] = [
   },
   {
     title: "Custom Feature Development",
-    description: "Building specialized functionalities and AI-driven insights for enhanced QA processes.",
+    description: "Building specialized functionalities and AI-driven insights for enhanced operational processes.",
     price: "$30,000 - $60,000",
     duration: "8-12 weeks",
     icon: <Cpu className="h-8 w-8 text-primary mb-3" />,
     services: [
       "Everything in Integration Setup, plus:",
       "Advanced API integrations with multiple CRMs and data sources",
-      "AI-powered policy violation detection and sentiment analysis",
+      "AI-powered analysis and intelligent business insights",
       "Custom dashboards and reporting with trending and analytics"
     ],
     deliverables: [
       "Advanced integrations setup",
-      "AI-driven QA tools",
+      "AI-driven operational tools",
       "Custom dashboards and reports",
-      "QA queue management features"
+      "Workflow management features"
     ],
     highlighted: true
   },
@@ -142,7 +142,7 @@ const ServicePackagesSection: React.FC = () => {
       <div className="mb-16">
         <h3 className="text-2xl font-semibold mb-6">Consulting Packages</h3>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-          Strategic advisory services to help define your QA approach, policies, and success metrics.
+          Strategic advisory services to help define your approach, policies, and success metrics.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {consultingPackages.map((pkg, index) => (
@@ -155,7 +155,7 @@ const ServicePackagesSection: React.FC = () => {
       <div>
         <h3 className="text-2xl font-semibold mb-6">Technology Services Packages</h3>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-          Hands-on technical implementation to build out your QA tools, integrations, and AI features.
+          Hands-on technical implementation to build out your tools, integrations, and AI features.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologyPackages.map((pkg, index) => (
@@ -177,7 +177,7 @@ const ServicePackagesSection: React.FC = () => {
           </li>
           <li className="flex items-start">
             <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-            <span>Choose <strong>Technology Services</strong> if you already have a defined QA strategy and need technical execution.</span>
+            <span>Choose <strong>Technology Services</strong> if you already have a defined strategy and need technical execution.</span>
           </li>
           <li className="flex items-start">
             <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
