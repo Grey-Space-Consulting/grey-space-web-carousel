@@ -11,6 +11,7 @@ import TestimonialCard from "./TestimonialCard";
 import { useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useCarouselAutoplay } from "@/hooks/useCarouselAutoplay";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const TestimonialCarousel = () => {
   const [api, setApi] = useState<{ scrollNext: () => void } | null>(null);
@@ -18,6 +19,7 @@ const TestimonialCarousel = () => {
     interval: 3000,
     initialAutoPlay: true
   });
+  const isMobile = useIsMobile();
 
   return (
     <Carousel
@@ -34,13 +36,16 @@ const TestimonialCarousel = () => {
       <ScrollArea className="w-full">
         <CarouselContent className="-ml-4">
           {testimonials.map((testimonial) => (
-            <CarouselItem key={testimonial.id} className="pl-4 md:basis-2/5 lg:basis-1/3">
+            <CarouselItem 
+              key={testimonial.id} 
+              className={`pl-4 ${isMobile ? 'basis-full' : 'md:basis-2/5 lg:basis-1/3'}`}
+            >
               <TestimonialCard testimonial={testimonial} />
             </CarouselItem>
           ))}
         </CarouselContent>
       </ScrollArea>
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-6 md:mt-8">
         <CarouselPrevious className="relative static -left-0 translate-y-0 mr-2" />
         <CarouselNext className="relative static -right-0 translate-y-0 ml-2" />
       </div>
