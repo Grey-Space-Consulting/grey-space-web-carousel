@@ -1,7 +1,12 @@
 
-import { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Star } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 type Testimonial = {
   id: number;
@@ -57,159 +62,64 @@ const testimonials: Testimonial[] = [
 ];
 
 const TestimonialCarousel = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
-
-  const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
-
-  const startAutoPlay = () => {
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    autoPlayRef.current = setInterval(() => {
-      handleNext();
-    }, 5000);
-  };
-
-  useEffect(() => {
-    startAutoPlay();
-    return () => {
-      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    };
-  }, []);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!carouselRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    startAutoPlay();
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !carouselRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2;
-    carouselRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollTo({
-        left: activeIndex * carouselRef.current.offsetWidth,
-        behavior: 'smooth'
-      });
-    }
-  }, [activeIndex]);
-
   return (
-    <div className="relative overflow-hidden">
-      <div
-        ref={carouselRef}
-        className={cn(
-          "flex transition-transform duration-500 overflow-x-hidden scroll-smooth",
-          isDragging ? "cursor-grabbing" : "cursor-grab"
-        )}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-        onMouseMove={handleMouseMove}
-      >
+    <Carousel
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+      className="w-full max-w-full"
+    >
+      <CarouselContent className="-ml-4">
         {testimonials.map((testimonial) => (
-          <div
-            key={testimonial.id}
-            className="min-w-full flex-shrink-0 px-6 md:px-10"
-          >
-            <div className="max-w-4xl mx-auto">
-              <div className="glass-card rounded-2xl p-8 md:p-10">
-                <div className="flex justify-between items-start">
-                  <div className="flex items-center gap-4">
-                    <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
-                      {testimonial.image ? (
-                        <img 
-                          src={testimonial.image} 
-                          alt={testimonial.name} 
-                          className="h-full w-full object-cover rounded-full"
-                        />
-                      ) : (
-                        <div className="h-6 w-6 rounded-full bg-primary/40"></div>
-                      )}
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-lg">{testimonial.name}</h4>
-                      <p className="text-muted-foreground text-sm">
-                        {testimonial.role}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star
-                        key={i}
-                        size={16}
-                        className={cn(
-                          "fill-current",
-                          i < testimonial.rating ? "text-primary" : "text-muted-foreground/30"
-                        )}
+          <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+            <div className="h-full glass-card rounded-2xl p-6 md:p-8">
+              <div className="flex justify-between items-start">
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    {testimonial.image ? (
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name} 
+                        className="h-full w-full object-cover rounded-full"
                       />
-                    ))}
+                    ) : (
+                      <div className="h-6 w-6 rounded-full bg-primary/40"></div>
+                    )}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+                    <p className="text-muted-foreground text-sm">
+                      {testimonial.role}, {testimonial.company}
+                    </p>
                   </div>
                 </div>
-                <div className="mt-6">
-                  <p className="text-lg md:text-xl italic text-foreground/90 leading-relaxed">
-                    "{testimonial.quote}"
-                  </p>
+                <div className="flex">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      size={16}
+                      className={`fill-current ${
+                        i < testimonial.rating ? "text-primary" : "text-muted-foreground/30"
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
+              <div className="mt-6">
+                <p className="text-md text-foreground/90 leading-relaxed">
+                  "{testimonial.quote}"
+                </p>
+              </div>
             </div>
-          </div>
+          </CarouselItem>
         ))}
+      </CarouselContent>
+      <div className="flex justify-center mt-8">
+        <CarouselPrevious className="relative static -left-0 translate-y-0 mr-2" />
+        <CarouselNext className="relative static -right-0 translate-y-0 ml-2" />
       </div>
-
-      <div className="flex justify-center mt-8 gap-2">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveIndex(index)}
-            className={cn(
-              "h-2 rounded-full transition-all duration-300",
-              index === activeIndex ? "w-8 bg-primary" : "w-2 bg-muted"
-            )}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      <button
-        onClick={handlePrev}
-        className="absolute top-1/2 left-2 md:left-4 -translate-y-1/2 h-9 w-9 bg-card/80 backdrop-blur-sm rounded-full flex items-center justify-center border border-border hover:bg-card transition-colors"
-        aria-label="Previous testimonial"
-      >
-        <ChevronLeft size={20} />
-      </button>
-
-      <button
-        onClick={handleNext}
-        className="absolute top-1/2 right-2 md:right-4 -translate-y-1/2 h-9 w-9 bg-card/80 backdrop-blur-sm rounded-full flex items-center justify-center border border-border hover:bg-card transition-colors"
-        aria-label="Next testimonial"
-      >
-        <ChevronRight size={20} />
-      </button>
-    </div>
+    </Carousel>
   );
 };
 
