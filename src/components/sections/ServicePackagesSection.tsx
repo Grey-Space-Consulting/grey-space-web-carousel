@@ -119,18 +119,24 @@ const ServicePackagesSection: React.FC = () => {
       </p>
       
       <Tabs defaultValue="leadership" className="w-full mb-10">
-        <TabsList className="mx-auto mb-8">
-          <TabsTrigger value="leadership" className="px-6">
-            <Users className="mr-2 h-4 w-4" />
+        <TabsList className="mx-auto mb-8 bg-secondary/80 p-1.5 border border-muted/30 shadow-lg rounded-xl">
+          <TabsTrigger 
+            value="leadership" 
+            className="px-8 py-3 rounded-lg text-base font-medium transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
+          >
+            <Users className="mr-2 h-5 w-5" />
             Leadership & Advisory
           </TabsTrigger>
-          <TabsTrigger value="technology" className="px-6">
-            <Database className="mr-2 h-4 w-4" />
+          <TabsTrigger 
+            value="technology" 
+            className="px-8 py-3 rounded-lg text-base font-medium transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
+          >
+            <Database className="mr-2 h-5 w-5" />
             Technology Implementation
           </TabsTrigger>
         </TabsList>
         
-        <TabsContent value="leadership" className="mt-6">
+        <TabsContent value="leadership" className="mt-8 animate-fade-in">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
             Strategic advisory services to help optimize your operations, tools, and customer experience initiatives.
           </p>
@@ -141,7 +147,7 @@ const ServicePackagesSection: React.FC = () => {
           </div>
         </TabsContent>
         
-        <TabsContent value="technology" className="mt-6">
+        <TabsContent value="technology" className="mt-8 animate-fade-in">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
             Hands-on technical implementation to build out your tools, integrations, and intelligent automation solutions.
           </p>
