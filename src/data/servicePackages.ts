@@ -10,7 +10,7 @@ export const leadershipPackages: ServicePackage[] = [
     description: "Strategic fractional CX leadership and executive guidance on best practices and industry standards.",
     price: "$8,000 - $15,000/month",
     duration: "Ongoing partnership",
-    icon: <Users className="h-8 w-8 text-primary mb-3" />,
+    icon: React.createElement(Users, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
       "Fractional CX Leadership: On-demand strategic oversight",
       "Executive Workshops & Guidance on industry trends",
@@ -28,7 +28,7 @@ export const leadershipPackages: ServicePackage[] = [
     description: "Platform audits, tool recommendations, and implementation planning to optimize your technology stack.",
     price: "$5,000 - $15,000",
     duration: "2-6 weeks",
-    icon: <BarChart className="h-8 w-8 text-primary mb-3" />,
+    icon: React.createElement(BarChart, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
       "Platform/Tool Audits to identify gaps or inefficiencies",
       "Recommendation Reports aligned with budget and goals",
@@ -46,7 +46,7 @@ export const leadershipPackages: ServicePackage[] = [
     description: "Process audits, team training, and ongoing system administration to streamline operations.",
     price: "$5,000 - $12,000/month",
     duration: "Ongoing support",
-    icon: <ListChecks className="h-8 w-8 text-primary mb-3" />,
+    icon: React.createElement(ListChecks, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
       "Operational Process Audits to identify inefficiencies",
       "Tool/System Admin Work for critical platforms",
@@ -68,7 +68,7 @@ export const technologyPackages: ServicePackage[] = [
     description: "Platform implementations, integrations, and strategic AI solutions that align with business needs.",
     price: "$20,000 - $40,000+",
     duration: "2-4 months",
-    icon: <Database className="h-8 w-8 text-primary mb-3" />,
+    icon: React.createElement(Database, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
       "Solution Architecture & Implementation planning",
       "Custom Integrations to unify disparate systems",
@@ -87,7 +87,7 @@ export const technologyPackages: ServicePackage[] = [
     description: "End-to-end operational transformation combining leadership, audits, advisory, and implementation.",
     price: "Starting at $50,000+",
     duration: "3-12 months",
-    icon: <Lightbulb className="h-8 w-8 text-primary mb-3" />,
+    icon: React.createElement(Lightbulb, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
       "Full CX & Operational Audit across all domains",
       "Platform & Tooling Roadmap + Implementation",
