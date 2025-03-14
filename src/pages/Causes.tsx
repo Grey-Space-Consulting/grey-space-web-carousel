@@ -16,68 +16,68 @@ const Causes = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="pt-24 pb-20 px-6 md:px-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-16 animate-fade-in">
-            <div className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6">
+      <main className="pt-20 pb-16 px-6 md:px-10">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-10 animate-fade-in">
+            <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-4">
               Making A Difference
             </div>
-            <h1 className="heading-lg mb-6 max-w-4xl">
+            <h1 className="heading-lg mb-4 max-w-4xl">
               Causes We Support
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
+            <p className="text-lg text-muted-foreground max-w-2xl">
               At Grey Space, we're committed to creating positive change beyond our business operations. We proudly donate 3% of our profits to the causes we believe in.
             </p>
           </div>
           
-          <div className="glass-card p-8 md:p-12 rounded-xl mb-16 animate-fade-in" style={{ animationDelay: "100ms" }}>
-            <div className="flex items-center justify-center md:justify-start mb-6">
-              <HandHeart className="h-12 w-12 text-primary mr-4" />
-              <h2 className="text-2xl md:text-3xl font-semibold">Our Commitment to Giving Back</h2>
+          <div className="glass-card p-6 md:p-8 rounded-xl mb-12 animate-fade-in" style={{ animationDelay: "100ms" }}>
+            <div className="flex items-center justify-center md:justify-start mb-4">
+              <HandHeart className="h-10 w-10 text-primary mr-3" />
+              <h2 className="text-xl md:text-2xl font-semibold">Our Commitment to Giving Back</h2>
             </div>
-            <p className="text-lg text-muted-foreground mb-8 max-w-4xl">
+            <p className="text-base text-muted-foreground mb-6 max-w-4xl">
               Grey Space is dedicated to making a positive impact on our communities and the world at large. That's why we donate <span className="font-semibold text-primary">3% of our profits</span> to charitable organizations that align with our values and mission.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
                 3% of All Profits Donated
               </div>
-              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
                 Supporting Local & Global Causes
               </div>
-              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+              <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
                 Employee-Matched Giving Program
               </div>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 animate-fade-in" style={{ animationDelay: "200ms" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in" style={{ animationDelay: "200ms" }}>
             {causes.map((cause, index) => (
               <div 
                 key={cause.name} 
-                className="glass-card rounded-xl overflow-hidden flex flex-col md:flex-row group animate-fade-in"
-                style={{ animationDelay: `${(index + 1) * 150}ms` }}
+                className="glass-card rounded-lg overflow-hidden flex flex-col group animate-fade-in"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
-                <div className="md:w-2/5 h-60 md:h-auto bg-card/80 overflow-hidden">
+                <div className="h-48 bg-card/80 overflow-hidden">
                   <img 
                     src={cause.image} 
                     alt={cause.name} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="md:w-3/5 p-6 md:p-8 flex flex-col">
-                  <div className="flex items-center gap-2 text-primary mb-3">
-                    <cause.icon size={20} />
-                    <span className="font-medium">{cause.category}</span>
+                <div className="p-5 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 text-primary mb-2">
+                    <cause.icon size={16} />
+                    <span className="text-sm font-medium">{cause.category}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{cause.name}</h3>
-                  <p className="text-muted-foreground mb-6 flex-grow">{cause.description}</p>
+                  <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{cause.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">{cause.description}</p>
                   <div className="mt-auto">
                     <a
                       href={cause.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors"
+                      className="inline-block px-3 py-1.5 bg-primary/10 text-primary text-sm rounded-md hover:bg-primary/20 transition-colors"
                     >
                       Learn More
                     </a>
