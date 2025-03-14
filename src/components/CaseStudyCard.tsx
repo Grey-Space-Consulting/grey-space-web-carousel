@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ChevronRight, Briefcase, Clock, DollarSign, BarChart, Check, Globe, ArrowLeftRight, Users, Phone } from "lucide-react";
+import { ChevronRight, Briefcase, Clock, DollarSign, BarChart } from "lucide-react";
 import { type CaseStudy } from "@/data/caseStudies";
 import { detailedCaseStudies } from "@/data/caseStudies";
 
@@ -48,16 +48,6 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
       stats.push({
         icon: <Clock size={16} className="text-primary" />,
         text: "45% reduced wait times"
-      });
-    } else if (study.id === "healthcare") {
-      stats.push({
-        icon: <BarChart size={16} className="text-primary" />,
-        text: "30% improved efficiency"
-      });
-    } else if (study.id === "retail") {
-      stats.push({
-        icon: <ArrowLeftRight size={16} className="text-primary" />,
-        text: "45% reduced costs"
       });
     }
     

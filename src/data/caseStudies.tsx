@@ -7,8 +7,6 @@ import turoStudy from "./case-studies/turo";
 import sweetgreenStudy from "./case-studies/sweetgreen";
 import springhealthStudy from "./case-studies/springhealth";
 import hopskipdriveStudy from "./case-studies/hopskipdrive";
-import healthcareStudy from "./case-studies/healthcare";
-import retailStudy from "./case-studies/retail";
 
 // Export all case studies in an array for easy access
 export const caseStudies: CaseStudy[] = [
@@ -16,8 +14,6 @@ export const caseStudies: CaseStudy[] = [
   sweetgreenStudy,
   springhealthStudy,
   hopskipdriveStudy,
-  healthcareStudy,
-  retailStudy,
 ];
 
 // Export detailed case studies
@@ -26,8 +22,6 @@ export const detailedCaseStudies: DetailedCaseStudy[] = [
   sweetgreenStudy,
   springhealthStudy,
   hopskipdriveStudy,
-  healthcareStudy,
-  retailStudy,
 ];
 
 // Re-export types for easier imports elsewhere
