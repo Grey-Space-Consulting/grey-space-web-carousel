@@ -25,7 +25,7 @@ interface Technology {
 // Define technologies with proper icon components or logo URLs
 const technologies: Technology[] = [
   { name: "Zendesk", category: "CRM", logoUrl: "https://greyspace-v3.netlify.app/technologies/zendesk-icon.png" },
-  { name: "Salesforce", category: "CRM", icon: <Cloud size={24} /> },
+  { name: "Salesforce", category: "CRM", logoUrl: "https://greyspace-v3.netlify.app/technologies/salesforce-icon.png" },
   { name: "Kustomer", category: "CRM", icon: <Users size={24} /> },
   { name: "Gladly", category: "CRM", icon: <MessageSquare size={24} /> },
   { name: "Gorgias", category: "CRM", icon: <MessageCircle size={24} /> },
