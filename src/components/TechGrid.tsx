@@ -6,16 +6,25 @@ import {
   PieChart, BarChartHorizontal, Activity, LineChart, 
   Users, HelpCircle, Code, MessageSquare, Slack
 } from 'lucide-react';
+import Image from 'next/image';
 
 interface TechCardProps {
   name: string;
   category: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
+  logoUrl?: string;
   index: number;
 }
 
-// Define technologies with proper icon components
-const technologies = [
+interface Technology {
+  name: string;
+  category: string;
+  icon?: React.ReactNode;
+  logoUrl?: string;
+}
+
+// Define technologies with proper icon components or logo URLs
+const technologies: Technology[] = [
   { name: "Zendesk", category: "CRM", icon: <MessageCircle size={24} /> },
   { name: "Salesforce", category: "CRM", icon: <Cloud size={24} /> },
   { name: "Kustomer", category: "CRM", icon: <Users size={24} /> },
@@ -45,14 +54,18 @@ const technologies = [
   { name: "NiceIncontact", category: "Communications", icon: <Headphones size={24} strokeWidth={1.5} /> },
 ];
 
-const TechCard = ({ name, category, icon, index }: TechCardProps) => {
+const TechCard = ({ name, category, icon, logoUrl, index }: TechCardProps) => {
   return (
     <div 
       className="glass-card rounded-xl p-6 flex flex-col items-center text-center hover:translate-y-[-5px] transition-all duration-300 animate-fade-in"
       style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className="h-16 w-16 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center text-primary">
-        {icon}
+      <div className="h-16 w-16 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center text-primary overflow-hidden">
+        {logoUrl ? (
+          <img src={logoUrl} alt={name} className="max-h-12 max-w-12 object-contain" />
+        ) : (
+          icon
+        )}
       </div>
       <h3 className="font-medium text-lg mb-1">{name}</h3>
       <p className="text-sm text-muted-foreground">{category}</p>
@@ -69,6 +82,7 @@ const TechGrid = () => {
           name={tech.name}
           category={tech.category}
           icon={tech.icon}
+          logoUrl={tech.logoUrl}
           index={index}
         />
       ))}
