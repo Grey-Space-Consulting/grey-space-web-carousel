@@ -1,6 +1,5 @@
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const HeroSection = () => {
@@ -57,12 +56,6 @@ const HeroSection = () => {
             className="px-8 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors w-full sm:w-auto"
           >
             Get Started
-          </a>
-          <a 
-            href="#services" 
-            className="px-8 py-3 rounded-lg border border-border bg-card/50 hover:bg-card transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
-          >
-            Learn More <ChevronRight size={16} />
           </a>
         </div>
       </div>
