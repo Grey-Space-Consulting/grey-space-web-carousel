@@ -4,22 +4,16 @@ import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
-import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import ServicesSection from "@/components/sections/ServicesSection";
 import CTASection from "@/components/sections/CTASection";
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
   // Create individual refs for each section
-  const testimonialsSectionRef = useRef<HTMLElement>(null);
-  const servicesSectionRef = useRef<HTMLElement>(null);
   const ctaSectionRef = useRef<HTMLElement>(null);
 
   // Collect all refs for the intersection observer
   const sectionRefs = [
-    testimonialsSectionRef,
-    servicesSectionRef,
     ctaSectionRef
   ];
 
@@ -57,8 +51,6 @@ const Index = () => {
       <Navbar />
       
       <HeroSection />
-      <TestimonialsSection sectionRef={testimonialsSectionRef} />
-      <ServicesSection sectionRef={servicesSectionRef} />
       <CTASection sectionRef={ctaSectionRef} />
       
       <Footer />

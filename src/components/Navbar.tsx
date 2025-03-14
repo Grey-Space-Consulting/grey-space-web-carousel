@@ -36,15 +36,7 @@ const Navbar = () => {
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
-          {["Services", "Testimonials"].map((item) => (
-            <a
-              key={item}
-              href={`/#${item.toLowerCase()}`}
-              className="text-foreground/80 hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all"
-            >
-              {item}
-            </a>
-          ))}
+          {/* No navigation links */}
         </nav>
 
         <button 
@@ -70,16 +62,6 @@ const Navbar = () => {
         )}
       >
         <nav className="flex flex-col gap-6">
-          {["Services", "Testimonials"].map((item) => (
-            <a
-              key={item}
-              href={`/#${item.toLowerCase()}`}
-              className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item}
-            </a>
-          ))}
           <button 
             className="mt-4 rounded-lg px-5 py-3 bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
           >
