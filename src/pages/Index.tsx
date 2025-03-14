@@ -11,29 +11,34 @@ import PartnerLogos from "@/components/PartnerLogos";
 
 const features = [
   {
-    title: "Strategic Consulting",
-    description: "We analyze your operational challenges and create tailored technology strategies that align with your business goals.",
-    icon: Lightbulb
+    title: "Fractional CX Leadership",
+    description: "Expert leadership to guide your customer experience initiatives on a flexible, as-needed basis.",
+    icon: Users
   },
   {
-    title: "Process Optimization",
-    description: "Our experts streamline your workflows and implement automation to eliminate inefficiencies and reduce operational costs.",
-    icon: Cog
-  },
-  {
-    title: "Technology Integration",
-    description: "Seamlessly connect your systems and data across the organization to create a unified operational ecosystem.",
+    title: "System Integration & Workflows",
+    description: "Seamlessly connect your systems and optimize workflows for maximum operational efficiency.",
     icon: Building
   },
   {
-    title: "Global Implementation",
-    description: "With experience across industries and regions, we deliver consistent results for operations around the world.",
+    title: "Training & Process Optimization",
+    description: "Enhance team capabilities and streamline processes through comprehensive training and optimization.",
+    icon: Cog
+  },
+  {
+    title: "Tool Selections, Audits, & Migrations",
+    description: "Expert guidance in selecting, auditing, and migrating to the right tools for your business needs.",
     icon: Globe
   },
   {
-    title: "Change Management",
-    description: "We guide your team through technological transitions with comprehensive training and support programs.",
-    icon: Users
+    title: "Intelligent Automation & AI",
+    description: "Leverage cutting-edge AI and automation solutions to enhance operational efficiency and innovation.",
+    icon: Lightbulb
+  },
+  {
+    title: "Strategic Consulting",
+    description: "Comprehensive strategic guidance to align your technology investments with business objectives.",
+    icon: ChevronRight
   }
 ];
 
