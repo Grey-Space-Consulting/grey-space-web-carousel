@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ChevronRight, Briefcase } from "lucide-react";
+import { ChevronRight, Briefcase, Clock, DollarSign } from "lucide-react";
 import { type CaseStudy } from "@/data/caseStudies";
 
 interface CaseStudyCardProps {
@@ -25,6 +25,20 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         </div>
         <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
         <p className="text-muted-foreground mb-4">{study.excerpt}</p>
+        
+        {study.id === "turo" && (
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="flex items-center gap-2">
+              <Clock size={16} className="text-primary" />
+              <span className="text-sm">3 month turnaround</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <DollarSign size={16} className="text-primary" />
+              <span className="text-sm">$200K annual savings</span>
+            </div>
+          </div>
+        )}
+        
         <button 
           onClick={() => onClick(study.id)}
           className="flex items-center gap-1 text-primary hover:underline"
