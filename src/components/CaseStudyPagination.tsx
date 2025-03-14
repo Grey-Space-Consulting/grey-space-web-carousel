@@ -28,6 +28,7 @@ const CaseStudyPagination: React.FC<CaseStudyPaginationProps> = ({
       case 'sweetgreen': return 'Sweetgreen';
       case 'springhealth': return 'Spring Health';
       case 'hopskipdrive': return 'HopSkipDrive';
+      case 'hellotech': return 'HelloTech';
       default: return id;
     }
   };
