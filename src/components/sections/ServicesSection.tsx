@@ -1,6 +1,8 @@
 
-import { Building, ChevronRight, Cog, Globe, Lightbulb, Users } from "lucide-react";
+import { ArrowRight, Building, ChevronRight, Cog, Globe, Lightbulb, Users } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const features = [
   {
@@ -67,6 +69,15 @@ const ServicesSection = ({ sectionRef }: ServicesSectionProps) => {
               index={index}
             />
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <Link to="/services">
+            <Button variant="default" size="lg" className="gap-2 font-medium text-base">
+              View All Services
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
