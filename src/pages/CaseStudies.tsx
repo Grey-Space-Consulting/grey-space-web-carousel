@@ -210,7 +210,7 @@ const CaseStudies = () => {
 const caseStudies = [
   {
     id: "turo",
-    title: "Support System Integration for Turo",
+    title: "Turo: Post-Acquisition Migration and Localization",
     category: "Technology",
     excerpt: "How we helped Turo merge support systems after acquiring a European competitor while localizing to multiple languages.",
     image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&auto=format&fit=crop",
@@ -234,7 +234,7 @@ const caseStudies = [
 const detailedCaseStudies = [
   {
     id: "turo",
-    title: "Support System Integration for Turo",
+    title: "Turo: Post-Acquisition Migration and Localization",
     category: "Technology",
     client: "Turo",
     clientLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Turo_logo.svg/320px-Turo_logo.svg.png",
