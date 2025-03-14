@@ -185,18 +185,22 @@ const ServicePackagesSection: React.FC = () => {
           </div>
           
           <div className="bg-background/70 p-6 rounded-lg">
-            <h4 className="text-xl font-medium mb-3 text-primary">Package Discounts</h4>
+            <h4 className="text-xl font-medium mb-3 text-primary">Budget-Friendly Options</h4>
             <p className="mb-4">
-              When you combine multiple services or choose long-term engagements, we offer significant cost advantages.
+              We believe in making our expertise accessible to businesses of all sizes, regardless of budget constraints.
             </p>
             <ul className="space-y-2">
               <li className="flex items-start">
                 <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-                <span>Save up to <strong>15%</strong> when bundling advisory and implementation services together.</span>
+                <span>Bundled services offer <strong>cost advantages</strong> while providing comprehensive solutions.</span>
               </li>
               <li className="flex items-start">
                 <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
                 <span>Long-term partnerships receive <strong>preferential rates</strong> and additional support hours.</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>We're committed to finding ways to work within your available budget while delivering value.</span>
               </li>
             </ul>
           </div>
@@ -219,6 +223,27 @@ const ServicePackagesSection: React.FC = () => {
             <li className="flex items-start">
               <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
               <span>We'll work with you to create the perfect solution - no cookie-cutter approaches.</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div className="bg-background/70 p-6 rounded-lg text-left mb-6">
+          <h4 className="text-xl font-medium mb-3 text-primary">Accessible to Businesses of All Sizes</h4>
+          <p className="mb-4">
+            We're passionate about helping brands succeed, regardless of their size or budget limitations.
+          </p>
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>We can almost always find creative ways to work within your budget constraints while delivering value.</span>
+            </li>
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>Our modular approach lets us focus on your most critical needs first, allowing for phased implementation.</span>
+            </li>
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>Start with a smaller engagement and expand our partnership as you see positive results and ROI.</span>
             </li>
           </ul>
         </div>
