@@ -7,18 +7,33 @@ interface TechCardProps {
 }
 
 const technologies = [
-  { name: "SAP", category: "ERP", icon: "SAP" },
-  { name: "Oracle", category: "Database", icon: "Oracle" },
-  { name: "Salesforce", category: "CRM", icon: "Salesforce" },
-  { name: "Microsoft Dynamics", category: "ERP", icon: "Microsoft" },
-  { name: "AWS", category: "Cloud", icon: "AWS" },
-  { name: "Azure", category: "Cloud", icon: "Azure" },
-  { name: "Google Cloud", category: "Cloud", icon: "Google" },
-  { name: "Tableau", category: "Analytics", icon: "Tableau" },
-  { name: "Power BI", category: "Analytics", icon: "PowerBI" },
-  { name: "ServiceNow", category: "ITSM", icon: "ServiceNow" },
-  { name: "Workday", category: "HCM", icon: "Workday" },
-  { name: "Snowflake", category: "Data", icon: "Snowflake" },
+  { name: "Zendesk", category: "CRM", icon: "Ze" },
+  { name: "Salesforce", category: "CRM", icon: "Sa" },
+  { name: "Kustomer", category: "CRM", icon: "Ku" },
+  { name: "Gladly", category: "CRM", icon: "Gl" },
+  { name: "Gorgias", category: "CRM", icon: "Go" },
+  { name: "Intercom", category: "CRM", icon: "In" },
+  { name: "Rudderstack", category: "Analytics", icon: "Ru" },
+  { name: "Segment", category: "Analytics", icon: "Se" },
+  { name: "Mixpanel", category: "Analytics", icon: "Mi" },
+  { name: "GA4", category: "Analytics", icon: "GA" },
+  { name: "Amplitude", category: "Analytics", icon: "Am" },
+  { name: "Kodif", category: "AI", icon: "Ko" },
+  { name: "Siena", category: "AI", icon: "Si" },
+  { name: "Netomi", category: "AI", icon: "Ne" },
+  { name: "AWS", category: "Cloud", icon: "AW" },
+  { name: "Google Cloud", category: "Cloud", icon: "GC" },
+  { name: "Snowflake", category: "Data", icon: "Sn" },
+  { name: "Ada", category: "AI", icon: "Ad" },
+  { name: "Twilio", category: "Communications", icon: "Tw" },
+  { name: "Talkdesk", category: "Communications", icon: "Ta" },
+  { name: "Aircall", category: "Communications", icon: "Ai" },
+  { name: "Dialpad", category: "Communications", icon: "Di" },
+  { name: "Assembled", category: "Operations", icon: "As" },
+  { name: "Mavenoid", category: "Support", icon: "Ma" },
+  { name: "AmazonConnect", category: "Communications", icon: "AC" },
+  { name: "ZoomPhone", category: "Communications", icon: "ZP" },
+  { name: "NiceIncontact", category: "Communications", icon: "NI" },
 ];
 
 const TechCard = ({ name, category, icon, index }: TechCardProps) => {
@@ -28,7 +43,7 @@ const TechCard = ({ name, category, icon, index }: TechCardProps) => {
       style={{ animationDelay: `${index * 50}ms` }}
     >
       <div className="h-16 w-16 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center">
-        <div className="text-xl font-bold text-primary">{icon.substring(0, 2)}</div>
+        <div className="text-xl font-bold text-primary">{icon}</div>
       </div>
       <h3 className="font-medium text-lg mb-1">{name}</h3>
       <p className="text-sm text-muted-foreground">{category}</p>
