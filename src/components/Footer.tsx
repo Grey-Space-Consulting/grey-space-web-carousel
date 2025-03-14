@@ -1,11 +1,12 @@
 
 import { Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="bg-card/50 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-5">
               <div className="h-8 w-8 bg-primary/20 rounded-md flex items-center justify-center">
@@ -28,6 +29,32 @@ const Footer = () => {
                 </a>
               ))}
             </div>
+          </div>
+          
+          <div>
+            <h3 className="font-medium text-lg mb-5">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/industries" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Industries
+                </Link>
+              </li>
+              <li>
+                <Link to="/causes" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Causes We Support
+                </Link>
+              </li>
+            </ul>
           </div>
           
           <div>

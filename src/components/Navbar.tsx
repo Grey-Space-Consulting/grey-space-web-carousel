@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,15 +29,32 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
           <div className="h-8 w-8 bg-primary/20 rounded-md flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
             <div className="h-3 w-3 bg-primary rounded-sm group-hover:scale-110 transition-transform duration-300"></div>
           </div>
           <span className="text-xl font-display font-medium">Grey Space</span>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {/* No navigation links */}
+          <Link
+            to="/case-studies"
+            className="text-foreground/80 hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all"
+          >
+            Case Studies
+          </Link>
+          <Link
+            to="/industries"
+            className="text-foreground/80 hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all"
+          >
+            Industries
+          </Link>
+          <Link
+            to="/causes"
+            className="text-foreground/80 hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all"
+          >
+            Causes We Support
+          </Link>
         </nav>
 
         <button 
@@ -62,6 +80,27 @@ const Navbar = () => {
         )}
       >
         <nav className="flex flex-col gap-6">
+          <Link
+            to="/case-studies"
+            className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Case Studies
+          </Link>
+          <Link
+            to="/industries"
+            className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Industries
+          </Link>
+          <Link
+            to="/causes"
+            className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Causes We Support
+          </Link>
           <button 
             className="mt-4 rounded-lg px-5 py-3 bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
           >
