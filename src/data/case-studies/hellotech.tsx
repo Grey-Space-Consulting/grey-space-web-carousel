@@ -5,7 +5,7 @@ import type { DetailedCaseStudy } from "../types";
 
 const hellotechStudy: DetailedCaseStudy = {
   id: "hellotech",
-  title: "Accelerated CRM Migration for HelloTech by Latch",
+  title: "HelloTech: Post-Acquisition System Integration",
   category: "Customer Support",
   excerpt: "Completed a Kustomer to Gladly migration in under 3 weeks instead of the typical 3 months, with significant cost savings.",
   image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070",
