@@ -1,14 +1,73 @@
 
 import React from "react";
-import { ChevronRight, Briefcase, Clock, DollarSign, BarChart } from "lucide-react";
+import { ChevronRight, Briefcase, Clock, DollarSign, BarChart, Check, Globe, ArrowLeftRight, Users } from "lucide-react";
 import { type CaseStudy } from "@/data/caseStudies";
+import { detailedCaseStudies } from "@/data/caseStudies";
 
 interface CaseStudyCardProps {
   study: CaseStudy;
   onClick: (id: string) => void;
 }
 
+// Helper function to get the detailed case study for a given ID
+const getDetailedStudy = (id: string) => {
+  return detailedCaseStudies.find(study => study.id === id);
+};
+
 const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
+  const detailedStudy = getDetailedStudy(study.id);
+  
+  // Define stats to display based on the case study
+  const getStatsForCaseStudy = () => {
+    if (!detailedStudy) return [];
+    
+    const stats = [];
+    
+    // Common stats that most case studies have
+    if (detailedStudy.timeframe) {
+      stats.push({
+        icon: <Clock size={16} className="text-primary" />,
+        text: detailedStudy.timeframe
+      });
+    }
+    
+    if (detailedStudy.results) {
+      stats.push({
+        icon: <DollarSign size={16} className="text-primary" />,
+        text: detailedStudy.results
+      });
+    }
+    
+    // Case-specific stats
+    if (study.id === "turo") {
+      // Turo-specific stats already covered by timeframe and results
+    } else if (study.id === "sweetgreen") {
+      stats.push({
+        icon: <BarChart size={16} className="text-primary" />,
+        text: "35% auto-deflection"
+      });
+    } else if (study.id === "springhealth") {
+      stats.push({
+        icon: <Clock size={16} className="text-primary" />,
+        text: "69% faster wait times"
+      });
+    } else if (study.id === "healthcare") {
+      stats.push({
+        icon: <BarChart size={16} className="text-primary" />,
+        text: "30% improved efficiency"
+      });
+    } else if (study.id === "retail") {
+      stats.push({
+        icon: <ArrowLeftRight size={16} className="text-primary" />,
+        text: "45% reduced costs"
+      });
+    }
+    
+    return stats;
+  };
+  
+  const stats = getStatsForCaseStudy();
+  
   return (
     <div className="glass-card rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
       <div className="h-52 bg-card/80 overflow-hidden">
@@ -26,42 +85,14 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
         <p className="text-muted-foreground mb-4">{study.excerpt}</p>
         
-        {study.id === "turo" && (
+        {stats.length > 0 && (
           <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center gap-2">
-              <Clock size={16} className="text-primary" />
-              <span className="text-sm">3 month turnaround</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <DollarSign size={16} className="text-primary" />
-              <span className="text-sm">$200K annual savings</span>
-            </div>
-          </div>
-        )}
-        
-        {study.id === "sweetgreen" && (
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center gap-2">
-              <DollarSign size={16} className="text-primary" />
-              <span className="text-sm">$175K annual savings</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <BarChart size={16} className="text-primary" />
-              <span className="text-sm">35% auto-deflection</span>
-            </div>
-          </div>
-        )}
-        
-        {study.id === "springhealth" && (
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="flex items-center gap-2">
-              <DollarSign size={16} className="text-primary" />
-              <span className="text-sm">$300K annual savings</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock size={16} className="text-primary" />
-              <span className="text-sm">69% faster wait times</span>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="flex items-center gap-2">
+                {stat.icon}
+                <span className="text-sm">{stat.text}</span>
+              </div>
+            ))}
           </div>
         )}
         
