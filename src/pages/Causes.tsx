@@ -1,9 +1,9 @@
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Heart, Trophy, Users } from "lucide-react";
+import { Heart, Leaf, Users, HandHeart } from "lucide-react";
 
 const Causes = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -26,8 +26,29 @@ const Causes = () => {
               Causes We Support
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl">
-              At Grey Space, we're committed to creating positive change beyond our business operations. Here are the causes we actively support and contribute to.
+              At Grey Space, we're committed to creating positive change beyond our business operations. We proudly donate 3% of our profits to the causes we believe in.
             </p>
+          </div>
+          
+          <div className="glass-card p-8 md:p-12 rounded-xl mb-16 animate-fade-in" style={{ animationDelay: "100ms" }}>
+            <div className="flex items-center justify-center md:justify-start mb-6">
+              <HandHeart className="h-12 w-12 text-primary mr-4" />
+              <h2 className="text-2xl md:text-3xl font-semibold">Our Commitment to Giving Back</h2>
+            </div>
+            <p className="text-lg text-muted-foreground mb-8 max-w-4xl">
+              Grey Space is dedicated to making a positive impact on our communities and the world at large. That's why we donate <span className="font-semibold text-primary">3% of our profits</span> to charitable organizations that align with our values and mission.
+            </p>
+            <div className="flex flex-wrap items-center gap-4">
+              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                3% of All Profits Donated
+              </div>
+              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                Supporting Local & Global Causes
+              </div>
+              <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                Employee-Matched Giving Program
+              </div>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 animate-fade-in" style={{ animationDelay: "200ms" }}>
@@ -75,36 +96,36 @@ const Causes = () => {
 
 const causes = [
   {
-    name: "Technology Education for Underserved Communities",
-    category: "Education",
+    name: "Wags & Walks",
+    category: "Animal Welfare",
+    icon: Heart,
+    description: "Wags & Walks is dedicated to rescuing shelter dogs and finding them permanent, loving homes. Their mission focuses on reducing euthanasia rates in shelters through rescue, rehabilitation, and education.",
+    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=800&auto=format&fit=crop",
+    link: "https://www.wagsandwalks.org/",
+  },
+  {
+    name: "DanceSafe",
+    category: "Harm Reduction",
     icon: Users,
-    description: "We provide resources, mentorship, and technology access to students from underserved communities, helping bridge the digital divide and create pathways to careers in technology.",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=800&auto=format&fit=crop",
-    link: "#tech-education",
+    description: "DanceSafe promotes health and safety within the nightlife and electronic music communities. They provide health education, harm reduction services, and work to reduce drug-related harm through education and peer-based initiatives.",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop",
+    link: "https://dancesafe.org/",
+  },
+  {
+    name: "American Foundation for Suicide Prevention",
+    category: "Mental Health",
+    icon: Heart,
+    description: "The AFSP is dedicated to saving lives and bringing hope to those affected by suicide. They fund scientific research, provide educational programs, advocate for public policy, and support survivors of suicide loss.",
+    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&auto=format&fit=crop",
+    link: "https://afsp.org/",
   },
   {
     name: "Environmental Sustainability Initiatives",
     category: "Environment",
-    icon: Heart,
+    icon: Leaf,
     description: "Our commitment to sustainability extends beyond our business practices. We actively support and participate in reforestation projects, clean energy adoption, and plastic reduction initiatives.",
     image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&auto=format&fit=crop",
     link: "#environmental-initiatives",
-  },
-  {
-    name: "Technology Innovation for Nonprofits",
-    category: "Innovation",
-    icon: Trophy,
-    description: "We provide pro bono technology consulting and implementation for nonprofit organizations, helping them leverage innovative solutions to maximize their impact and operational efficiency.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop",
-    link: "#nonprofit-tech",
-  },
-  {
-    name: "Diversity in Tech Advocacy",
-    category: "Diversity & Inclusion",
-    icon: Users,
-    description: "We're committed to promoting diversity and inclusion in the technology sector through scholarship programs, inclusive hiring practices, and mentorship opportunities for underrepresented groups.",
-    image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&auto=format&fit=crop",
-    link: "#diversity-tech",
   },
 ];
 
