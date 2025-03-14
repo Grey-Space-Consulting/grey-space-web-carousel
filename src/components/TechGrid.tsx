@@ -74,7 +74,7 @@ const TechCard = ({ name, category, icon, logoUrl, index }: TechCardProps) => {
 
 const TechGrid = () => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
       {technologies.map((tech, index) => (
         <TechCard
           key={tech.name}
