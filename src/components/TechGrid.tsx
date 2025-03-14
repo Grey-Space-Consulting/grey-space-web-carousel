@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   BarChart, Database, MessageCircle, Cloud, Server, 
@@ -55,25 +56,25 @@ const technologies: Technology[] = [
 const TechCard = ({ name, category, icon, logoUrl, index }: TechCardProps) => {
   return (
     <div 
-      className="glass-card rounded-xl p-6 flex flex-col items-center text-center hover:translate-y-[-5px] transition-all duration-300 animate-fade-in"
+      className="glass-card rounded-xl p-4 flex flex-col items-center text-center hover:translate-y-[-5px] transition-all duration-300 animate-fade-in"
       style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className="h-16 w-16 rounded-lg bg-secondary/50 mb-4 flex items-center justify-center text-primary overflow-hidden">
+      <div className="h-12 w-12 rounded-lg bg-secondary/50 mb-3 flex items-center justify-center text-primary overflow-hidden">
         {logoUrl ? (
-          <img src={logoUrl} alt={name} className="max-h-12 max-w-12 object-contain" />
+          <img src={logoUrl} alt={name} className="max-h-10 max-w-10 object-contain" />
         ) : (
           icon
         )}
       </div>
-      <h3 className="font-medium text-lg mb-1">{name}</h3>
-      <p className="text-sm text-muted-foreground">{category}</p>
+      <h3 className="font-medium text-sm mb-0.5">{name}</h3>
+      <p className="text-xs text-muted-foreground">{category}</p>
     </div>
   );
 };
 
 const TechGrid = () => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
       {technologies.map((tech, index) => (
         <TechCard
           key={tech.name}
