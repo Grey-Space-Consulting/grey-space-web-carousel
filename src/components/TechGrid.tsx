@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   BarChart, Database, MessageCircle, Cloud, Server, 
@@ -24,7 +23,7 @@ interface Technology {
 
 // Define technologies with proper icon components or logo URLs
 const technologies: Technology[] = [
-  { name: "Zendesk", category: "CRM", icon: <MessageCircle size={24} /> },
+  { name: "Zendesk", category: "CRM", logoUrl: "https://greyspace-v3.netlify.app/technologies/zendesk-icon.png" },
   { name: "Salesforce", category: "CRM", icon: <Cloud size={24} /> },
   { name: "Kustomer", category: "CRM", icon: <Users size={24} /> },
   { name: "Gladly", category: "CRM", icon: <MessageSquare size={24} /> },
