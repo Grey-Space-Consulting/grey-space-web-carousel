@@ -4,7 +4,8 @@ import {
   BarChart, Database, MessageCircle, Cloud, Server, 
   Phone, Headphones, Zap, Network, Bot, Layers, 
   PieChart, BarChartHorizontal, Activity, LineChart, 
-  Users, HelpCircle, Code, MessageSquare, Slack
+  Users, HelpCircle, Code, MessageSquare, Slack,
+  SquareCode
 } from 'lucide-react';
 
 interface TechCardProps {
@@ -30,6 +31,7 @@ const technologies: Technology[] = [
   { name: "Gladly", category: "CRM", icon: <MessageSquare size={24} /> },
   { name: "Gorgias", category: "CRM", icon: <MessageCircle size={24} /> },
   { name: "Intercom", category: "CRM", icon: <MessageSquare size={24} strokeWidth={1.5} /> },
+  { name: "Dixa", category: "CRM", icon: <SquareCode size={24} /> },
   { name: "Rudderstack", category: "Analytics", icon: <BarChart size={24} /> },
   { name: "Segment", category: "Analytics", icon: <PieChart size={24} /> },
   { name: "Mixpanel", category: "Analytics", icon: <BarChartHorizontal size={24} /> },
