@@ -23,9 +23,6 @@ const Services = () => {
             <div className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6">
               Our Services
             </div>
-            <h1 className="heading-lg mb-6 max-w-4xl">
-              How We Help You Succeed
-            </h1>
             <p className="text-xl text-muted-foreground max-w-2xl">
               Our comprehensive operations technology services are designed to transform your business from the inside out.
             </p>
