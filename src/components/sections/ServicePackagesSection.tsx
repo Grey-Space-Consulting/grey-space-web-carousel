@@ -1,114 +1,125 @@
 
 import React from "react";
-import { Users, Cog, Lightbulb, ArrowRight, ListChecks } from "lucide-react";
+import { Users, Cog, Lightbulb, ArrowRight, ListChecks, Clipboard, BadgeAlert, BarChart, Database, Cpu } from "lucide-react";
 import ServicePackageCard, { ServicePackage } from "@/components/ServicePackageCard";
 
-const servicePackages: ServicePackage[] = [
+// Define the consulting packages
+const consultingPackages: ServicePackage[] = [
   {
-    title: "CX Leadership & Strategy Package",
-    description: "Expert leadership with a focus on aligning customer experience initiatives with strategic goals.",
-    price: "$10,000/month",
-    duration: "20 hours/month",
-    icon: <Users className="h-8 w-8 text-primary mb-3" />,
+    title: "Foundational Consulting",
+    description: "High-level strategy and initial roadmap to clarify what's possible before investing in development.",
+    price: "$5,000 - $10,000",
+    duration: "2-3 weeks",
+    icon: <Clipboard className="h-8 w-8 text-primary mb-3" />,
     services: [
-      "Fractional CX Leadership: Flexible leadership support for your CX strategy.",
-      "Strategic Consulting: Align your technology and CX investments with business goals.",
-      "Training & Process Optimization: Enhance your team's capabilities and streamline workflows."
+      "Discovery session to understand business goals and pain points",
+      "High-level QA strategy for customer service",
+      "Policy alignment and recommended best practices"
     ],
     deliverables: [
-      "CX strategy roadmap",
-      "Executive guidance and leadership for CX teams",
-      "Process improvements and training materials"
+      "Strategy roadmap document",
+      "Tech stack recommendations",
+      "Best practices guide"
     ],
     highlighted: false
   },
   {
-    title: "System & Workflow Optimization Package",
-    description: "Improve internal operations through system integration, workflow optimization, and technology upgrades.",
-    price: "$15,000 - $25,000",
-    duration: "Depends on system complexity",
-    icon: <Cog className="h-8 w-8 text-primary mb-3" />,
+    title: "Operational Consulting",
+    description: "Process design, policy development, and workflow optimization for teams with basic QA approaches.",
+    price: "$10,000 - $20,000",
+    duration: "4-6 weeks",
+    icon: <BarChart className="h-8 w-8 text-primary mb-3" />,
     services: [
-      "System Integration & Workflows: Streamline system connections and operational processes.",
-      "Tool Selections, Audits, & Migrations: Select and migrate the right tools for your business.",
-      "Training & Process Optimization: Train your teams on new systems and processes."
+      "In-depth review of existing QA processes and policies",
+      "Custom QA framework creation or refinement",
+      "Recommendations for integrating QA metrics into business reporting"
     ],
     deliverables: [
-      "System integration plan",
-      "Process workflow documentation",
-      "Tool audit and migration reports"
+      "Custom QA framework documentation",
+      "Technology recommendations with guided RFP",
+      "Process optimization plan"
     ],
     highlighted: true
   },
   {
-    title: "AI & Automation Innovation Package",
-    description: "Automate repetitive tasks and integrate AI for smarter operations and better customer experience.",
-    price: "$20,000 - $40,000",
-    duration: "Based on automation scope",
+    title: "Comprehensive Advisory",
+    description: "Ongoing strategic partnership and continuous improvement for larger organizations.",
+    price: "$15,000+/quarter",
+    duration: "Ongoing partnership",
+    icon: <BadgeAlert className="h-8 w-8 text-primary mb-3" />,
+    services: [
+      "All Operational Consulting deliverables",
+      "Ongoing advisory sessions (monthly or quarterly)",
+      "Review of QA performance metrics over time",
+      "High-level stakeholder presentations to align leadership"
+    ],
+    deliverables: [
+      "Regular performance analysis reports",
+      "Executive summaries for leadership",
+      "Strategic alignment with technical teams"
+    ],
+    highlighted: false
+  }
+];
+
+// Define the technology services packages
+const technologyPackages: ServicePackage[] = [
+  {
+    title: "Integration Setup",
+    description: "Connecting core systems to get data flowing for clients who want to start small.",
+    price: "$15,000 - $25,000",
+    duration: "4-6 weeks",
+    icon: <Database className="h-8 w-8 text-primary mb-3" />,
+    services: [
+      "Initial setup and configuration of QA tool with one CRM",
+      "Basic authentication and data piping from one data source",
+      "Simple Slack channel alert integration for flagged tickets"
+    ],
+    deliverables: [
+      "Working production or staging environment",
+      "CRM integration",
+      "Basic alert system"
+    ],
+    highlighted: false
+  },
+  {
+    title: "Custom Feature Development",
+    description: "Building specialized functionalities and AI-driven insights for enhanced QA processes.",
+    price: "$30,000 - $60,000",
+    duration: "8-12 weeks",
+    icon: <Cpu className="h-8 w-8 text-primary mb-3" />,
+    services: [
+      "Everything in Integration Setup, plus:",
+      "Advanced API integrations with multiple CRMs and data sources",
+      "AI-powered policy violation detection and sentiment analysis",
+      "Custom dashboards and reporting with trending and analytics"
+    ],
+    deliverables: [
+      "Advanced integrations setup",
+      "AI-driven QA tools",
+      "Custom dashboards and reports",
+      "QA queue management features"
+    ],
+    highlighted: true
+  },
+  {
+    title: "Enterprise Implementation",
+    description: "Full-scale deployment, customization, and continuous iteration for large organizations.",
+    price: "$75,000+",
+    duration: "3-6 months + ongoing",
     icon: <Lightbulb className="h-8 w-8 text-primary mb-3" />,
     services: [
-      "Intelligent Automation & AI: Implement automation and AI to enhance operational efficiency.",
-      "System Integration & Workflows: Ensure systems work seamlessly with new AI tools.",
-      "Training & Process Optimization: Equip your team to work with automated systems."
+      "Everything in Custom Feature Development, plus:",
+      "Enterprise-grade security and compliance considerations",
+      "Multi-environment setup and CI/CD pipeline creation",
+      "Advanced analytics and natural language query capabilities",
+      "Ongoing development retainer for updates and enhancements"
     ],
     deliverables: [
-      "AI implementation plan",
-      "Automation setup and testing",
-      "Training on using automation tools"
-    ],
-    highlighted: false
-  },
-  {
-    title: "Comprehensive Transformation Package",
-    description: "Full-service, end-to-end solution for businesses looking to completely overhaul their CX and operations.",
-    price: "$40,000 - $75,000",
-    duration: "Depends on engagement scope",
-    icon: <ArrowRight className="h-8 w-8 text-primary mb-3" />,
-    services: [
-      "Fractional CX Leadership: Ongoing leadership for the transformation.",
-      "Strategic Consulting: Align business strategy with CX and operational goals.",
-      "System Integration & Workflows: Integrate new systems for operational excellence.",
-      "Tool Selections, Audits, & Migrations: Choose the best tools for your needs.",
-      "Training & Process Optimization: Equip your teams with necessary adaptation skills."
-    ],
-    deliverables: [
-      "A comprehensive transformation strategy",
-      "New systems, tools, and processes implemented",
-      "Ongoing leadership support and training"
-    ],
-    highlighted: false
-  },
-  {
-    title: "CX Audit & Optimization Package",
-    description: "For businesses that already have CX processes in place but need an audit and optimization for greater impact.",
-    price: "$7,500 - $15,000",
-    duration: "Based on business size",
-    icon: <ListChecks className="h-8 w-8 text-primary mb-3" />,
-    services: [
-      "Tool Selections, Audits, & Migrations: Conduct an audit of existing CX tools.",
-      "Training & Process Optimization: Identify gaps and provide training to improve performance.",
-      "System Integration & Workflows: Streamline systems and improve cross-team workflows."
-    ],
-    deliverables: [
-      "CX audit report with recommended actions",
-      "Process improvement plan and training schedule",
-      "Optimized workflows"
-    ],
-    highlighted: false
-  },
-  {
-    title: "Executive CX Workshop Package",
-    description: "Short-term, intensive workshops that will kickstart your CX transformation.",
-    price: "$5,000 - $10,000",
-    duration: "Half-day to full-day",
-    icon: <Users className="h-8 w-8 text-primary mb-3" />,
-    services: [
-      "Strategic Consulting: One-day workshop for executive leaders on CX strategy.",
-      "Training & Process Optimization: Targeted training for specific teams."
-    ],
-    deliverables: [
-      "Workshop presentations and materials",
-      "Actionable steps for CX transformation"
+      "Enterprise-ready deployment",
+      "Advanced security configurations",
+      "Natural language query system",
+      "Dedicated support and maintenance"
     ],
     highlighted: false
   }
@@ -123,14 +134,56 @@ const ServicePackagesSection: React.FC = () => {
       <h2 className="heading-lg mb-6">
         Tailored Solutions for Your Business
       </h2>
-      <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-        Choose from our carefully designed service packages or mix and match to meet your specific needs.
+      <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-16">
+        Our service packages are designed to deliver exactly what you need, whether it's strategic guidance or hands-on technical implementation.
       </p>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-        {servicePackages.map((pkg, index) => (
-          <ServicePackageCard key={pkg.title} pkg={pkg} index={index} />
-        ))}
+      {/* Consulting Packages */}
+      <div className="mb-16">
+        <h3 className="text-2xl font-semibold mb-6">Consulting Packages</h3>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+          Strategic advisory services to help define your QA approach, policies, and success metrics.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {consultingPackages.map((pkg, index) => (
+            <ServicePackageCard key={pkg.title} pkg={pkg} index={index} />
+          ))}
+        </div>
+      </div>
+      
+      {/* Technology Services Packages */}
+      <div>
+        <h3 className="text-2xl font-semibold mb-6">Technology Services Packages</h3>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
+          Hands-on technical implementation to build out your QA tools, integrations, and AI features.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {technologyPackages.map((pkg, index) => (
+            <ServicePackageCard key={pkg.title} pkg={pkg} index={index + consultingPackages.length} />
+          ))}
+        </div>
+      </div>
+      
+      {/* How These Packages Work Together */}
+      <div className="mt-16 bg-secondary/50 p-8 rounded-xl">
+        <h3 className="text-2xl font-semibold mb-4">How These Packages Work Together</h3>
+        <p className="text-lg text-muted-foreground mb-6">
+          Our packages are designed to be flexible and can be combined to create a comprehensive solution.
+        </p>
+        <ul className="text-left max-w-3xl mx-auto space-y-2">
+          <li className="flex items-start">
+            <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+            <span>Purchase <strong>Consulting packages</strong> if you want strategic input but will handle implementation yourself.</span>
+          </li>
+          <li className="flex items-start">
+            <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+            <span>Choose <strong>Technology Services</strong> if you already have a defined QA strategy and need technical execution.</span>
+          </li>
+          <li className="flex items-start">
+            <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+            <span>Combine <strong>Consulting + Technology</strong> for an end-to-end engagement covering both planning and implementation.</span>
+          </li>
+        </ul>
       </div>
     </div>
   );
