@@ -6,7 +6,6 @@ import {
   PieChart, BarChartHorizontal, Activity, LineChart, 
   Users, HelpCircle, Code, MessageSquare, Slack
 } from 'lucide-react';
-import Image from 'next/image';
 
 interface TechCardProps {
   name: string;
