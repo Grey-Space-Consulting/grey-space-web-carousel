@@ -36,7 +36,7 @@ const Navbar = () => {
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
-          {["Services", "About", "Technologies", "Partners", "Contact"].map((item) => (
+          {["Services", "Testimonials"].map((item) => (
             <a
               key={item}
               href={`/#${item.toLowerCase()}`}
@@ -70,7 +70,7 @@ const Navbar = () => {
         )}
       >
         <nav className="flex flex-col gap-6">
-          {["Services", "About", "Technologies", "Partners", "Contact"].map((item) => (
+          {["Services", "Testimonials"].map((item) => (
             <a
               key={item}
               href={`/#${item.toLowerCase()}`}

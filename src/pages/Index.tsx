@@ -6,8 +6,6 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
-import TechnologiesSection from "@/components/sections/TechnologiesSection";
-import PartnersSection from "@/components/sections/PartnersSection";
 import CTASection from "@/components/sections/CTASection";
 
 const Index = () => {
@@ -16,16 +14,12 @@ const Index = () => {
   // Create individual refs for each section
   const testimonialsSectionRef = useRef<HTMLElement>(null);
   const servicesSectionRef = useRef<HTMLElement>(null);
-  const technologiesSectionRef = useRef<HTMLElement>(null);
-  const partnersSectionRef = useRef<HTMLElement>(null);
   const ctaSectionRef = useRef<HTMLElement>(null);
 
   // Collect all refs for the intersection observer
   const sectionRefs = [
     testimonialsSectionRef,
     servicesSectionRef,
-    technologiesSectionRef,
-    partnersSectionRef,
     ctaSectionRef
   ];
 
@@ -65,8 +59,6 @@ const Index = () => {
       <HeroSection />
       <TestimonialsSection sectionRef={testimonialsSectionRef} />
       <ServicesSection sectionRef={servicesSectionRef} />
-      <TechnologiesSection sectionRef={technologiesSectionRef} />
-      <PartnersSection sectionRef={partnersSectionRef} />
       <CTASection sectionRef={ctaSectionRef} />
       
       <Footer />

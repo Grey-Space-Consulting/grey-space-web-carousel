@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-card/50 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-5">
               <div className="h-8 w-8 bg-primary/20 rounded-md flex items-center justify-center">
@@ -33,26 +33,10 @@ const Footer = () => {
           <div>
             <h3 className="font-medium text-lg mb-5">Quick Links</h3>
             <ul className="space-y-3">
-              {["Home", "Services", "About Us", "Technologies", "Partners", "Contact"].map((item) => (
+              {["Home", "Services", "Testimonials"].map((item) => (
                 <li key={item}>
                   <a 
                     href={`/#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="font-medium text-lg mb-5">Services</h3>
-            <ul className="space-y-3">
-              {["Operations Consulting", "Technology Implementation", "Process Optimization", "Digital Transformation", "Custom Solutions"].map((item) => (
-                <li key={item}>
-                  <a 
-                    href="#"
                     className="text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {item}
