@@ -59,13 +59,15 @@ const TestimonialCarousel = () => {
               key={testimonial.id} 
               className={`pl-4 ${
                 itemsPerView === 1 
-                  ? 'basis-full' 
+                  ? 'basis-full min-h-[280px]' 
                   : itemsPerView === 2 
                     ? 'basis-1/2 md:basis-1/2' 
                     : 'basis-full sm:basis-1/2 lg:basis-1/3'
               }`}
             >
-              <TestimonialCard testimonial={testimonial} />
+              <div className="h-full">
+                <TestimonialCard testimonial={testimonial} />
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>

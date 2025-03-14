@@ -12,7 +12,7 @@ const TestimonialsSection = ({ sectionRef }: TestimonialsSectionProps) => {
       ref={sectionRef}
       className="pb-12 sm:pb-16 md:pb-24 pt-8 sm:pt-10 md:pt-12 px-0 opacity-0"
     >
-      <div className="max-w-7xl mx-auto mb-4 sm:mb-6 md:mb-8 px-4 md:px-10">
+      <div className="max-w-7xl mx-auto mb-6 sm:mb-6 md:mb-8 px-4 md:px-10">
         <div className="inline-block px-3 md:px-4 py-1 rounded-full bg-primary/10 text-primary text-xs md:text-sm mb-3 md:mb-6">
           Client Success Stories
         </div>
