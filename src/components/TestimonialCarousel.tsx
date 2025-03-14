@@ -8,30 +8,16 @@ import {
 } from "@/components/ui/carousel";
 import { testimonials } from "@/data/testimonials";
 import TestimonialCard from "./TestimonialCard";
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useCarouselAutoplay } from "@/hooks/useCarouselAutoplay";
 
 const TestimonialCarousel = () => {
-  const [autoPlay, setAutoPlay] = useState(true);
   const [api, setApi] = useState<{ scrollNext: () => void } | null>(null);
-
-  const scrollNext = useCallback(() => {
-    if (api) {
-      api.scrollNext();
-    }
-  }, [api]);
-
-  useEffect(() => {
-    let interval: number;
-    
-    if (autoPlay && api) {
-      interval = setInterval(scrollNext, 5000) as unknown as number;
-    }
-    
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [autoPlay, api, scrollNext]);
+  const { pauseAutoplay, resumeAutoplay } = useCarouselAutoplay(api, {
+    interval: 5000,
+    initialAutoPlay: true
+  });
 
   return (
     <Carousel
@@ -42,8 +28,8 @@ const TestimonialCarousel = () => {
       }}
       className="w-full max-w-full"
       setApi={setApi}
-      onMouseEnter={() => setAutoPlay(false)}
-      onMouseLeave={() => setAutoPlay(true)}
+      onMouseEnter={pauseAutoplay}
+      onMouseLeave={resumeAutoplay}
     >
       <ScrollArea className="w-full">
         <CarouselContent className="-ml-4">
