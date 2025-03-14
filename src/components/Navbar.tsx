@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -86,6 +86,14 @@ const Navbar = () => {
         )}
       >
         <nav className="flex flex-col gap-6">
+          <Link
+            to="/"
+            className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border flex items-center gap-2"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Home size={20} />
+            Home
+          </Link>
           <Link
             to="/case-studies"
             className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border"
