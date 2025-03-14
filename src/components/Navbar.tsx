@@ -50,6 +50,12 @@ const Navbar = () => {
             Industries
           </Link>
           <Link
+            to="/services"
+            className="text-foreground/80 hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all"
+          >
+            Services
+          </Link>
+          <Link
             to="/causes"
             className="text-foreground/80 hover:text-foreground transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all"
           >
@@ -93,6 +99,13 @@ const Navbar = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Industries
+          </Link>
+          <Link
+            to="/services"
+            className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Services
           </Link>
           <Link
             to="/causes"
