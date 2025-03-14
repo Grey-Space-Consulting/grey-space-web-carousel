@@ -52,6 +52,19 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
           </div>
         )}
         
+        {study.id === "springhealth" && (
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            <div className="flex items-center gap-2">
+              <DollarSign size={16} className="text-primary" />
+              <span className="text-sm">$300K annual savings</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock size={16} className="text-primary" />
+              <span className="text-sm">69% faster wait times</span>
+            </div>
+          </div>
+        )}
+        
         <button 
           onClick={() => onClick(study.id)}
           className="flex items-center gap-1 text-primary hover:underline"
