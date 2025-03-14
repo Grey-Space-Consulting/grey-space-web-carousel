@@ -21,6 +21,19 @@ const CaseStudyPagination: React.FC<CaseStudyPaginationProps> = ({
   activeStudy, 
   onCaseStudyClick 
 }) => {
+  // Helper function to get display name for pagination
+  const getDisplayName = (id: string) => {
+    switch(id) {
+      case 'turo': return 'Turo';
+      case 'sweetgreen': return 'Sweetgreen';
+      case 'springhealth': return 'Spring Health';
+      case 'hopskipdrive': return 'HopSkipDrive';
+      case 'healthcare': return 'Healthcare';
+      case 'retail': return 'Retail';
+      default: return id;
+    }
+  };
+
   return (
     <div className="border-t pt-8 mt-12">
       <Pagination>
@@ -38,7 +51,7 @@ const CaseStudyPagination: React.FC<CaseStudyPaginationProps> = ({
                   onCaseStudyClick(s.id);
                 }}
               >
-                {s.id === 'turo' ? 'Turo' : s.id === 'healthcare' ? 'Healthcare' : 'Retail'}
+                {getDisplayName(s.id)}
               </PaginationLink>
             </PaginationItem>
           ))}
