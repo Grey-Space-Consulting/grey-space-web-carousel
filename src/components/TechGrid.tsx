@@ -56,17 +56,17 @@ const technologies: Technology[] = [
 const TechCard = ({ name, category, icon, logoUrl, index }: TechCardProps) => {
   return (
     <div 
-      className="glass-card rounded-xl p-4 flex flex-col items-center text-center hover:translate-y-[-5px] transition-all duration-300 animate-fade-in"
+      className="glass-card rounded-xl p-3 flex flex-col items-center text-center hover:translate-y-[-5px] transition-all duration-300 animate-fade-in"
       style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className="h-12 w-12 rounded-lg bg-secondary/50 mb-3 flex items-center justify-center text-primary overflow-hidden">
+      <div className="h-10 w-10 rounded-lg bg-secondary/50 mb-2 flex items-center justify-center text-primary overflow-hidden">
         {logoUrl ? (
-          <img src={logoUrl} alt={name} className="max-h-10 max-w-10 object-contain" />
+          <img src={logoUrl} alt={name} className="max-h-8 max-w-8 object-contain" />
         ) : (
           icon
         )}
       </div>
-      <h3 className="font-medium text-sm mb-0.5">{name}</h3>
+      <h3 className="font-medium text-xs mb-0.5">{name}</h3>
       <p className="text-xs text-muted-foreground">{category}</p>
     </div>
   );
@@ -74,7 +74,7 @@ const TechCard = ({ name, category, icon, logoUrl, index }: TechCardProps) => {
 
 const TechGrid = () => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
       {technologies.map((tech, index) => (
         <TechCard
           key={tech.name}
