@@ -34,7 +34,7 @@ const TestimonialCarousel = () => {
       <ScrollArea className="w-full">
         <CarouselContent className="-ml-4">
           {testimonials.map((testimonial) => (
-            <CarouselItem key={testimonial.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+            <CarouselItem key={testimonial.id} className="pl-4 md:basis-2/5 lg:basis-1/3">
               <TestimonialCard testimonial={testimonial} />
             </CarouselItem>
           ))}
