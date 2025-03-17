@@ -81,5 +81,13 @@ export const testimonials: Testimonial[] = [
     company: "Kinship (Mars Group)",
     quote: "I have been working with Greyspace on several engagements in my role as Head of Customer Experience for Kinship Partners (a division of Mars) The whole Greyspace has been a great combination of knowledgable, dedicated and flexible. As a former pro services lead, I appreciate the level of thought and care they bring to each day - making me a happy client. I'd recommend them in a heartbeat.",
     rating: 5
+  },
+  {
+    id: 10,
+    name: "Katie Spinosa",
+    role: "Head of Member Experience",
+    company: "Seed Health",
+    quote: "We hired Grey Space to help us transform our Queues and Routing experience within Kustomer's ticketing platform. The level of knowledge, professionalism, and overall responsiveness are outstanding!! We will continue our partnership with them for ongoing support. Truly a pleasure to work with their team.",
+    rating: 5
   }
 ];
