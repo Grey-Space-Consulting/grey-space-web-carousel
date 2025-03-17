@@ -65,5 +65,21 @@ export const testimonials: Testimonial[] = [
     company: "Prose Beauty",
     quote: "Grey Space has been an key partner in helping to grow my CX team! They're great to work with, super knowledgeable, and thoughtful in their approach. They really understand what we're trying to accomplish and their help has been invaluable!",
     rating: 5
+  },
+  {
+    id: 8,
+    name: "David Horowitz",
+    role: "Chief Information Officer",
+    company: "PuppySpot",
+    quote: "Been using Grey Space at PuppySpot for over a year now and they are very responsive to our needs and are now an integral part of our process for managing and updating our Kustomer CRM. They are experts on the system and are able to work with you to determine the best solution. They also do not nickel and dime you against the clock like some other groups. Love working with them and they are a complement to our team.",
+    rating: 5
+  },
+  {
+    id: 9,
+    name: "Evan Shumeyko",
+    role: "Head of Customer Experience",
+    company: "Kinship (Mars Group)",
+    quote: "I have been working with Greyspace on several engagements in my role as Head of Customer Experience for Kinship Partners (a division of Mars) The whole Greyspace has been a great combination of knowledgable, dedicated and flexible. As a former pro services lead, I appreciate the level of thought and care they bring to each day - making me a happy client. I'd recommend them in a heartbeat.",
+    rating: 5
   }
 ];
