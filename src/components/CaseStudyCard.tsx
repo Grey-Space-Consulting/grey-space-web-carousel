@@ -18,6 +18,8 @@ const getDetailedStudy = (id: string) => {
 // Get solution tags for a case study based on its ID
 const getSolutionTags = (id: string): string[] => {
   switch (id) {
+    case "seedhealth":
+      return ["CRM", "Analytics", "Automation", "Support"];
     case "turo":
       return ["Migration", "Integration"];
     case "sweetgreen":
@@ -90,6 +92,15 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         icon: <MessageSquare size={14} className="text-primary" />,
         text: "Reduced wait times"
       });
+    } else if (study.id === "seedhealth") {
+      stats.push({
+        icon: <MessageSquare size={14} className="text-primary" />,
+        text: "Improved response times"
+      });
+      stats.push({
+        icon: <BarChart size={14} className="text-primary" />,
+        text: "Reduced cost per interaction"
+      });
     }
     
     return stats;
@@ -100,30 +111,30 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
   
   return (
     <div className="glass-card rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-      <div className="h-36 bg-card/80 overflow-hidden">
+      <div className="h-28 bg-card/80 overflow-hidden">
         <img 
           src={study.image} 
           alt={study.title} 
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
-      <div className="p-4 flex-1 flex flex-col">
+      <div className="p-3 flex-1 flex flex-col">
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-1 text-primary text-xs">
             <Briefcase size={12} />
-            <span>{study.category}</span>
+            <span className="truncate">{study.category}</span>
           </div>
         </div>
         
         {detailedStudy && (
-          <div className="font-bold text-sm text-primary mb-1">
+          <div className="font-bold text-sm text-primary mb-1 truncate">
             {detailedStudy.client}
           </div>
         )}
         
-        <h3 className="text-base font-semibold mb-1 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
+        <h3 className="text-sm font-semibold mb-1 group-hover:text-primary transition-colors duration-300 line-clamp-2">{study.title}</h3>
         
-        <p className="text-xs text-muted-foreground mb-3 flex-grow">{study.excerpt}</p>
+        <p className="text-xs text-muted-foreground mb-2 flex-grow line-clamp-2">{study.excerpt}</p>
         
         {/* Display solution tags */}
         {solutionTags.length > 0 && (
@@ -131,7 +142,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
             {solutionTags.map((solution, index) => (
               <span 
                 key={index} 
-                className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium text-foreground"
+                className="inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium text-foreground"
               >
                 {solution}
               </span>
@@ -140,11 +151,11 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         )}
         
         {stats.length > 0 && (
-          <div className="grid grid-cols-2 gap-2 mb-2">
+          <div className="grid grid-cols-1 gap-1 mb-2">
             {stats.map((stat, index) => (
               <div key={index} className="flex items-center gap-1">
                 {stat.icon}
-                <span className="text-xs">{stat.text}</span>
+                <span className="text-xs truncate">{stat.text}</span>
               </div>
             ))}
           </div>
@@ -152,9 +163,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         
         <button 
           onClick={() => onClick(study.id)}
-          className="flex items-center gap-1 text-primary text-sm hover:underline mt-auto"
+          className="flex items-center gap-1 text-primary text-xs hover:underline mt-auto"
         >
-          Read Case Study <ChevronRight size={14} />
+          Read Case Study <ChevronRight size={12} />
         </button>
       </div>
     </div>

@@ -15,19 +15,19 @@ const DetailedCaseStudy: React.FC<DetailedCaseStudyProps> = ({ study, isActive }
     <div 
       id={study.id}
       className={cn(
-        "mb-16 pt-16 -mt-16 scroll-mt-24 transition-opacity duration-500",
+        "mb-12 pt-16 -mt-16 scroll-mt-24 transition-opacity duration-500",
         isActive ? "opacity-100" : "opacity-80"
       )}
     >
       <Card className="overflow-hidden border-0 shadow-lg">
-        <div className="h-64 w-full relative">
+        <div className="h-56 w-full relative">
           <img
             src={study.heroImage} 
             alt={study.title}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-            <div className="p-6 text-white">
+            <div className="p-5 text-white">
               <div className="flex items-center gap-2 text-primary-foreground/80 text-sm mb-2">
                 <Briefcase size={16} />
                 <span>{study.category}</span>
@@ -37,49 +37,46 @@ const DetailedCaseStudy: React.FC<DetailedCaseStudyProps> = ({ study, isActive }
           </div>
         </div>
         
-        <CardContent className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-            <div className="space-y-3 col-span-2">
-              <h3 className="text-base font-semibold">Client</h3>
-              <div className="flex flex-col gap-2">
-                <h4 className="text-xl font-bold text-primary">{study.client}</h4>
+        <CardContent className="p-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold">Client</h3>
+              <div className="flex flex-col gap-1">
+                <h4 className="text-lg font-bold text-primary">{study.client}</h4>
               </div>
             </div>
-            <div className="space-y-3 col-span-2">
-              <h3 className="text-base font-semibold">Industry</h3>
-              <p>{study.industry}</p>
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold">Industry</h3>
+              <p className="text-sm">{study.industry}</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold">Timeframe</h3>
+              <p className="text-sm">{study.timeframe}</p>
+            </div>
+            <div className="space-y-2">
+              <h3 className="text-sm font-semibold">Results</h3>
+              <p className="text-sm text-primary font-medium">{study.results}</p>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="space-y-3">
-              <h3 className="text-base font-semibold">Timeframe</h3>
-              <p>{study.timeframe}</p>
-            </div>
-            <div className="space-y-3">
-              <h3 className="text-base font-semibold">Results</h3>
-              <p className="text-primary font-medium">{study.results}</p>
-            </div>
-          </div>
-          
-          <div className="space-y-6 mb-8">
+          <div className="space-y-5 mb-6">
             <div>
-              <h3 className="text-lg font-semibold mb-3">The Challenge</h3>
-              <p className="text-muted-foreground leading-relaxed">{study.challenge}</p>
+              <h3 className="text-base font-semibold mb-2">The Challenge</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{study.challenge}</p>
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-3">Our Approach</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">{study.approach}</p>
+              <h3 className="text-base font-semibold mb-2">Our Approach</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{study.approach}</p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
                 {study.keyPoints.map((point, idx) => (
                   <Card key={idx} className="border bg-muted/30">
-                    <CardContent className="pt-4 p-4">
-                      <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                    <CardContent className="pt-3 p-3">
+                      <div className="h-8 w-8 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
                         {point.icon}
                       </div>
-                      <h4 className="font-medium mb-1">{point.title}</h4>
+                      <h4 className="text-sm font-medium mb-1">{point.title}</h4>
                       <p className="text-xs text-muted-foreground">{point.description}</p>
                     </CardContent>
                   </Card>
@@ -88,8 +85,8 @@ const DetailedCaseStudy: React.FC<DetailedCaseStudyProps> = ({ study, isActive }
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-3">The Results</h3>
-              <p className="text-muted-foreground leading-relaxed">{study.resultsDetails}</p>
+              <h3 className="text-base font-semibold mb-2">The Results</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{study.resultsDetails}</p>
             </div>
           </div>
         </CardContent>
