@@ -13,7 +13,7 @@ import MarketplaceTab from "./MarketplaceTab";
 import EcommerceTab from "./EcommerceTab";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-// Create context for filtering functionality
+// Create context with minimum required props (no filtering)
 import React from "react";
 
 export interface FilterContextType {
@@ -22,7 +22,7 @@ export interface FilterContextType {
 }
 
 export const FilterContext = React.createContext<FilterContextType>({
-  selectedSolutions: ["All"],
+  selectedSolutions: [],
   isFiltering: false
 });
 
@@ -36,7 +36,7 @@ const IndustryTabs = () => {
 
   // Simplified FilterContext with no active filtering
   const filterContextValue = {
-    selectedSolutions: ["All"],
+    selectedSolutions: [],
     isFiltering: false
   };
 

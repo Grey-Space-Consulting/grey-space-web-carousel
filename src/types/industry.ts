@@ -12,16 +12,15 @@ export interface CaseStudyPreview {
   description: string;
   image: string;
   industry: string;
-  solutions?: string[]; // Added solutions array for filtering
+  solutions?: string[]; // This is still kept for future use if needed
   metrics: {
     icon: React.ReactNode;
     text: string;
   }[];
 }
 
-// Define solution categories for filtering
+// Define solution categories for filtering - removing "All" since we're not using it anymore
 export type SolutionCategory = 
-  | "All"
   | "CRM"
   | "Automation"
   | "Chatbots"

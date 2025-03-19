@@ -12,16 +12,7 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
   const { selectedSolutions, isFiltering } = useContext(FilterContext);
   const navigate = useNavigate();
   
-  // If filtering is active, check if this case study should be shown
-  if (isFiltering && study.solutions) {
-    const hasMatchingSolution = study.solutions.some(solution => 
-      selectedSolutions.includes(solution as any));
-    
-    // Hide this card if it doesn't match the selected filters
-    if (!hasMatchingSolution) {
-      return null;
-    }
-  }
+  // We're no longer filtering, so we always show all cards
 
   // Navigate to case studies page when the card is clicked
   const handleCardClick = () => {
