@@ -5,7 +5,7 @@ import {
   Phone, Headphones, Zap, Network, Bot, Layers, 
   PieChart, BarChartHorizontal, Activity, LineChart, 
   Users, HelpCircle, Code, MessageSquare, Slack,
-  SquareCode
+  SquareCode, Plus
 } from 'lucide-react';
 
 interface TechCardProps {
@@ -14,6 +14,7 @@ interface TechCardProps {
   icon?: React.ReactNode;
   logoUrl?: string;
   index: number;
+  isMoreCard?: boolean;
 }
 
 interface Technology {
@@ -55,13 +56,13 @@ const technologies: Technology[] = [
   { name: "NiceIncontact", category: "Communications", logoUrl: "https://www.celigo.com/wp-content/uploads/2024/01/nice-cxone-logo.jpg" },
 ];
 
-const TechCard = ({ name, category, icon, logoUrl, index }: TechCardProps) => {
+const TechCard = ({ name, category, icon, logoUrl, index, isMoreCard }: TechCardProps) => {
   return (
     <div 
-      className="glass-card rounded-xl p-3 flex flex-col items-center text-center hover:translate-y-[-5px] transition-all duration-300 animate-fade-in"
+      className={`glass-card rounded-xl p-3 flex flex-col items-center text-center hover:translate-y-[-5px] transition-all duration-300 animate-fade-in ${isMoreCard ? 'cursor-pointer hover:bg-primary/10' : ''}`}
       style={{ animationDelay: `${index * 50}ms` }}
     >
-      <div className="h-10 w-10 rounded-lg bg-secondary/50 mb-2 flex items-center justify-center text-primary overflow-hidden">
+      <div className={`h-10 w-10 rounded-lg ${isMoreCard ? 'bg-primary/20' : 'bg-secondary/50'} mb-2 flex items-center justify-center text-primary overflow-hidden`}>
         {logoUrl ? (
           <img src={logoUrl} alt={name} className="max-h-8 max-w-8 object-contain" />
         ) : (
@@ -69,12 +70,17 @@ const TechCard = ({ name, category, icon, logoUrl, index }: TechCardProps) => {
         )}
       </div>
       <h3 className="font-medium text-xs mb-0.5">{name}</h3>
-      <p className="text-xs text-muted-foreground">{category}</p>
+      {!isMoreCard && <p className="text-xs text-muted-foreground">{category}</p>}
     </div>
   );
 };
 
 const TechGrid = () => {
+  const handleMoreClick = () => {
+    // This could open a dialog, navigate to a dedicated page, or trigger any other action
+    console.log('More technologies clicked');
+  };
+  
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
       {technologies.map((tech, index) => (
@@ -87,6 +93,18 @@ const TechGrid = () => {
           index={index}
         />
       ))}
+      
+      {/* More card */}
+      <div onClick={handleMoreClick}>
+        <TechCard
+          key="more"
+          name="+ More"
+          category=""
+          icon={<Plus className="h-5 w-5" />}
+          index={technologies.length}
+          isMoreCard={true}
+        />
+      </div>
     </div>
   );
 };
