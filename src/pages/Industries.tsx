@@ -10,14 +10,18 @@ const Industries = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   
   useEffect(() => {
+    // Add fade-in effect when page loads
     setIsLoaded(true);
+    
+    // Scroll to top when page loads
+    window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
-      <main className="pt-28 pb-24">
+      <main className={`pt-28 pb-24 transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {/* Hero Section */}
         <IndustriesHero />
         

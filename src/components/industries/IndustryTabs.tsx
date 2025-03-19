@@ -13,7 +13,7 @@ import MarketplaceTab from "./MarketplaceTab";
 import EcommerceTab from "./EcommerceTab";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-// Simple context with no filtering functionality
+// Create context for filtering functionality
 import React from "react";
 
 export interface FilterContextType {

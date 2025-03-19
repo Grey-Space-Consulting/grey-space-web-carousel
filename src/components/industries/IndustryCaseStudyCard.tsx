@@ -30,15 +30,23 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
   
   return (
     <div 
-      className="glass-card rounded-xl overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+      className="glass-card rounded-xl overflow-hidden h-full flex flex-col hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
       onClick={handleCardClick}
+      role="button"
+      tabIndex={0}
+      aria-label={`View case study: ${study.title}`}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleCardClick();
+        }
+      }}
     >
       <div className="relative h-48 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent z-10"></div>
         <img 
           src={study.image} 
           alt={study.title} 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
       <div className="p-6 flex-grow flex flex-col">
