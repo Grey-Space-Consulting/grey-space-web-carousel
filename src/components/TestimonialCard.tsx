@@ -30,9 +30,9 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
             <p className="text-muted-foreground text-xs md:text-sm">
               {testimonial.role}
             </p>
-            <p className="text-primary font-semibold text-xs md:text-sm">
+            <h5 className="text-primary font-bold text-xs md:text-sm">
               {testimonial.company}
-            </p>
+            </h5>
           </div>
         </div>
         <div className="flex">

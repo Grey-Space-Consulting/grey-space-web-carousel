@@ -42,14 +42,7 @@ const DetailedCaseStudy: React.FC<DetailedCaseStudyProps> = ({ study, isActive }
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Client</h3>
               <div className="flex flex-col gap-3">
-                <div className="h-16 flex items-center">
-                  <img
-                    src={study.clientLogo}
-                    alt={study.client}
-                    className="max-h-full max-w-full object-contain"
-                  />
-                </div>
-                <span className="text-xl font-semibold text-primary">{study.client}</span>
+                <h4 className="text-2xl font-bold text-primary">{study.client}</h4>
               </div>
             </div>
             <div className="space-y-4">

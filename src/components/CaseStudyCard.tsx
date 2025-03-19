@@ -82,23 +82,13 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
           </div>
           
           {detailedStudy && (
-            <div className="h-10 flex items-center">
-              {detailedStudy.clientLogo && (
-                <img 
-                  src={detailedStudy.clientLogo} 
-                  alt={detailedStudy.client}
-                  className="max-h-full object-contain"
-                />
-              )}
+            <div className="font-bold text-lg text-primary">
+              {detailedStudy.client}
             </div>
           )}
         </div>
         
         <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
-        
-        {detailedStudy && (
-          <div className="text-base font-medium text-primary mb-3">{detailedStudy.client}</div>
-        )}
         
         <p className="text-muted-foreground mb-4">{study.excerpt}</p>
         
