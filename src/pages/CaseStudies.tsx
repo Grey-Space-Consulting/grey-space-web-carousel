@@ -44,21 +44,21 @@ const CaseStudies = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="pt-24 pb-20 px-6 md:px-10">
+      <main className="pt-20 pb-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16 animate-fade-in">
-            <div className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm mb-6">
+          <div className="mb-10 animate-fade-in">
+            <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-4">
               Our Success Stories
             </div>
-            <h1 className="heading-lg mb-6 max-w-4xl">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 max-w-4xl">
               Case Studies
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
+            <p className="text-lg text-muted-foreground max-w-2xl">
               Explore how we've helped organizations transform their operations with innovative technology solutions.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "200ms" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 animate-fade-in" style={{ animationDelay: "200ms" }}>
             {caseStudies.map((study) => (
               <CaseStudyCard 
                 key={study.id} 
@@ -69,7 +69,7 @@ const CaseStudies = () => {
           </div>
           
           {/* Detailed Case Studies */}
-          <div className="mt-32">
+          <div className="mt-20">
             {detailedCaseStudies.map((study) => (
               <DetailedCaseStudy 
                 key={study.id}

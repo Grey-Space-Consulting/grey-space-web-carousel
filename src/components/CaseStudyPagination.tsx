@@ -34,7 +34,7 @@ const CaseStudyPagination: React.FC<CaseStudyPaginationProps> = ({
   };
 
   return (
-    <div className="border-t pt-8 mt-12">
+    <div className="border-t pt-6 mt-8">
       <Pagination>
         <PaginationContent>
           <PaginationItem>
@@ -49,6 +49,7 @@ const CaseStudyPagination: React.FC<CaseStudyPaginationProps> = ({
                   e.preventDefault();
                   onCaseStudyClick(s.id);
                 }}
+                className="text-sm px-3"
               >
                 {getDisplayName(s.id)}
               </PaginationLink>

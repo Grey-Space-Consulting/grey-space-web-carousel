@@ -58,7 +58,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
     // Only include results, not timeframes
     if (detailedStudy.results) {
       stats.push({
-        icon: <DollarSign size={16} className="text-primary" />,
+        icon: <DollarSign size={14} className="text-primary" />,
         text: detailedStudy.results
       });
     }
@@ -68,26 +68,26 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
       // No additional Turo-specific stats needed
     } else if (study.id === "sweetgreen") {
       stats.push({
-        icon: <BarChart size={16} className="text-primary" />,
+        icon: <BarChart size={14} className="text-primary" />,
         text: "35% auto-deflection"
       });
     } else if (study.id === "springhealth") {
       stats.push({
-        icon: <Clock size={16} className="text-primary" />,
+        icon: <Clock size={14} className="text-primary" />,
         text: "69% faster wait times"
       });
     } else if (study.id === "hopskipdrive") {
       stats.push({
-        icon: <Clock size={16} className="text-primary" />,
+        icon: <Clock size={14} className="text-primary" />,
         text: "45% reduced wait times"
       });
     } else if (study.id === "hellotech") {
       stats.push({
-        icon: <Clock size={16} className="text-primary" />,
+        icon: <Clock size={14} className="text-primary" />,
         text: "Accelerated deployment schedule"
       });
       stats.push({
-        icon: <MessageSquare size={16} className="text-primary" />,
+        icon: <MessageSquare size={14} className="text-primary" />,
         text: "Reduced wait times"
       });
     }
@@ -99,39 +99,39 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
   const solutionTags = getSolutionTags(study.id);
   
   return (
-    <div className="glass-card rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
-      <div className="h-52 bg-card/80 overflow-hidden">
+    <div className="glass-card rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+      <div className="h-36 bg-card/80 overflow-hidden">
         <img 
           src={study.image} 
           alt={study.title} 
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2 text-primary text-sm">
-            <Briefcase size={16} />
+      <div className="p-4 flex-1 flex flex-col">
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex items-center gap-1 text-primary text-xs">
+            <Briefcase size={12} />
             <span>{study.category}</span>
           </div>
         </div>
         
         {detailedStudy && (
-          <div className="font-bold text-xl text-primary mb-2">
+          <div className="font-bold text-sm text-primary mb-1">
             {detailedStudy.client}
           </div>
         )}
         
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
+        <h3 className="text-base font-semibold mb-1 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
         
-        <p className="text-muted-foreground mb-4">{study.excerpt}</p>
+        <p className="text-xs text-muted-foreground mb-3 flex-grow">{study.excerpt}</p>
         
         {/* Display solution tags */}
         {solutionTags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap gap-1 mb-2">
             {solutionTags.map((solution, index) => (
               <span 
                 key={index} 
-                className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold text-foreground"
+                className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium text-foreground"
               >
                 {solution}
               </span>
@@ -140,11 +140,11 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         )}
         
         {stats.length > 0 && (
-          <div className="grid grid-cols-2 gap-4 mb-4">
+          <div className="grid grid-cols-2 gap-2 mb-2">
             {stats.map((stat, index) => (
-              <div key={index} className="flex items-center gap-2">
+              <div key={index} className="flex items-center gap-1">
                 {stat.icon}
-                <span className="text-sm">{stat.text}</span>
+                <span className="text-xs">{stat.text}</span>
               </div>
             ))}
           </div>
@@ -152,9 +152,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         
         <button 
           onClick={() => onClick(study.id)}
-          className="flex items-center gap-1 text-primary hover:underline"
+          className="flex items-center gap-1 text-primary text-sm hover:underline mt-auto"
         >
-          Read Case Study <ChevronRight size={16} />
+          Read Case Study <ChevronRight size={14} />
         </button>
       </div>
     </div>
