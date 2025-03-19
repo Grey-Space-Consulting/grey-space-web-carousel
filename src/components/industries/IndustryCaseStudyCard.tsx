@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { CaseStudyPreview } from "@/types/industry";
 import { FilterContext } from "./IndustryTabs";
+import { useNavigate } from "react-router-dom";
 
 interface IndustryCaseStudyCardProps {
   study: CaseStudyPreview;
@@ -9,6 +10,7 @@ interface IndustryCaseStudyCardProps {
 
 const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
   const { selectedSolutions, isFiltering } = useContext(FilterContext);
+  const navigate = useNavigate();
   
   // If filtering is active, check if this case study should be shown
   if (isFiltering && study.solutions) {
@@ -20,9 +22,17 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
       return null;
     }
   }
+
+  // Navigate to case studies page when the card is clicked
+  const handleCardClick = () => {
+    navigate('/case-studies');
+  };
   
   return (
-    <div className="glass-card rounded-xl overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow duration-300">
+    <div 
+      className="glass-card rounded-xl overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+      onClick={handleCardClick}
+    >
       <div className="relative h-48 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent z-10"></div>
         <img 
@@ -36,19 +46,7 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
         <h3 className="text-xl font-semibold mb-3">{study.title}</h3>
         <p className="text-muted-foreground mb-6 flex-grow">{study.description}</p>
         
-        {/* Show solution tags if available */}
-        {study.solutions && study.solutions.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {study.solutions.map((solution, index) => (
-              <span 
-                key={index} 
-                className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold text-foreground"
-              >
-                {solution}
-              </span>
-            ))}
-          </div>
-        )}
+        {/* Solutions tags have been removed */}
         
         <div className="flex items-center gap-4 border-t border-border pt-4">
           {study.metrics.map((metric, index) => (

@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   Select,
@@ -12,14 +12,12 @@ import HealthcareTab from "./HealthcareTab";
 import MarketplaceTab from "./MarketplaceTab";
 import EcommerceTab from "./EcommerceTab";
 import { useIsMobile } from "@/hooks/use-mobile";
-import IndustryFilter from "./IndustryFilter";
-import { SolutionCategory } from "@/types/industry";
 
-// Context to share filtering state with child components
+// Simple context with no filtering functionality
 import React from "react";
 
 export interface FilterContextType {
-  selectedSolutions: SolutionCategory[];
+  selectedSolutions: string[];
   isFiltering: boolean;
 }
 
@@ -31,18 +29,15 @@ export const FilterContext = React.createContext<FilterContextType>({
 const IndustryTabs = () => {
   const [selectedTab, setSelectedTab] = useState("healthcare");
   const isMobile = useIsMobile();
-  const [selectedSolutions, setSelectedSolutions] = useState<SolutionCategory[]>(["All"]);
 
   const handleValueChange = (value: string) => {
     setSelectedTab(value);
   };
 
-  // Calculate if filtering is active (not just "All" selected)
-  const isFiltering = !selectedSolutions.includes("All");
-
-  // Handle filter changes
-  const handleFilterChange = (solutions: SolutionCategory[]) => {
-    setSelectedSolutions(solutions);
+  // Simplified FilterContext with no active filtering
+  const filterContextValue = {
+    selectedSolutions: ["All"],
+    isFiltering: false
   };
 
   return (
@@ -91,14 +86,10 @@ const IndustryTabs = () => {
           )}
         </div>
         
-        {/* Add filter component */}
-        <IndustryFilter 
-          selectedSolutions={selectedSolutions}
-          onFilterChange={handleFilterChange}
-        />
+        {/* Removed the IndustryFilter component */}
         
-        {/* Provide filtering context to tab contents */}
-        <FilterContext.Provider value={{ selectedSolutions, isFiltering }}>
+        {/* Provide simplified filter context to tab contents */}
+        <FilterContext.Provider value={filterContextValue}>
           {/* Healthcare Tab */}
           <TabsContent value="healthcare" className="space-y-10 mt-4">
             <HealthcareTab />
