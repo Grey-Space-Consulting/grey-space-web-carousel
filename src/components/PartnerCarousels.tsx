@@ -1,7 +1,6 @@
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { useCarouselAutoplay } from "@/hooks/useCarouselAutoplay";
 import Autoplay from "embla-carousel-autoplay";
 
 // Define partners list
@@ -39,7 +38,11 @@ const PartnerCarousels = () => {
 
   // Configure plugins for auto-scrolling
   const topAutoplayPlugin = Autoplay({ delay: 2000, stopOnInteraction: false });
-  const bottomAutoplayPlugin = Autoplay({ delay: 2000, stopOnInteraction: false, direction: 'backward' });
+  
+  // For the reverse direction, we'll use a different approach
+  // Instead of using 'direction' property which isn't supported,
+  // we'll reverse the order of items in the bottom carousel
+  const bottomAutoplayPlugin = Autoplay({ delay: 2000, stopOnInteraction: false });
 
   return (
     <div className="space-y-6">
@@ -69,12 +72,14 @@ const PartnerCarousels = () => {
           align: "start",
           loop: true,
           dragFree: true,
+          direction: "rtl" // Use RTL direction to make it scroll left
         }}
         plugins={[bottomAutoplayPlugin]}
         setApi={setBottomApi}
         className="w-full"
       >
         <CarouselContent className="-ml-4">
+          {/* Using the partners list in reverse order */}
           {partnersBottom.map((partner, index) => (
             <CarouselItem key={partner} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5">
               <PartnerLogo name={partner} index={index} />
