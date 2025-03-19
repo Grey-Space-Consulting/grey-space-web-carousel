@@ -32,7 +32,7 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
         }
       }}
     >
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-40 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent z-10"></div>
         <img 
           src={study.image} 
@@ -40,16 +40,16 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
-      <div className="p-6 flex-grow flex flex-col">
-        <span className="text-sm text-primary font-medium mb-1">{study.industry}</span>
-        <h3 className="text-xl font-semibold mb-3">{study.title}</h3>
-        <p className="text-muted-foreground mb-6 flex-grow">{study.description}</p>
+      <div className="p-4 flex-grow flex flex-col">
+        <span className="text-xs text-primary font-medium mb-1">{study.industry}</span>
+        <h3 className="text-lg font-semibold mb-2">{study.title}</h3>
+        <p className="text-sm text-muted-foreground mb-4 flex-grow">{study.description}</p>
         
-        <div className="flex items-center gap-4 border-t border-border pt-4">
+        <div className="flex items-center gap-3 border-t border-border pt-3">
           {study.metrics.map((metric, index) => (
-            <div key={index} className="flex items-center gap-2">
+            <div key={index} className="flex items-center gap-1">
               {metric.icon}
-              <span className="text-sm">{metric.text}</span>
+              <span className="text-xs">{metric.text}</span>
             </div>
           ))}
         </div>

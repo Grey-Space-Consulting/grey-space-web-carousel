@@ -41,18 +41,18 @@ const IndustryTabs = () => {
   };
 
   return (
-    <section className="px-6 md:px-10 lg:px-20 max-w-7xl mx-auto mb-24">
+    <section className="px-6 md:px-10 lg:px-20 max-w-6xl mx-auto mb-16">
       <Tabs 
         value={selectedTab} 
         onValueChange={handleValueChange}
         className="animate-fade-in" 
         style={{ animationDelay: "200ms" }}
       >
-        <div className="mb-12">
+        <div className="mb-8">
           {isMobile ? (
             <div className="w-full">
               <Select value={selectedTab} onValueChange={handleValueChange}>
-                <SelectTrigger className="w-full bg-secondary/30 border rounded-lg py-3 px-6">
+                <SelectTrigger className="w-full bg-secondary/30 border rounded-lg py-2 px-4">
                   <SelectValue placeholder="Select an industry" />
                 </SelectTrigger>
                 <SelectContent>
@@ -66,19 +66,19 @@ const IndustryTabs = () => {
             <TabsList className="w-full md:w-auto bg-secondary/30 border rounded-lg p-1 h-auto">
               <TabsTrigger 
                 value="healthcare" 
-                className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
+                className="text-sm py-2 px-4 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
               >
                 Healthcare
               </TabsTrigger>
               <TabsTrigger 
                 value="marketplace" 
-                className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
+                className="text-sm py-2 px-4 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
               >
                 Marketplaces
               </TabsTrigger>
               <TabsTrigger 
                 value="ecommerce" 
-                className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
+                className="text-sm py-2 px-4 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
               >
                 E-Commerce
               </TabsTrigger>
@@ -89,17 +89,17 @@ const IndustryTabs = () => {
         {/* Provide simplified filter context to tab contents */}
         <FilterContext.Provider value={filterContextValue}>
           {/* Healthcare Tab */}
-          <TabsContent value="healthcare" className="space-y-10 mt-4">
+          <TabsContent value="healthcare" className="space-y-8 mt-2">
             <HealthcareTab />
           </TabsContent>
           
           {/* Marketplace Tab */}
-          <TabsContent value="marketplace" className="space-y-10 mt-4">
+          <TabsContent value="marketplace" className="space-y-8 mt-2">
             <MarketplaceTab />
           </TabsContent>
           
           {/* E-commerce Tab */}
-          <TabsContent value="ecommerce" className="space-y-10 mt-4">
+          <TabsContent value="ecommerce" className="space-y-8 mt-2">
             <EcommerceTab />
           </TabsContent>
         </FilterContext.Provider>

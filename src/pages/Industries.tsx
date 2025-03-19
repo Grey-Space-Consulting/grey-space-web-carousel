@@ -21,7 +21,7 @@ const Industries = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <main className={`pt-28 pb-24 transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <main className={`pt-24 pb-16 transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {/* Hero Section */}
         <IndustriesHero />
         
