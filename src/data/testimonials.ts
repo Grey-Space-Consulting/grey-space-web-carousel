@@ -89,5 +89,13 @@ export const testimonials: Testimonial[] = [
     company: "Seed Health",
     quote: "We hired Grey Space to help us transform our Queues and Routing experience within Kustomer's ticketing platform. The level of knowledge, professionalism, and overall responsiveness are outstanding!! We will continue our partnership with them for ongoing support. Truly a pleasure to work with their team.",
     rating: 5
+  },
+  {
+    id: 11,
+    name: "Kateri Corvetti",
+    role: "Scientific Communications & Member Experience",
+    company: "Seed Health",
+    quote: "Extremely knowledgeable, very professional, kind, hard-working and full of valuable suggestions. My team worked closely with GreySpace on a very big project to improve internal tooling, and the results were 10x improved from the last launch attempt–directly as a result of their contributions. Loved working with each of them, and look forward to continuing the partnership.",
+    rating: 5
   }
 ];
