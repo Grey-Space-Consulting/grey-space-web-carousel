@@ -1,5 +1,6 @@
 
-import PartnerLogos from "@/components/PartnerLogos";
+import React from "react";
+import PartnerCarousels from "@/components/PartnerCarousels";
 
 interface PartnersSectionProps {
   sectionRef: React.RefObject<HTMLElement>;
@@ -23,7 +24,7 @@ const PartnersSection = ({ sectionRef }: PartnersSectionProps) => {
           </p>
         </div>
         
-        <PartnerLogos />
+        <PartnerCarousels />
       </div>
     </section>
   );
