@@ -5,7 +5,7 @@ import { BarChart, Users, Clock } from "lucide-react";
 
 const sweetgreenStudy: DetailedCaseStudy = {
   id: "sweetgreen",
-  title: "Sweetgreen: Scaling Customer Support with Automation",
+  title: "Scaling Customer Support with Automation",
   category: "Food & Beverage",
   client: "Sweetgreen",
   clientLogo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Sweetgreen_logo.png",

@@ -5,7 +5,7 @@ import { GitMerge, Languages, DollarSign } from "lucide-react";
 
 const turoStudy: DetailedCaseStudy = {
   id: "turo",
-  title: "Turo: Post-Acquisition Migration and Localization",
+  title: "Post-Acquisition Migration and Localization",
   category: "Technology",
   client: "Turo",
   clientLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Turo_logo.svg/320px-Turo_logo.svg.png",

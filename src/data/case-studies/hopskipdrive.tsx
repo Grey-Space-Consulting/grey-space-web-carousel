@@ -5,7 +5,7 @@ import { Users, Phone, Globe } from "lucide-react";
 
 const hopskipdriveStudy: DetailedCaseStudy = {
   id: "hopskipdrive",
-  title: "HopSkipDrive: Optimizing Customer Support Services",
+  title: "Optimizing Customer Support Services",
   category: "Transportation",
   client: "HopSkipDrive",
   clientLogo: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=100&h=50&auto=format&fit=crop",

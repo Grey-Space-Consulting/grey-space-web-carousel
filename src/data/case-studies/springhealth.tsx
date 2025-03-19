@@ -5,7 +5,7 @@ import { BarChart, Clock, Check } from "lucide-react";
 
 const springhealthStudy: DetailedCaseStudy = {
   id: "springhealth",
-  title: "Spring Health: Platform Rebuild for Customer Support Excellence",
+  title: "Platform Rebuild for Customer Support Excellence",
   category: "Healthcare",
   client: "Spring Health",
   clientLogo: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=100&h=50&auto=format&fit=crop",
