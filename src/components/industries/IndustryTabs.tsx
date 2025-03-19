@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Tabs, TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   Select,
   SelectContent,
@@ -49,7 +49,7 @@ const IndustryTabs = () => {
         style={{ animationDelay: "200ms" }}
       >
         <div className="mb-12">
-          {isMobile && (
+          {isMobile ? (
             <div className="w-full">
               <Select value={selectedTab} onValueChange={handleValueChange}>
                 <SelectTrigger className="w-full bg-secondary/30 border rounded-lg py-3 px-6">
@@ -62,6 +62,27 @@ const IndustryTabs = () => {
                 </SelectContent>
               </Select>
             </div>
+          ) : (
+            <TabsList className="w-full md:w-auto bg-secondary/30 border rounded-lg p-1 h-auto">
+              <TabsTrigger 
+                value="healthcare" 
+                className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
+              >
+                Healthcare
+              </TabsTrigger>
+              <TabsTrigger 
+                value="marketplace" 
+                className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
+              >
+                Marketplaces
+              </TabsTrigger>
+              <TabsTrigger 
+                value="ecommerce" 
+                className="text-base py-3 px-6 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md"
+              >
+                E-Commerce
+              </TabsTrigger>
+            </TabsList>
           )}
         </div>
         

@@ -46,8 +46,6 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
         <h3 className="text-xl font-semibold mb-3">{study.title}</h3>
         <p className="text-muted-foreground mb-6 flex-grow">{study.description}</p>
         
-        {/* Solutions tags have been removed */}
-        
         <div className="flex items-center gap-4 border-t border-border pt-4">
           {study.metrics.map((metric, index) => (
             <div key={index} className="flex items-center gap-2">
