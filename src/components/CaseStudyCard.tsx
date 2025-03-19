@@ -75,18 +75,18 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         />
       </div>
       <div className="p-6">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2 text-primary text-sm">
             <Briefcase size={16} />
             <span>{study.category}</span>
           </div>
-          
-          {detailedStudy && (
-            <div className="font-bold text-lg text-primary">
-              {detailedStudy.client}
-            </div>
-          )}
         </div>
+        
+        {detailedStudy && (
+          <div className="font-bold text-xl text-primary mb-2">
+            {detailedStudy.client}
+          </div>
+        )}
         
         <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
         

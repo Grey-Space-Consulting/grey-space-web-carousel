@@ -39,16 +39,19 @@ const DetailedCaseStudy: React.FC<DetailedCaseStudyProps> = ({ study, isActive }
         
         <CardContent className="p-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div className="space-y-4">
+            <div className="space-y-4 col-span-2">
               <h3 className="text-lg font-semibold">Client</h3>
               <div className="flex flex-col gap-3">
                 <h4 className="text-2xl font-bold text-primary">{study.client}</h4>
               </div>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 col-span-2">
               <h3 className="text-lg font-semibold">Industry</h3>
               <p>{study.industry}</p>
             </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold">Timeframe</h3>
               <p>{study.timeframe}</p>
