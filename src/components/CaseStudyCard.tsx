@@ -75,11 +75,31 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         />
       </div>
       <div className="p-6">
-        <div className="flex items-center gap-2 text-primary text-sm mb-3">
-          <Briefcase size={16} />
-          <span>{study.category}</span>
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2 text-primary text-sm">
+            <Briefcase size={16} />
+            <span>{study.category}</span>
+          </div>
+          
+          {detailedStudy && (
+            <div className="h-10 flex items-center">
+              {detailedStudy.clientLogo && (
+                <img 
+                  src={detailedStudy.clientLogo} 
+                  alt={detailedStudy.client}
+                  className="max-h-full object-contain"
+                />
+              )}
+            </div>
+          )}
         </div>
-        <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
+        
+        <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
+        
+        {detailedStudy && (
+          <div className="text-base font-medium text-primary mb-3">{detailedStudy.client}</div>
+        )}
+        
         <p className="text-muted-foreground mb-4">{study.excerpt}</p>
         
         {stats.length > 0 && (
