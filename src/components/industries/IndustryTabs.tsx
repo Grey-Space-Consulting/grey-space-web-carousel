@@ -12,13 +12,37 @@ import HealthcareTab from "./HealthcareTab";
 import MarketplaceTab from "./MarketplaceTab";
 import EcommerceTab from "./EcommerceTab";
 import { useIsMobile } from "@/hooks/use-mobile";
+import IndustryFilter from "./IndustryFilter";
+import { SolutionCategory } from "@/types/industry";
+
+// Context to share filtering state with child components
+import React from "react";
+
+export interface FilterContextType {
+  selectedSolutions: SolutionCategory[];
+  isFiltering: boolean;
+}
+
+export const FilterContext = React.createContext<FilterContextType>({
+  selectedSolutions: ["All"],
+  isFiltering: false
+});
 
 const IndustryTabs = () => {
   const [selectedTab, setSelectedTab] = useState("healthcare");
   const isMobile = useIsMobile();
+  const [selectedSolutions, setSelectedSolutions] = useState<SolutionCategory[]>(["All"]);
 
   const handleValueChange = (value: string) => {
     setSelectedTab(value);
+  };
+
+  // Calculate if filtering is active (not just "All" selected)
+  const isFiltering = !selectedSolutions.includes("All");
+
+  // Handle filter changes
+  const handleFilterChange = (solutions: SolutionCategory[]) => {
+    setSelectedSolutions(solutions);
   };
 
   return (
@@ -67,20 +91,29 @@ const IndustryTabs = () => {
           )}
         </div>
         
-        {/* Healthcare Tab */}
-        <TabsContent value="healthcare" className="space-y-10 mt-4">
-          <HealthcareTab />
-        </TabsContent>
+        {/* Add filter component */}
+        <IndustryFilter 
+          selectedSolutions={selectedSolutions}
+          onFilterChange={handleFilterChange}
+        />
         
-        {/* Marketplace Tab */}
-        <TabsContent value="marketplace" className="space-y-10 mt-4">
-          <MarketplaceTab />
-        </TabsContent>
-        
-        {/* E-commerce Tab */}
-        <TabsContent value="ecommerce" className="space-y-10 mt-4">
-          <EcommerceTab />
-        </TabsContent>
+        {/* Provide filtering context to tab contents */}
+        <FilterContext.Provider value={{ selectedSolutions, isFiltering }}>
+          {/* Healthcare Tab */}
+          <TabsContent value="healthcare" className="space-y-10 mt-4">
+            <HealthcareTab />
+          </TabsContent>
+          
+          {/* Marketplace Tab */}
+          <TabsContent value="marketplace" className="space-y-10 mt-4">
+            <MarketplaceTab />
+          </TabsContent>
+          
+          {/* E-commerce Tab */}
+          <TabsContent value="ecommerce" className="space-y-10 mt-4">
+            <EcommerceTab />
+          </TabsContent>
+        </FilterContext.Provider>
       </Tabs>
     </section>
   );

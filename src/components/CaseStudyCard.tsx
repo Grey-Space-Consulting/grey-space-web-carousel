@@ -1,8 +1,9 @@
 
-import React from "react";
+import React, { useContext } from "react";
 import { ChevronRight, Briefcase, Clock, DollarSign, BarChart, MessageSquare } from "lucide-react";
 import { type CaseStudy } from "@/data/caseStudies";
 import { detailedCaseStudies } from "@/data/caseStudies";
+import { FilterContext } from "@/components/industries/IndustryTabs";
 
 interface CaseStudyCardProps {
   study: CaseStudy;
@@ -14,8 +15,39 @@ const getDetailedStudy = (id: string) => {
   return detailedCaseStudies.find(study => study.id === id);
 };
 
+// Get solution tags for a case study based on its ID
+const getSolutionTags = (id: string): string[] => {
+  switch (id) {
+    case "turo":
+      return ["Migration", "Integration"];
+    case "sweetgreen":
+      return ["Automation", "Analytics"];
+    case "springhealth":
+      return ["CRM", "Analytics", "Support"];
+    case "hopskipdrive":
+      return ["CRM", "Telephony", "Chatbots"];
+    case "hellotech":
+      return ["Migration", "Integration", "Support"];
+    default:
+      return [];
+  }
+};
+
 const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
   const detailedStudy = getDetailedStudy(study.id);
+  const filterContext = useContext(FilterContext);
+  
+  // Check if this card should be filtered out
+  if (filterContext && filterContext.isFiltering) {
+    const solutions = getSolutionTags(study.id);
+    const hasMatchingSolution = solutions.some(solution => 
+      filterContext.selectedSolutions.includes(solution as any));
+    
+    // Hide this card if it doesn't match the selected filters
+    if (!hasMatchingSolution) {
+      return null;
+    }
+  }
   
   // Define stats to display based on the case study
   const getStatsForCaseStudy = () => {
@@ -64,6 +96,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
   };
   
   const stats = getStatsForCaseStudy();
+  const solutionTags = getSolutionTags(study.id);
   
   return (
     <div className="glass-card rounded-xl overflow-hidden group hover:shadow-xl transition-all duration-300">
@@ -91,6 +124,20 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{study.title}</h3>
         
         <p className="text-muted-foreground mb-4">{study.excerpt}</p>
+        
+        {/* Display solution tags */}
+        {solutionTags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {solutionTags.map((solution, index) => (
+              <span 
+                key={index} 
+                className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold text-foreground"
+              >
+                {solution}
+              </span>
+            ))}
+          </div>
+        )}
         
         {stats.length > 0 && (
           <div className="grid grid-cols-2 gap-4 mb-4">
