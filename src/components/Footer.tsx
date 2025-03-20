@@ -12,11 +12,7 @@ const Footer = () => {
             <p className="text-muted-foreground mb-6">
               Transforming operations through innovative technology solutions.
             </p>
-            <div className="flex gap-4">
-              {[["github", "#"], ["twitter", "#"], ["linkedin", "#"]].map(([name, href]) => <a key={name} href={href} className="h-10 w-10 rounded-full bg-secondary/50 hover:bg-primary/20 flex items-center justify-center transition-colors" aria-label={name}>
-                  <div className="h-5 w-5 rounded-full bg-foreground/30"></div>
-                </a>)}
-            </div>
+            
           </div>
           
           <div>
