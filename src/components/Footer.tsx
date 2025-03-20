@@ -44,11 +44,7 @@ const Footer = () => {
                   Case Studies
                 </Link>
               </li>
-              <li>
-                <Link to="/industries" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Industries
-                </Link>
-              </li>
+              {/* Industries link removed from footer */}
               <li>
                 <Link to="/causes" className="text-muted-foreground hover:text-foreground transition-colors">
                   Causes We Support
