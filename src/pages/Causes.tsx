@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
@@ -10,19 +9,20 @@ const Causes = () => {
   
   useEffect(() => {
     setIsLoaded(true);
+    window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="pt-20 pb-16 px-6 md:px-10">
+      <main className="pt-28 pb-16 px-6 md:px-10">
         <div className="max-w-6xl mx-auto">
           <div className="mb-10 animate-fade-in">
             <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-4">
               Making A Difference
             </div>
-            <h1 className="heading-lg mb-4 max-w-4xl">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 max-w-4xl">
               Causes We Support
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
