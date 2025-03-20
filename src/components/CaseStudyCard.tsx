@@ -131,11 +131,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
           </div>
         )}
         
-        <h3 className="text-sm font-semibold mb-1 group-hover:text-primary transition-colors duration-300 line-clamp-2">{study.title}</h3>
+        <h3 className="text-sm font-semibold mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-3">{study.title}</h3>
         
-        <p className="text-xs text-muted-foreground mb-2 flex-grow line-clamp-2">{study.excerpt}</p>
-        
-        {/* Solution tags section removed */}
+        {/* Excerpt removed to allow title to fill more space */}
         
         {stats.length > 0 && (
           <div className="grid grid-cols-1 gap-1 mb-2">
