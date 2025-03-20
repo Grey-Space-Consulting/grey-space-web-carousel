@@ -60,8 +60,8 @@ const Index = () => {
       <Navbar />
       
       <HeroSection />
-      <TestimonialsSection sectionRef={testimonialsSectionRef} />
       <ServicesSection sectionRef={servicesSectionRef} />
+      <TestimonialsSection sectionRef={testimonialsSectionRef} />
       <TechnologiesSection sectionRef={technologiesSectionRef} />
       <CTASection sectionRef={ctaSectionRef} />
       
