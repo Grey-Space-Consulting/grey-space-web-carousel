@@ -15,7 +15,7 @@ const seedhealthStudy: DetailedCaseStudy = {
   timeframe: "6 months",
   results: "$500,000+ annual savings",
   challenge: "Seed Health, a premium probiotic company, needed to restructure their customer care team for efficiency while maintaining their exceptional support standards. Their existing CRM infrastructure couldn't provide the automation and insights needed to support a leaner team structure without compromising on service quality.",
-  approach: "We implemented a comprehensive CRM rebuild focused on automation, data quality, and streamlined workflows. Our approach emphasized maintaining high-quality customer interactions with fewer resources through intelligent routing, advanced analytics, and purpose-built tools.",
+  approach: "We implemented a comprehensive CRM rebuild with a primary focus on redesigning their ticket routing business logic. The new system intelligently categorizes and prioritizes customer inquiries based on content analysis, customer history, and predicted resolution complexity. This intelligent routing ensures that even with fewer agents, high-priority issues are addressed promptly while routine inquiries are efficiently managed through automation. Our approach integrated this advanced routing system with broader improvements in data quality, workflow streamlining, and analytics capabilities, enabling the maintenance of high-quality customer interactions with significantly reduced resources.",
   keyPoints: [
     {
       icon: <DollarSign size={18} className="text-primary" />,
