@@ -9,7 +9,7 @@ const hellotechStudy: DetailedCaseStudy = {
   category: "2-Sided Marketplace",
   excerpt: "Completed a Kustomer to Gladly migration in under 3 weeks instead of the typical 3 months, with significant cost savings.",
   image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070",
-  client: "HelloTech by Latch",
+  client: "HelloTech",
   clientLogo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=1974",
   industry: "Technology Services",
   timeframe: "3 weeks",
