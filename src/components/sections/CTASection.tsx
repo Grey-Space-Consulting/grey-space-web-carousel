@@ -16,7 +16,9 @@ const CTASection = ({ sectionRef }: CTASectionProps) => {
           Let's discuss how Grey Space can help optimize your operational technology and drive business growth.
         </p>
         <a 
-          href="#" 
+          href="https://calendly.com/greyspace-hudson/grey-space-introductory-call" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block px-8 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
         >
           Schedule a Consultation
