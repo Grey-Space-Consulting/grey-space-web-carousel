@@ -30,9 +30,11 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="h-8 w-8 bg-primary/20 rounded-md flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
-            <div className="h-3 w-3 bg-primary rounded-sm group-hover:scale-110 transition-transform duration-300"></div>
-          </div>
+          <img 
+            src="https://greyspace-v3.netlify.app/assets/greyspace-logo-white.svg" 
+            alt="Grey Space Logo" 
+            className="h-8 w-auto group-hover:scale-105 transition-transform duration-300"
+          />
           <span className="text-xl font-display font-medium">Grey Space</span>
         </Link>
 

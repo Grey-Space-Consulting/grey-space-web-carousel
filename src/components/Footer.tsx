@@ -9,9 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
             <div className="flex items-center gap-2 mb-5">
-              <div className="h-8 w-8 bg-primary/20 rounded-md flex items-center justify-center">
-                <div className="h-3 w-3 bg-primary rounded-sm"></div>
-              </div>
+              <img 
+                src="https://greyspace-v3.netlify.app/assets/greyspace-logo-white.svg" 
+                alt="Grey Space Logo" 
+                className="h-8 w-auto"
+              />
               <span className="text-xl font-display font-medium">Grey Space</span>
             </div>
             <p className="text-muted-foreground mb-6">
