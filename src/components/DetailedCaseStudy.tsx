@@ -15,12 +15,12 @@ const DetailedCaseStudy: React.FC<DetailedCaseStudyProps> = ({ study, isActive }
     <div 
       id={study.id}
       className={cn(
-        "mb-12 pt-16 -mt-16 scroll-mt-24 transition-opacity duration-500",
+        "mb-12 pt-16 -mt-16 scroll-mt-24 transition-opacity duration-500 w-full",
         isActive ? "opacity-100" : "opacity-80"
       )}
     >
-      <Card className="overflow-hidden border-0 shadow-lg">
-        <div className="h-56 w-full relative">
+      <Card className="overflow-hidden border-0 shadow-lg w-full">
+        <div className="h-56 sm:h-64 md:h-72 w-full relative">
           <img
             src={study.heroImage} 
             alt={study.title}
@@ -69,7 +69,7 @@ const DetailedCaseStudy: React.FC<DetailedCaseStudyProps> = ({ study, isActive }
               <h3 className="text-base font-semibold mb-2">Our Approach</h3>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">{study.approach}</p>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-4">
                 {study.keyPoints.map((point, idx) => (
                   <Card key={idx} className="border bg-muted/30">
                     <CardContent className="pt-3 p-3">

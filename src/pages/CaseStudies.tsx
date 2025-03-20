@@ -45,7 +45,7 @@ const CaseStudies = () => {
       <Navbar />
       
       <main className="pt-16 pb-12 px-3 md:px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1400px] mx-auto">
           <div className="mb-8 animate-fade-in">
             <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-3">
               Our Success Stories
@@ -69,7 +69,7 @@ const CaseStudies = () => {
           </div>
           
           {/* Detailed Case Studies */}
-          <div className="mt-16">
+          <div className="mt-16 w-full">
             {detailedCaseStudies.map((study) => (
               <DetailedCaseStudy 
                 key={study.id}
