@@ -14,6 +14,7 @@ const CaseStudies = () => {
   
   useEffect(() => {
     setIsLoaded(true);
+    window.scrollTo(0, 0);
     
     // Check if URL has a hash and scroll to that case study
     if (window.location.hash) {
@@ -44,7 +45,7 @@ const CaseStudies = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      <main className="pt-16 pb-12 px-3 md:px-6">
+      <main className="pt-28 pb-12 px-3 md:px-6">
         <div className="max-w-[1400px] mx-auto">
           <div className="mb-8 animate-fade-in">
             <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm mb-3">
