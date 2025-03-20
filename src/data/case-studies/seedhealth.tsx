@@ -48,7 +48,7 @@ const seedhealthStudy: DetailedCaseStudy = {
     }
   ],
   resultsDetails: "The CRM rebuild enabled Seed Health to maintain superior customer support quality while significantly reducing operational costs. The company achieved over $500,000 in annualized savings through team restructuring, supported by enhanced automation and more efficient workflows. Response times improved despite the leaner team structure, and customer satisfaction scores remained high. Additionally, improved data collection and reporting provided better visibility into customer trends and business metrics.",
-  heroImage: "/placeholder.svg"
+  heroImage: "https://res.cloudinary.com/dljz0lko8/image/upload/f_auto,q_auto,c_scale,w_550/v1649193546/DS-01_Jar_and_capsule.png"
 };
 
 export default seedhealthStudy;
