@@ -28,6 +28,7 @@ const Index = () => {
 
   useEffect(() => {
     setIsLoaded(true);
+    window.scrollTo(0, 0);
 
     const observerOptions = {
       threshold: 0.1,
