@@ -11,13 +11,13 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
   const isMobile = useIsMobile();
   
   return (
-    <div className="w-full h-full flex flex-col glass-card rounded-2xl p-6 max-w-sm mx-auto min-h-[340px] md:min-h-[380px]">
+    <div className="w-full h-full flex flex-col glass-card rounded-2xl p-6 max-w-[280px] mx-auto min-h-[360px] md:min-h-[400px]">
       <div className="text-primary mb-4">
         <Quote size={24} className="opacity-50" />
       </div>
       
       <div className="flex-grow">
-        <p className="text-xs sm:text-sm md:text-md text-foreground/90 leading-relaxed break-words">
+        <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed break-words">
           "{testimonial.quote}"
         </p>
       </div>
@@ -36,7 +36,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
             )}
           </div>
           <div>
-            <h4 className="font-semibold text-sm sm:text-base">{testimonial.name}</h4>
+            <h4 className="font-semibold text-sm">{testimonial.name}</h4>
             <p className="text-muted-foreground text-xs">
               {testimonial.role}{testimonial.company ? `, ${testimonial.company}` : ''}
             </p>

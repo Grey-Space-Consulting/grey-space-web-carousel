@@ -12,7 +12,7 @@ const TestimonialGrid = () => {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
         {testimonials.slice(0, visibleCount).map((testimonial, index) => (
           <div 
             key={testimonial.id} 
