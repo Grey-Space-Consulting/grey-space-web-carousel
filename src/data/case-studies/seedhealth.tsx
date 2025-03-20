@@ -6,7 +6,7 @@ import { DollarSign, Clock, MessageSquare, BarChart, Database, UserCheck } from 
 const seedhealthStudy: DetailedCaseStudy = {
   id: "seedhealth",
   title: "CRM Rebuild with Improved Metrics & Cost Reduction",
-  category: "CRM Transformation",
+  category: "D2C Ecommerce",
   excerpt: "A complete CRM overhaul that maintained support quality while allowing significant team restructuring and cost savings.",
   image: "/placeholder.svg",
   client: "Seed Health",
