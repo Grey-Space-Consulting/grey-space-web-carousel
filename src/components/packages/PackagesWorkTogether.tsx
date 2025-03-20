@@ -10,6 +10,33 @@ const PackagesWorkTogether: React.FC = () => {
         Our packages are designed to be flexible and can be combined to create a custom program that aligns with your specific needs.
       </p>
       
+      {/* Common Package Combinations section moved to the top */}
+      <div className="bg-primary/10 p-6 rounded-lg shadow-sm mb-8">
+        <h4 className="text-xl font-medium mb-3 text-primary text-center">Common Package Combinations</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>Use <strong>Leadership & Advisory</strong> packages for strategic guidance without technical implementation.</span>
+            </li>
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>Choose <strong>Technology Implementation</strong> when you have a clear strategy but need technical execution.</span>
+            </li>
+          </ul>
+          <ul className="space-y-3">
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>Combine packages for a <strong>comprehensive solution</strong> covering strategy, operations, and implementation.</span>
+            </li>
+            <li className="flex items-start">
+              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+              <span>All packages offer <strong>customization options</strong> to adjust deliverables, timelines, and involvement levels.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <div className="bg-background/70 p-6 rounded-lg shadow-sm">
           <h4 className="text-xl font-medium mb-3 text-primary flex items-center">
@@ -52,7 +79,7 @@ const PackagesWorkTogether: React.FC = () => {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-background/70 p-6 rounded-lg shadow-sm">
           <h4 className="text-xl font-medium mb-3 text-primary flex items-center">
             <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">3</span>
@@ -89,32 +116,6 @@ const PackagesWorkTogether: React.FC = () => {
             <li className="flex items-start">
               <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
               <span>Our modular approach lets us focus on your most critical needs first, allowing for phased implementation.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div className="bg-primary/10 p-6 rounded-lg shadow-sm mb-4">
-        <h4 className="text-xl font-medium mb-3 text-primary text-center">Common Package Combinations</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Use <strong>Leadership & Advisory</strong> packages for strategic guidance without technical implementation.</span>
-            </li>
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Choose <strong>Technology Implementation</strong> when you have a clear strategy but need technical execution.</span>
-            </li>
-          </ul>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Combine packages for a <strong>comprehensive solution</strong> covering strategy, operations, and implementation.</span>
-            </li>
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>All packages offer <strong>customization options</strong> to adjust deliverables, timelines, and involvement levels.</span>
             </li>
           </ul>
         </div>
