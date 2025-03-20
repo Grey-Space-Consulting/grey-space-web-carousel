@@ -13,15 +13,10 @@ const TestimonialGrid = () => {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
-        {testimonials.slice(0, visibleCount).map((testimonial, index) => (
+        {testimonials.slice(0, visibleCount).map((testimonial) => (
           <div 
             key={testimonial.id} 
-            className={`h-full transform ${
-              // Add vertical offset for every other card in each row
-              index % 4 === 1 ? 'translate-y-6' : 
-              index % 4 === 2 ? 'translate-y-12' : 
-              index % 4 === 3 ? 'translate-y-6' : ''
-            }`}
+            className="h-full"
           >
             <TestimonialCard testimonial={testimonial} />
           </div>
