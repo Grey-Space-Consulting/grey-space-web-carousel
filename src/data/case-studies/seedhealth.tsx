@@ -9,7 +9,7 @@ const seedhealthStudy: DetailedCaseStudy = {
   excerpt: "A complete CRM overhaul that maintained support quality while allowing significant team restructuring and cost savings.",
   image: "https://res.cloudinary.com/dljz0lko8/image/upload/f_auto,q_auto,c_scale,w_550/v1649193546/DS-01_Jar_and_capsule.png",
   client: "Seed Health",
-  clientLogo: "/placeholder.svg",
+  clientLogo: "https://res.cloudinary.com/dljz0lko8/image/upload/f_auto,q_auto,c_scale,w_550/v1649193546/DS-01_Jar_and_capsule.png",
   industry: "Health & Wellness",
   timeframe: "2 months",
   results: "$500,000+ annual savings",
