@@ -1,5 +1,5 @@
 
-import TestimonialCarousel from "@/components/TestimonialCarousel";
+import TestimonialGrid from "@/components/TestimonialCarousel";
 
 interface TestimonialsSectionProps {
   sectionRef: React.RefObject<HTMLElement>;
@@ -22,7 +22,7 @@ const TestimonialsSection = ({ sectionRef }: TestimonialsSectionProps) => {
         </p>
       </div>
       
-      <TestimonialCarousel />
+      <TestimonialGrid />
     </section>
   );
 };
