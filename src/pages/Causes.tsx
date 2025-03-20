@@ -100,7 +100,7 @@ const causes = [
     category: "Animal Welfare",
     icon: Heart,
     description: "Wags & Walks is dedicated to rescuing shelter dogs and finding them permanent, loving homes. Their mission focuses on reducing euthanasia rates in shelters through rescue, rehabilitation, and education.",
-    image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=800&auto=format&fit=crop",
+    image: "https://images.squarespace-cdn.com/content/v1/5f0e64fa1e037519173207cc/a781772b-c79c-429f-9dbe-d1c27d04156a/Wags+%26+Walks+Simple+Logo.png?format=1500w",
     link: "https://www.wagsandwalks.org/",
   },
   {
@@ -108,7 +108,7 @@ const causes = [
     category: "Harm Reduction",
     icon: Users,
     description: "DanceSafe promotes health and safety within the nightlife and electronic music communities. They provide health education, harm reduction services, and work to reduce drug-related harm through education and peer-based initiatives.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop",
+    image: "https://dancesafe.org/wp-content/uploads/2024/12/cropped-dancesafe-circle-logo-200x200.webp",
     link: "https://dancesafe.org/",
   },
   {
@@ -116,7 +116,7 @@ const causes = [
     category: "Mental Health",
     icon: Heart,
     description: "The AFSP is dedicated to saving lives and bringing hope to those affected by suicide. They fund scientific research, provide educational programs, advocate for public policy, and support survivors of suicide loss.",
-    image: "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=800&auto=format&fit=crop",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/American_Foundation_for_Suicide_Prevention_logo.svg/2880px-American_Foundation_for_Suicide_Prevention_logo.svg.png",
     link: "https://afsp.org/",
   },
 ];
