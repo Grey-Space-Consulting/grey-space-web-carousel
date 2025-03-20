@@ -2,7 +2,7 @@
 import React from "react";
 import PackageTabs from "@/components/packages/PackageTabs";
 import PackagesWorkTogether from "@/components/packages/PackagesWorkTogether";
-import { leadershipPackages, technologyPackages } from "@/data/servicePackages";
+import { leadershipPackages, technologyPackages, combinedPackages } from "@/data/servicePackages";
 
 const ServicePackagesSection: React.FC = () => {
   return (
@@ -14,12 +14,13 @@ const ServicePackagesSection: React.FC = () => {
         Tailored Solutions for Your Business
       </h2>
       <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-16">
-        Our service packages are designed to deliver exactly what you need, whether it's strategic guidance or hands-on technical implementation.
+        Our service packages are designed to deliver exactly what you need, whether it's strategic guidance, hands-on implementation, or a comprehensive solution.
       </p>
       
       <PackageTabs 
         leadershipPackages={leadershipPackages} 
-        technologyPackages={technologyPackages} 
+        technologyPackages={technologyPackages}
+        combinedPackages={combinedPackages}
       />
       
       {/* How These Packages Work Together */}

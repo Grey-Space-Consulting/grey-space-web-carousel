@@ -46,7 +46,7 @@ const ServicePackageCard: React.FC<ServicePackageCardProps> = ({ pkg, index }) =
         <Separator className="mb-4" />
         
         <div className="mb-4">
-          <h4 className="font-medium mb-2">Services Included:</h4>
+          <h4 className="font-medium mb-2">Includes:</h4>
           <ul className="space-y-2">
             {pkg.services.map((service, i) => (
               <li key={i} className="flex items-start">
