@@ -1,4 +1,3 @@
-
 import React from "react";
 import { DetailedCaseStudy } from "../types";
 import { DollarSign, Clock, MessageSquare, BarChart, Database, UserCheck } from "lucide-react";
@@ -8,7 +7,7 @@ const seedhealthStudy: DetailedCaseStudy = {
   title: "CRM Rebuild with Improved Metrics & Cost Reduction",
   category: "D2C Ecommerce",
   excerpt: "A complete CRM overhaul that maintained support quality while allowing significant team restructuring and cost savings.",
-  image: "/placeholder.svg",
+  image: "https://res.cloudinary.com/dljz0lko8/image/upload/f_auto,q_auto,c_scale,w_550/v1649193546/DS-01_Jar_and_capsule.png",
   client: "Seed Health",
   clientLogo: "/placeholder.svg",
   industry: "Health & Wellness",
