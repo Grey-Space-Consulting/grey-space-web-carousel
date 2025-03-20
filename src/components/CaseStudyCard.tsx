@@ -107,7 +107,6 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
   };
   
   const stats = getStatsForCaseStudy();
-  const solutionTags = getSolutionTags(study.id);
   
   return (
     <div className="glass-card rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300 h-full flex flex-col">
@@ -136,19 +135,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         
         <p className="text-xs text-muted-foreground mb-2 flex-grow line-clamp-2">{study.excerpt}</p>
         
-        {/* Display solution tags */}
-        {solutionTags.length > 0 && (
-          <div className="flex flex-wrap gap-1 mb-2">
-            {solutionTags.map((solution, index) => (
-              <span 
-                key={index} 
-                className="inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium text-foreground"
-              >
-                {solution}
-              </span>
-            ))}
-          </div>
-        )}
+        {/* Solution tags section removed */}
         
         {stats.length > 0 && (
           <div className="grid grid-cols-1 gap-1 mb-2">
