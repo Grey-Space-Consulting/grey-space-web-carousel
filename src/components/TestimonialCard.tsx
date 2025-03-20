@@ -37,9 +37,12 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
           </div>
           <div>
             <h4 className="font-semibold text-sm">{testimonial.name}</h4>
-            <p className="text-muted-foreground text-xs">
-              {testimonial.role}{testimonial.company ? `, ${testimonial.company}` : ''}
-            </p>
+            <p className="text-muted-foreground text-xs">{testimonial.role}</p>
+            {testimonial.company && (
+              <p className="text-primary font-medium text-xs italic">
+                {testimonial.company}
+              </p>
+            )}
           </div>
         </div>
       </div>
