@@ -71,6 +71,7 @@ const TechCard = ({ name, category, icon, logoUrl, index, isMoreCard }: TechCard
       </div>
       <h3 className="font-medium text-xs mb-0.5">{name}</h3>
       {!isMoreCard && <p className="text-xs text-muted-foreground">{category}</p>}
+      {isMoreCard && <p className="text-xs text-muted-foreground opacity-0">Placeholder</p>}
     </div>
   );
 };
@@ -99,7 +100,7 @@ const TechGrid = () => {
         <TechCard
           key="more"
           name="+ More"
-          category=""
+          category="Technologies"
           icon={<Plus className="h-5 w-5" />}
           index={technologies.length}
           isMoreCard={true}
