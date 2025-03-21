@@ -23,9 +23,32 @@ const HeroSection = () => {
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-primary/5 animate-float" style={{ animationDelay: "0s" }} />
-        <div className="absolute bottom-1/3 right-1/3 h-96 w-96 rounded-full bg-accent/5 animate-float" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-2/3 left-1/2 h-48 w-48 rounded-full bg-primary/3 animate-float" style={{ animationDelay: "2s" }} />
+        {/* First circle - larger movement, slower */}
+        <div 
+          className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-primary/5 animate-float-circle"
+          style={{ 
+            animation: "float-circle 20s ease-in-out infinite",
+            animationDelay: "0s" 
+          }} 
+        />
+        
+        {/* Second circle - different direction, medium speed */}
+        <div 
+          className="absolute bottom-1/3 right-1/3 h-96 w-96 rounded-full bg-accent/5"
+          style={{ 
+            animation: "float-circle-alt 15s ease-in-out infinite",
+            animationDelay: "1s" 
+          }} 
+        />
+        
+        {/* Third circle - smaller, faster movement */}
+        <div 
+          className="absolute top-2/3 left-1/2 h-48 w-48 rounded-full bg-primary/3"
+          style={{ 
+            animation: "float-circle-small 10s ease-in-out infinite",
+            animationDelay: "2s" 
+          }} 
+        />
       </div>
       
       <div className="max-w-7xl mx-auto text-center z-10 relative">
