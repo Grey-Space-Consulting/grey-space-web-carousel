@@ -13,7 +13,7 @@ const IndustriesCTA = () => {
               Marketplaces, and E-Commerce businesses. Let's discuss how we can help you 
               solve your specific challenges.
             </p>
-            <Button size="default" onClick={() => window.location.href = "mailto:contact@example.com"}>
+            <Button size="default" onClick={() => window.location.href = "mailto:hello@greyspace.co"}>
               Contact Our Team
             </Button>
           </div>

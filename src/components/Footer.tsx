@@ -1,3 +1,4 @@
+
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 const Footer = () => {
@@ -44,8 +45,8 @@ const Footer = () => {
               
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-primary shrink-0" />
-                <a href="mailto:info@greyspace.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                  info@greyspace.com
+                <a href="mailto:hello@greyspace.co" className="text-muted-foreground hover:text-foreground transition-colors">
+                  hello@greyspace.co
                 </a>
               </li>
             </ul>
