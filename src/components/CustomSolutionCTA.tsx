@@ -9,7 +9,7 @@ const CustomSolutionCTA: React.FC = () => {
       <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
         Our team can create a tailored package that perfectly fits your unique business requirements and challenges.
       </p>
-      <Button size="lg">
+      <Button size="lg" onClick={() => window.location.href = "/#contact"}>
         Contact Us
       </Button>
     </div>
