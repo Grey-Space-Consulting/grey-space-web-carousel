@@ -36,7 +36,6 @@ const technologies: Technology[] = [
   { name: "Mixpanel", category: "Analytics", logoUrl: "https://seeklogo.com/images/M/mixpanel-logo-A209D265A2-seeklogo.com.png" },
   { name: "Kodif", category: "AI", logoUrl: "https://greyspace-v3.netlify.app/technologies/kodif-icon.jpeg" },
   { name: "Siena", category: "AI", logoUrl: "https://greyspace-v3.netlify.app/technologies/siena-icon.jpeg" },
-  { name: "Netomi", category: "AI", logoUrl: "https://du3qakkv2rjkz.cloudfront.net/entity_assets/bots/113/Netomi_Logo_320px.png" },
   { name: "AWS", category: "Cloud", logoUrl: "https://greyspace-v3.netlify.app/technologies/aws-icon.svg" },
   { name: "Google Cloud", category: "Cloud", logoUrl: "https://images.icon-icons.com/2642/PNG/512/google_cloud_logo_icon_159333.png" },
   { name: "Snowflake", category: "Data", logoUrl: "https://logos-world.net/wp-content/uploads/2022/11/Snowflake-Symbol-500x281.png" },
