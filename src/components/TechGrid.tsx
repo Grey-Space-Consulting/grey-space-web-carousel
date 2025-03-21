@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   BarChart, Database, MessageCircle, Cloud, Server, 
@@ -32,12 +31,9 @@ const technologies: Technology[] = [
   { name: "Gladly", category: "CRM", logoUrl: "https://greyspace-v3.netlify.app/technologies/gladly-icon.png" },
   { name: "Gorgias", category: "CRM", logoUrl: "https://greyspace-v3.netlify.app/technologies/gorgias-icon.png" },
   { name: "Intercom", category: "CRM", logoUrl: "https://www.clipartmax.com/png/small/292-2927934_intercom-logo-intercom-logo.png" },
-  { name: "Dixa", category: "CRM", logoUrl: "https://greyspace-v3.netlify.app/technologies/dixa-icon.avif" },
   { name: "Rudderstack", category: "Analytics", logoUrl: "https://api.getkoala.com/web/companies/rudderstack.com/logo" },
   { name: "Segment", category: "Analytics", logoUrl: "https://logosandtypes.com/wp-content/uploads/2020/08/segment.svg" },
   { name: "Mixpanel", category: "Analytics", logoUrl: "https://seeklogo.com/images/M/mixpanel-logo-A209D265A2-seeklogo.com.png" },
-  { name: "GA4", category: "Analytics", logoUrl: "https://logos-world.net/wp-content/uploads/2021/02/Google-Analytics-Logo.png" },
-  { name: "Amplitude", category: "Analytics", logoUrl: "https://logosandtypes.com/wp-content/uploads/2020/06/amplitude.svg" },
   { name: "Kodif", category: "AI", logoUrl: "https://greyspace-v3.netlify.app/technologies/kodif-icon.jpeg" },
   { name: "Siena", category: "AI", logoUrl: "https://greyspace-v3.netlify.app/technologies/siena-icon.jpeg" },
   { name: "Netomi", category: "AI", logoUrl: "https://du3qakkv2rjkz.cloudfront.net/entity_assets/bots/113/Netomi_Logo_320px.png" },
@@ -52,7 +48,6 @@ const technologies: Technology[] = [
   { name: "Assembled", category: "Operations", logoUrl: "https://res.cloudinary.com/apideck/image/upload/v1603781513/icons/assembled.png" },
   { name: "Mavenoid", category: "Support", logoUrl: "https://greyspace-v3.netlify.app/technologies/mavenoid-icon.avif" },
   { name: "AmazonConnect", category: "Communications", logoUrl: "https://greyspace-v3.netlify.app/technologies/amazon-connect-icon.avif" },
-  { name: "ZoomPhone", category: "Communications", logoUrl: "https://ml.globenewswire.com/Resource/Download/1a5e6f52-9a8e-432b-84cc-7dfb0e6623e2?size=3" },
   { name: "NiceIncontact", category: "Communications", logoUrl: "https://www.celigo.com/wp-content/uploads/2024/01/nice-cxone-logo.jpg" },
 ];
 
