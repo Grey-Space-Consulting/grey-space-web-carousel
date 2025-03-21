@@ -1,10 +1,13 @@
+
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, Home } from "lucide-react";
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -13,9 +16,11 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 md:px-10", scrolled ? "py-4 glass-dark" : "py-6")}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
@@ -36,9 +41,9 @@ const Navbar = () => {
           </Link>
         </nav>
 
-        <button className="rounded-lg px-5 py-2.5 bg-primary/10 text-primary hover:bg-primary/20 transition-colors hidden md:block">
+        <a href="/#contact" className="rounded-lg px-5 py-2.5 bg-primary/10 text-primary hover:bg-primary/20 transition-colors hidden md:block">
           Get in touch
-        </button>
+        </a>
 
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -62,11 +67,12 @@ const Navbar = () => {
           <Link to="/causes" className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border" onClick={() => setIsMenuOpen(false)}>
             Causes We Support
           </Link>
-          <button className="mt-4 rounded-lg px-5 py-3 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+          <a href="/#contact" className="mt-4 rounded-lg px-5 py-3 bg-primary/10 text-primary hover:bg-primary/20 transition-colors" onClick={() => setIsMenuOpen(false)}>
             Get in touch
-          </button>
+          </a>
         </nav>
       </div>
     </header>;
 };
+
 export default Navbar;
