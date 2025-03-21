@@ -23,11 +23,11 @@ const HeroSection = () => {
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* First circle - larger movement, slower */}
+        {/* First circle - larger movement, faster */}
         <div 
-          className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-primary/5 animate-float-circle"
+          className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-primary/5"
           style={{ 
-            animation: "float-circle 20s ease-in-out infinite",
+            animation: "float-circle 15s ease-in-out infinite",
             animationDelay: "0s" 
           }} 
         />
@@ -36,7 +36,7 @@ const HeroSection = () => {
         <div 
           className="absolute bottom-1/3 right-1/3 h-96 w-96 rounded-full bg-accent/5"
           style={{ 
-            animation: "float-circle-alt 15s ease-in-out infinite",
+            animation: "float-circle-alt 12s ease-in-out infinite",
             animationDelay: "1s" 
           }} 
         />
@@ -45,8 +45,17 @@ const HeroSection = () => {
         <div 
           className="absolute top-2/3 left-1/2 h-48 w-48 rounded-full bg-primary/3"
           style={{ 
-            animation: "float-circle-small 10s ease-in-out infinite",
+            animation: "float-circle-small 8s ease-in-out infinite",
             animationDelay: "2s" 
+          }} 
+        />
+
+        {/* Fourth circle - tiny, very fast movement */}
+        <div 
+          className="absolute bottom-1/4 right-1/4 h-32 w-32 rounded-full bg-accent/4"
+          style={{ 
+            animation: "float-circle-tiny 6s ease-in-out infinite",
+            animationDelay: "0.5s" 
           }} 
         />
       </div>
