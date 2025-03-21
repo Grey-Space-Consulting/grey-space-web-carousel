@@ -109,27 +109,27 @@ export default {
 				// Enhanced animations for the background circles with more movement
 				'float-circle': {
 					'0%': { transform: 'translate(0, 0)' },
-					'25%': { transform: 'translate(50px, -40px)' },
-					'50%': { transform: 'translate(25px, 40px)' },
-					'75%': { transform: 'translate(-40px, 20px)' },
+					'25%': { transform: 'translate(80px, -60px)' },
+					'50%': { transform: 'translate(40px, 70px)' },
+					'75%': { transform: 'translate(-70px, 30px)' },
 					'100%': { transform: 'translate(0, 0)' }
 				},
 				'float-circle-alt': {
 					'0%': { transform: 'translate(0, 0)' },
-					'33%': { transform: 'translate(-45px, 30px)' },
-					'66%': { transform: 'translate(45px, 30px)' },
+					'33%': { transform: 'translate(-75px, 50px)' },
+					'66%': { transform: 'translate(75px, 50px)' },
 					'100%': { transform: 'translate(0, 0)' }
 				},
 				'float-circle-small': {
 					'0%': { transform: 'translate(0, 0)' },
-					'50%': { transform: 'translate(-35px, -45px)' },
+					'50%': { transform: 'translate(-60px, -75px)' },
 					'100%': { transform: 'translate(0, 0)' }
 				},
 				'float-circle-tiny': {
 					'0%': { transform: 'translate(0, 0) rotate(0deg)' },
-					'25%': { transform: 'translate(25px, -15px) rotate(5deg)' },
-					'50%': { transform: 'translate(-20px, -30px) rotate(-5deg)' },
-					'75%': { transform: 'translate(-15px, 25px) rotate(3deg)' },
+					'25%': { transform: 'translate(40px, -30px) rotate(10deg)' },
+					'50%': { transform: 'translate(-35px, -50px) rotate(-15deg)' },
+					'75%': { transform: 'translate(-25px, 40px) rotate(8deg)' },
 					'100%': { transform: 'translate(0, 0) rotate(0deg)' }
 				}
 			},
@@ -143,10 +143,10 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
 				// Animations for the background circles
-				'float-circle': 'float-circle 20s ease-in-out infinite',
-				'float-circle-alt': 'float-circle-alt 15s ease-in-out infinite',
-				'float-circle-small': 'float-circle-small 10s ease-in-out infinite',
-				'float-circle-tiny': 'float-circle-tiny 8s ease-in-out infinite'
+				'float-circle': 'float-circle 15s ease-in-out infinite',
+				'float-circle-alt': 'float-circle-alt 12s ease-in-out infinite',
+				'float-circle-small': 'float-circle-small 8s ease-in-out infinite',
+				'float-circle-tiny': 'float-circle-tiny 6s ease-in-out infinite'
 			}
 		}
 	},
