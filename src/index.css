@@ -14,35 +14,47 @@
     --popover: 0 0% 100%;  /* Pure White: #FFFFFF */
     --popover-foreground: 0 0% 29%;  /* Core Dark Grey: #4A4A4A */
 
-    --primary: 217 91% 60%;  /* Vivid Blue: #3B82F6 */
+    /* Enhanced Primary - more vibrant blue */
+    --primary: 213 94% 60%;  /* Enhanced Vivid Blue: #3178F6 */
     --primary-foreground: 0 0% 100%;  /* Pure White: #FFFFFF */
 
-    --secondary: 220 14% 69%;  /* Mid Grey: #A0AEC0 */
+    /* Enhanced Secondary - more colorful */
+    --secondary: 220 32% 69%;  /* Enhanced Mid Grey with blue tint: #95A9C6 */
     --secondary-foreground: 0 0% 29%;  /* Core Dark Grey: #4A4A4A */
 
     --muted: 220 14% 69%;  /* Mid Grey: #A0AEC0 */
     --muted-foreground: 0 0% 45%;  /* Lighter version of Core Dark Grey */
 
-    --accent: 93 70% 44%;  /* Lime Green: #84CC16 */
+    /* Enhanced Accent - more saturated green */
+    --accent: 93 76% 46%;  /* Enhanced Lime Green: #82CC12 */
     --accent-foreground: 0 0% 98%;  /* Almost white */
 
-    --destructive: 0 84% 60%;  /* Bold Red: #EF4444 */
+    /* Enhanced Destructive - brighter red */
+    --destructive: 0 90% 60%;  /* Enhanced Bold Red: #F83A3A */
     --destructive-foreground: 0 0% 98%;  /* Almost white */
+
+    /* Added Tertiary Color */
+    --tertiary: 43 96% 64%;  /* Warm Yellow: #FBCA44 */
+    --tertiary-foreground: 0 0% 20%;  /* Dark Grey: #333333 */
+
+    /* Added Info Color */
+    --info: 199 89% 55%;  /* Sky Blue: #22A9E3 */
+    --info-foreground: 0 0% 100%;  /* Pure White: #FFFFFF */
 
     --border: 220 14% 75%;  /* Lighter version of Mid Grey: #A0AEC0 */
     --input: 220 14% 75%;  /* Lighter version of Mid Grey: #A0AEC0 */
-    --ring: 217 91% 60%;  /* Vivid Blue: #3B82F6 */
+    --ring: 213 94% 60%;  /* Enhanced Vivid Blue: #3178F6 */
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 29%;  /* Core Dark Grey: #4A4A4A */
     --sidebar-foreground: 0 0% 93%;  /* Light Grey: #EDEDED */
-    --sidebar-primary: 217 91% 60%;  /* Vivid Blue: #3B82F6 */
+    --sidebar-primary: 213 94% 60%;  /* Enhanced Vivid Blue: #3178F6 */
     --sidebar-primary-foreground: 0 0% 100%;  /* Pure White: #FFFFFF */
     --sidebar-accent: 0 0% 35%;  /* Slightly lighter Core Dark Grey */
     --sidebar-accent-foreground: 0 0% 93%;  /* Light Grey: #EDEDED */
     --sidebar-border: 0 0% 35%;  /* Slightly lighter Core Dark Grey */
-    --sidebar-ring: 217 91% 60%;  /* Vivid Blue: #3B82F6 */
+    --sidebar-ring: 213 94% 60%;  /* Enhanced Vivid Blue: #3178F6 */
   }
 }
 
@@ -75,7 +87,7 @@
   }
   
   .subtle-glow {
-    @apply shadow-[0_0_15px_rgba(59,130,246,0.15)];
+    @apply shadow-[0_0_15px_rgba(49,120,246,0.2)];
   }
   
   .text-balance {
@@ -83,7 +95,11 @@
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-info to-accent bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-warm {
+    @apply bg-gradient-to-r from-tertiary to-destructive bg-clip-text text-transparent;
   }
   
   .heading-xl {
@@ -100,5 +116,17 @@
   
   .section-padding {
     @apply py-16 md:py-24;
+  }
+  
+  .accent-border {
+    @apply border-l-4 border-accent pl-4;
+  }
+  
+  .info-badge {
+    @apply bg-info/10 text-info px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  
+  .tertiary-badge {
+    @apply bg-tertiary/10 text-tertiary-foreground px-2.5 py-0.5 rounded-full text-xs font-semibold;
   }
 }
