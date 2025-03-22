@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
@@ -55,14 +56,14 @@ const Causes = () => {
             {causes.map((cause, index) => (
               <div 
                 key={cause.name} 
-                className="glass-card rounded-lg overflow-hidden flex flex-col group animate-fade-in"
+                className="glass-card rounded-lg overflow-hidden flex flex-col animate-fade-in"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
                 <div className="h-48 bg-card/80 overflow-hidden">
                   <img 
                     src={cause.image} 
                     alt={cause.name} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-5 flex flex-col flex-grow">
@@ -70,7 +71,7 @@ const Causes = () => {
                     <cause.icon size={16} />
                     <span className="text-sm font-medium">{cause.category}</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">{cause.name}</h3>
+                  <h3 className="text-lg font-semibold mb-2">{cause.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4 flex-grow">{cause.description}</p>
                   <div className="mt-auto">
                     <a
