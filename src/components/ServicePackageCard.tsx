@@ -28,7 +28,7 @@ const ServicePackageCard: React.FC<ServicePackageCardProps> = ({ pkg, index }) =
       style={{ animationDelay: `${(index + 1) * 100}ms` }}
     >
       {pkg.highlighted && (
-        <div className="absolute top-0 right-0 bg-primary text-white px-4 py-1 text-sm font-medium">
+        <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium">
           Most Popular
         </div>
       )}
