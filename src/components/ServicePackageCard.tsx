@@ -24,7 +24,7 @@ interface ServicePackageCardProps {
 const ServicePackageCard: React.FC<ServicePackageCardProps> = ({ pkg, index }) => {
   return (
     <Card 
-      className={`animate-fade-in ${pkg.highlighted ? 'border-primary shadow-lg relative overflow-hidden' : ''}`}
+      className={`animate-fade-in h-full ${pkg.highlighted ? 'border-primary shadow-lg relative overflow-hidden' : ''}`}
       style={{ animationDelay: `${(index + 1) * 100}ms` }}
     >
       {pkg.highlighted && (

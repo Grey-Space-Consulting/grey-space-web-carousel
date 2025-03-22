@@ -21,29 +21,31 @@ const PackageTabs: React.FC<PackageTabsProps> = ({
   
   return (
     <Tabs defaultValue="leadership" className="w-full mb-10">
-      <TabsList className="mx-auto mb-8 bg-secondary/80 p-1.5 border border-muted/30 shadow-lg rounded-xl flex flex-wrap justify-center">
-        <TabsTrigger 
-          value="leadership" 
-          className="px-4 sm:px-6 py-3 rounded-lg text-sm sm:text-base font-medium transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
-        >
-          <Users className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-          {isMobile ? "Advisory" : "Leadership & Advisory"}
-        </TabsTrigger>
-        <TabsTrigger 
-          value="technology" 
-          className="px-4 sm:px-6 py-3 rounded-lg text-sm sm:text-base font-medium transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
-        >
-          <Database className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-          {isMobile ? "Technology" : "Technology Implementation"}
-        </TabsTrigger>
-        <TabsTrigger 
-          value="combined" 
-          className="px-4 sm:px-6 py-3 rounded-lg text-sm sm:text-base font-medium transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
-        >
-          <Puzzle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-          {isMobile ? "Combined" : "Combined Packages"}
-        </TabsTrigger>
-      </TabsList>
+      <div className="flex justify-center w-full">
+        <TabsList className="mb-8 bg-secondary/80 p-1.5 border border-muted/30 shadow-lg rounded-xl flex flex-wrap justify-center max-w-fit mx-auto">
+          <TabsTrigger 
+            value="leadership" 
+            className="px-4 sm:px-6 py-3 rounded-lg text-sm sm:text-base font-medium transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
+          >
+            <Users className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+            {isMobile ? "Advisory" : "Leadership & Advisory"}
+          </TabsTrigger>
+          <TabsTrigger 
+            value="technology" 
+            className="px-4 sm:px-6 py-3 rounded-lg text-sm sm:text-base font-medium transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
+          >
+            <Database className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+            {isMobile ? "Technology" : "Technology Implementation"}
+          </TabsTrigger>
+          <TabsTrigger 
+            value="combined" 
+            className="px-4 sm:px-6 py-3 rounded-lg text-sm sm:text-base font-medium transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md"
+          >
+            <Puzzle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+            {isMobile ? "Combined" : "Combined Packages"}
+          </TabsTrigger>
+        </TabsList>
+      </div>
       
       <TabsContent value="leadership">
         <PackageTabContent
