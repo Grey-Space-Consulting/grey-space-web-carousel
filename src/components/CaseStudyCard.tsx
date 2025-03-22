@@ -109,7 +109,18 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
   const stats = getStatsForCaseStudy();
   
   return (
-    <div className="glass-card rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+    <div 
+      className="glass-card rounded-lg overflow-hidden group hover:shadow-lg transition-all duration-300 h-full flex flex-col cursor-pointer"
+      onClick={() => onClick(study.id)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          onClick(study.id);
+        }
+      }}
+      aria-label={`View case study: ${study.title}`}
+    >
       <div className="h-28 bg-card/80 overflow-hidden">
         <img 
           src={study.image} 
@@ -133,8 +144,6 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
         
         <h3 className="text-sm font-semibold mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-3">{study.title}</h3>
         
-        {/* Excerpt removed to allow title to fill more space */}
-        
         {stats.length > 0 && (
           <div className="grid grid-cols-1 gap-1 mb-2">
             {stats.map((stat, index) => (
@@ -146,12 +155,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
           </div>
         )}
         
-        <button 
-          onClick={() => onClick(study.id)}
-          className="flex items-center gap-1 text-primary text-xs hover:underline mt-auto"
-        >
+        <div className="flex items-center gap-1 text-primary text-xs hover:underline mt-auto">
           Read Case Study <ChevronRight size={12} />
-        </button>
+        </div>
       </div>
     </div>
   );
