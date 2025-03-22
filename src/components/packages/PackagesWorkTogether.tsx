@@ -1,6 +1,7 @@
 
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const PackagesWorkTogether: React.FC = () => {
   return (
@@ -37,88 +38,103 @@ const PackagesWorkTogether: React.FC = () => {
         </div>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-background/70 p-6 rounded-lg shadow-sm">
-          <h4 className="text-xl font-medium mb-3 text-primary flex items-center">
-            <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">1</span>
-            Mix & Match for Complete Solutions
-          </h4>
-          <p className="mb-4">
-            Combine packages from different categories to create a comprehensive solution that addresses all aspects of your business needs.
-          </p>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Pair <strong>Platform & Tooling Advisory</strong> with <strong>Technology Implementation</strong> for end-to-end solutions.</span>
-            </li>
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Add <strong>Fractional Leadership</strong> to any technical implementation for strategic oversight.</span>
-            </li>
-          </ul>
-        </div>
-        
-        <div className="bg-background/70 p-6 rounded-lg shadow-sm">
-          <h4 className="text-xl font-medium mb-3 text-primary flex items-center">
-            <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">2</span>
-            Budget-Friendly Options
-          </h4>
-          <p className="mb-4">
-            We believe in making our expertise accessible to businesses of all sizes, regardless of budget constraints.
-          </p>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Bundled services offer <strong>cost advantages</strong> while providing comprehensive solutions.</span>
-            </li>
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Long-term partnerships receive <strong>preferential rates</strong> and additional support hours.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
+      {/* Updated section with individual cards for each option */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-background/70 p-6 rounded-lg shadow-sm">
-          <h4 className="text-xl font-medium mb-3 text-primary flex items-center">
-            <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">3</span>
-            Custom Tailoring
-          </h4>
-          <p className="mb-4">
-            Every business has unique requirements. We can customize any package to perfectly align with your specific situation.
-          </p>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Adjust service components, delivery timelines, and engagement levels to match your budget and priorities.</span>
-            </li>
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Scale services up or down based on your evolving needs and organizational growth.</span>
-            </li>
-          </ul>
-        </div>
+        <Card className="bg-background/70 border-primary/10 hover:border-primary/30 transition-colors">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-xl text-primary flex items-center">
+              <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">1</span>
+              Mix & Match for Complete Solutions
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4">
+              Combine packages from different categories to create a comprehensive solution that addresses all aspects of your business needs.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Pair <strong>Platform & Tooling Advisory</strong> with <strong>Technology Implementation</strong> for end-to-end solutions.</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Add <strong>Fractional Leadership</strong> to any technical implementation for strategic oversight.</span>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
         
-        <div className="bg-background/70 p-6 rounded-lg shadow-sm">
-          <h4 className="text-xl font-medium mb-3 text-primary flex items-center">
-            <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">4</span>
-            Accessible to All Businesses
-          </h4>
-          <p className="mb-4">
-            We're passionate about helping brands succeed, regardless of their size or budget limitations.
-          </p>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>We always find creative ways to work within your budget constraints while delivering value.</span>
-            </li>
-            <li className="flex items-start">
-              <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
-              <span>Our modular approach lets us focus on your most critical needs first, allowing for phased implementation.</span>
-            </li>
-          </ul>
-        </div>
+        <Card className="bg-background/70 border-primary/10 hover:border-primary/30 transition-colors">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-xl text-primary flex items-center">
+              <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">2</span>
+              Budget-Friendly Options
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4">
+              We believe in making our expertise accessible to businesses of all sizes, regardless of budget constraints.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Bundled services offer <strong>cost advantages</strong> while providing comprehensive solutions.</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Long-term partnerships receive <strong>preferential rates</strong> and additional support hours.</span>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+      
+        <Card className="bg-background/70 border-primary/10 hover:border-primary/30 transition-colors">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-xl text-primary flex items-center">
+              <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">3</span>
+              Custom Tailoring
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4">
+              Every business has unique requirements. We can customize any package to perfectly align with your specific situation.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Adjust service components, delivery timelines, and engagement levels to match your budget and priorities.</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Scale services up or down based on your evolving needs and organizational growth.</span>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+        
+        <Card className="bg-background/70 border-primary/10 hover:border-primary/30 transition-colors">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-xl text-primary flex items-center">
+              <span className="bg-primary/10 text-primary rounded-full w-8 h-8 inline-flex items-center justify-center mr-2">4</span>
+              Accessible to All Businesses
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-4">
+              We're passionate about helping brands succeed, regardless of their size or budget limitations.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>We always find creative ways to work within your budget constraints while delivering value.</span>
+              </li>
+              <li className="flex items-start">
+                <ArrowRight className="h-5 w-5 text-primary shrink-0 mr-2 mt-1" />
+                <span>Our modular approach lets us focus on your most critical needs first, allowing for phased implementation.</span>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
