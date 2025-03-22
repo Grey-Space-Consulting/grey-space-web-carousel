@@ -24,33 +24,41 @@ interface ServicePackageCardProps {
 const ServicePackageCard: React.FC<ServicePackageCardProps> = ({ pkg, index }) => {
   return (
     <Card 
-      className={`animate-fade-in h-full ${pkg.highlighted ? 'border-primary shadow-lg relative overflow-hidden' : ''}`}
+      className={`animate-fade-in h-full flex flex-col ${
+        pkg.highlighted 
+          ? 'border-primary/50 shadow-lg relative overflow-hidden bg-primary/5' 
+          : 'hover:border-secondary/50 hover:shadow-md transition-all duration-300'
+      }`}
       style={{ animationDelay: `${(index + 1) * 100}ms` }}
     >
       {pkg.highlighted && (
-        <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium">
+        <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-xs font-medium rounded-bl-md">
           Most Popular
         </div>
       )}
-      <CardHeader>
-        {pkg.icon}
+      
+      <CardHeader className="pb-2">
+        <div className="mb-2">{pkg.icon}</div>
         <CardTitle className={pkg.highlighted ? 'text-primary' : ''}>{pkg.title}</CardTitle>
         <CardDescription className="mt-1">{pkg.description}</CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="mb-6">
-          <span className="text-3xl font-bold">{pkg.price}</span>
+      
+      <CardContent className="flex-grow">
+        <div className="mb-4">
+          <span className={`text-3xl font-bold ${pkg.highlighted ? 'text-primary' : ''}`}>{pkg.price}</span>
           <span className="text-muted-foreground ml-2 text-sm">{pkg.duration}</span>
         </div>
         
-        <Separator className="mb-4" />
+        <Separator className="my-4" />
         
         <div className="mb-4">
-          <h4 className="font-medium mb-2">Includes:</h4>
-          <ul className="space-y-2">
+          <h4 className="font-medium text-sm uppercase tracking-wide text-muted-foreground mb-3">Includes:</h4>
+          <ul className="space-y-2.5">
             {pkg.services.map((service, i) => (
-              <li key={i} className="flex items-start">
-                <Check className="h-5 w-5 text-primary shrink-0 mr-2 mt-0.5" />
+              <li key={i} className="flex items-start gap-2.5">
+                <span className={`flex-shrink-0 rounded-full p-1 ${pkg.highlighted ? 'bg-primary/10' : 'bg-secondary/30'}`}>
+                  <Check className={`h-3.5 w-3.5 ${pkg.highlighted ? 'text-primary' : 'text-foreground/80'}`} />
+                </span>
                 <span className="text-sm">{service}</span>
               </li>
             ))}
@@ -58,19 +66,28 @@ const ServicePackageCard: React.FC<ServicePackageCardProps> = ({ pkg, index }) =
         </div>
         
         <div>
-          <h4 className="font-medium mb-2">Deliverables:</h4>
-          <ul className="space-y-2">
+          <h4 className="font-medium text-sm uppercase tracking-wide text-muted-foreground mb-3">Deliverables:</h4>
+          <ul className="space-y-2.5">
             {pkg.deliverables.map((deliverable, i) => (
-              <li key={i} className="flex items-start">
-                <Check className="h-5 w-5 text-primary shrink-0 mr-2 mt-0.5" />
+              <li key={i} className="flex items-start gap-2.5">
+                <span className={`flex-shrink-0 rounded-full p-1 ${pkg.highlighted ? 'bg-primary/10' : 'bg-secondary/30'}`}>
+                  <Check className={`h-3.5 w-3.5 ${pkg.highlighted ? 'text-primary' : 'text-foreground/80'}`} />
+                </span>
                 <span className="text-sm">{deliverable}</span>
               </li>
             ))}
           </ul>
         </div>
       </CardContent>
-      <CardFooter>
-        <Button className={`w-full ${pkg.highlighted ? '' : 'variant-outline'}`}>
+      
+      <CardFooter className="pt-4">
+        <Button 
+          className={`w-full transition-all ${
+            pkg.highlighted 
+              ? 'bg-primary hover:bg-primary/90' 
+              : 'bg-secondary/50 hover:bg-secondary/70 text-foreground'
+          }`}
+        >
           Learn More
         </Button>
       </CardFooter>
