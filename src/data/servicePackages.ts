@@ -44,7 +44,7 @@ export const leadershipPackages: ServicePackage[] = [
     highlighted: true
   },
   {
-    title: "Executive Advisory & Vendor Selection",
+    title: "Executive Advisory & Leadership Package",
     description: "Bring in a seasoned C-suite leader—at a fraction of a full-time hire cost—to develop and execute your vision for operational and customer experience excellence.",
     price: "Starting at $12,500",
     duration: "/month (3–12+ month engagement)",
