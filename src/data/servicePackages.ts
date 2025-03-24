@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Users, Cog, Lightbulb, BarChart, ListChecks, Database, Cpu, LineChart, Bot, Code, Workflow, Headphones, BrainCircuit } from "lucide-react";
 import { ServicePackage } from "@/components/ServicePackageCard";
@@ -6,9 +5,9 @@ import { ServicePackage } from "@/components/ServicePackageCard";
 // Define the advisory packages
 export const leadershipPackages: ServicePackage[] = [
   {
-    title: "Advisory Quick-Start",
+    title: "Platform & Operational Review",
     description: "Rapidly identify CX or technology gaps and provide a targeted roadmap for improvement, without a long-term commitment.",
-    price: "$5,000 – $10,000",
+    price: "Starting At $7,500",
     duration: "one-time",
     icon: React.createElement(BarChart, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
