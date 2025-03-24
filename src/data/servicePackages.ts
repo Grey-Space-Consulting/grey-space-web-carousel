@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Users, Cog, Lightbulb, BarChart, ListChecks, Database, Cpu, LineChart, Bot, Code, Workflow, Headphones, BrainCircuit } from "lucide-react";
 import { ServicePackage } from "@/components/ServicePackageCard";
@@ -32,7 +33,7 @@ export const leadershipPackages: ServicePackage[] = [
     services: [
       "Fractional CX or Tech Executive: Bi-Weekly strategic planning & stakeholder alignment",
       "Lightweight Audit & Health Checks: Continuous improvement updates",
-      "Team Leadership, Goal-Setting, & Organization"
+      "Team Leadership, Goal-Setting, & Organization",
       "Mentorship & Workshops: Grow internal leadership capabilities"
     ],
     deliverables: [
