@@ -45,19 +45,20 @@ export const leadershipPackages: ServicePackage[] = [
   },
   {
     title: "Executive Advisory & Vendor Selection",
-    description: "White-glove advisory plus end-to-end vendor RFP management—ideal for larger budgets or complex, multi-vendor environments.",
-    price: "$15,000 – $25,000",
-    duration: "/month (3–6 month engagement)",
+    description: "Bring in a seasoned C-suite leader—at a fraction of a full-time hire cost—to develop and execute your vision for operational and customer experience excellence.",
+    price: "Starting at $12,500",
+    duration: "/month (3–12+ month engagement)",
     icon: React.createElement(ListChecks, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
-      "Fractional Leadership with executive-level guidance",
-      "In-Depth Audit & Assessment of your entire technology stack",
-      "Vendor & Tool Selection: Custom RFPs and negotiation"
+      "Strategic Roadmap: A 12–24 month CX & Operations plan, with defined priorities and ROI targets.",
+      "Leadership Mentorship: Workshops and coaching for your management team to strengthen CX-focused culture and streamline operations.",
+      "Technology & Process Oversight: Recommendations for platform upgrades, workflow improvements, and vendor governance.",
+      "Embedded Executive Partnership: On-demand advisory for board-level decisions, plus ongoing alignment across all departments."
     ],
     deliverables: [
-      "Comprehensive Audit Report & High-Level Roadmap",
-      "Full RFP Development & Vendor Comparison Matrix",
-      "Contract Negotiation & Executive Alignment Sessions"
+      "Access years of leadership experience without the overhead of a permanent hire.",
+      "Accelerate CX improvements and optimize operations quickly using proven frameworks.",
+      " We act as an extension of your leadership team, ensuring every initiative aligns with your vision."
     ],
     highlighted: false
   }
