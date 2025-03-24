@@ -26,7 +26,7 @@ export const leadershipPackages: ServicePackage[] = [
   {
     title: "Fractional CX Leadership Program",
     description: "Ongoing executive-level partnership at a fraction of the cost of hiring a full-time VP of CX/CTO.",
-    price: "Starting at $8500",
+    price: "Starting at $8,500",
     duration: "/month",
     icon: React.createElement(Users, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
