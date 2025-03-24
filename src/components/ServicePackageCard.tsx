@@ -44,36 +44,36 @@ const ServicePackageCard: React.FC<ServicePackageCardProps> = ({ pkg, index }) =
       </CardHeader>
       
       <CardContent className="flex-grow">
-        <div className="mb-4">
+        <div className="mb-4 text-center">
           <span className={`text-3xl font-bold ${pkg.highlighted ? 'text-primary' : ''}`}>{pkg.price}</span>
           <span className="text-muted-foreground ml-2 text-sm">{pkg.duration}</span>
         </div>
         
         <Separator className="my-4" />
         
-        <div className="mb-4">
+        <div className="mb-4 text-center">
           <h4 className="font-medium text-sm uppercase tracking-wide text-muted-foreground mb-3">Includes:</h4>
           <ul className="space-y-2.5">
             {pkg.services.map((service, i) => (
-              <li key={i} className="flex items-start gap-2.5">
+              <li key={i} className="flex items-start gap-2.5 justify-center text-center">
                 <span className={`flex-shrink-0 rounded-full p-1 ${pkg.highlighted ? 'bg-primary/10' : 'bg-secondary/30'}`}>
                   <Check className={`h-3.5 w-3.5 ${pkg.highlighted ? 'text-primary' : 'text-foreground/80'}`} />
                 </span>
-                <span className="text-sm">{service}</span>
+                <span className="text-sm text-center max-w-[80%]">{service}</span>
               </li>
             ))}
           </ul>
         </div>
         
-        <div>
+        <div className="text-center">
           <h4 className="font-medium text-sm uppercase tracking-wide text-muted-foreground mb-3">Deliverables:</h4>
           <ul className="space-y-2.5">
             {pkg.deliverables.map((deliverable, i) => (
-              <li key={i} className="flex items-start gap-2.5">
+              <li key={i} className="flex items-start gap-2.5 justify-center text-center">
                 <span className={`flex-shrink-0 rounded-full p-1 ${pkg.highlighted ? 'bg-primary/10' : 'bg-secondary/30'}`}>
                   <Check className={`h-3.5 w-3.5 ${pkg.highlighted ? 'text-primary' : 'text-foreground/80'}`} />
                 </span>
-                <span className="text-sm">{deliverable}</span>
+                <span className="text-sm text-center max-w-[80%]">{deliverable}</span>
               </li>
             ))}
           </ul>
