@@ -13,27 +13,30 @@ export const leadershipPackages: ServicePackage[] = [
     services: [
       "CX & Technology Audit: High-level review of tools and workflows",
       "Maturity Assessment: Benchmark against industry best practices",
-      "Select Vendor Recommendations: High-level guidance on potential vendors"
+      "Vendor Recommendations: High-level guidance on potential vendors"
     ],
     deliverables: [
       "Short-form Audit Report & Quick-Win Recommendations",
       "Maturity Scorecard (light version)",
-      "30-Day Improvement Action Plan"
+      "Vendor Analysis & Recommenations",
+      "30/60/90 Day Improvement Action Plan"
     ],
     highlighted: false
   },
   {
-    title: "Fractional Leadership Program",
+    title: "Fractional CX Leadership Program",
     description: "Ongoing executive-level partnership at a fraction of the cost of hiring a full-time VP of CX/CTO.",
-    price: "$8,000 – $15,000",
+    price: "Starting at $8500",
     duration: "/month",
     icon: React.createElement(Users, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
-      "Fractional CX or Tech Executive: Monthly strategic planning & stakeholder alignment",
+      "Fractional CX or Tech Executive: Bi-Weekly strategic planning & stakeholder alignment",
       "Lightweight Audit & Health Checks: Continuous improvement updates",
+      "Team Leadership, Goal-Setting, & Organization"
       "Mentorship & Workshops: Grow internal leadership capabilities"
     ],
     deliverables: [
+      "Director/VP Level Team Leadership",
       "Monthly/Quarterly Executive Strategy Sessions",
       "Advisory Hours for Senior Leadership & Board Meetings",
       "Custom Playbooks for best practices"
