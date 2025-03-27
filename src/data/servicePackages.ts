@@ -46,8 +46,8 @@ export const leadershipPackages: ServicePackage[] = [
   {
     title: "Executive Advisory & Leadership Package",
     description: "Bring in a seasoned C-suite leader—at a fraction of a full-time hire cost—to develop and execute your vision for operational and customer experience excellence.",
-    price: "Starting at $12,500",
-    duration: "/month (3–12+ month engagement)",
+    price: "Contact Us",
+    duration: "(3–12+ month engagement)",
     icon: React.createElement(ListChecks, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
       "Strategic Roadmap: A 12–24 month CX & Operations plan, with defined priorities and ROI targets.",
@@ -69,7 +69,7 @@ export const technologyPackages: ServicePackage[] = [
   {
     title: "CRM & Telephony Essentials",
     description: "Quickly set up or optimize foundational CRM/telephony platforms with minimal disruption.",
-    price: "$10,000 – $25,000",
+    price: "Starting at $10,000",
     duration: "depending on complexity",
     icon: React.createElement(Headphones, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
@@ -87,8 +87,8 @@ export const technologyPackages: ServicePackage[] = [
   {
     title: "AI & Chatbot Accelerator",
     description: "Deploy advanced automation (chatbots, AI routing) to reduce workload and supercharge the customer experience.",
-    price: "$25,000 – $40,000",
-    duration: "implementation",
+    price: "Starting at $15,000",
+    duration: "2-6 month implementation",
     icon: React.createElement(Bot, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
       "Chatbot Setup & NLP Training with platforms like Ada or Mavenoid",
@@ -105,7 +105,7 @@ export const technologyPackages: ServicePackage[] = [
   {
     title: "Full CX Data & Tech Overhaul",
     description: "A soup-to-nuts technology transformation that unifies all customer data and channels, complete with advanced AI/analytics.",
-    price: "$40,000 – $60,000+",
+    price: "Schedule a Consultation",
     duration: "depending on scope",
     icon: React.createElement(Database, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
@@ -127,7 +127,7 @@ export const combinedPackages: ServicePackage[] = [
   {
     title: "CX & Tech Accelerator Program",
     description: "A blended approach that covers strategy, leadership, and key technology implementations over a defined timeline.",
-    price: "$35,000 – $50,000",
+    price: "Schedule a Consultation",
     duration: "total (4–6 month program)",
     icon: React.createElement(Workflow, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
@@ -145,7 +145,7 @@ export const combinedPackages: ServicePackage[] = [
   {
     title: "AI Transformation & Executive Guidance",
     description: "A high-touch package for organizations that want AI-driven initiatives plus C-level strategic support.",
-    price: "$50,000 – $75,000",
+    price: "Schedule a Consultation",
     duration: "(6–9 month engagement)",
     icon: React.createElement(BrainCircuit, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
@@ -163,7 +163,7 @@ export const combinedPackages: ServicePackage[] = [
   {
     title: "Embedded Operations & Outsourcing",
     description: "Long-term partnership where we function as an extension of your internal CX and technology teams.",
-    price: "$8,000 – $20,000",
+    price: "Starting at $5,000",
     duration: "/month",
     icon: React.createElement(Lightbulb, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
