@@ -105,7 +105,7 @@ export const technologyPackages: ServicePackage[] = [
   {
     title: "Full CX Data & Tech Overhaul",
     description: "A soup-to-nuts technology transformation that unifies all customer data and channels, complete with advanced AI/analytics.",
-    price: "Schedule a Consultation",
+    price: "Contact Us",
     duration: "depending on scope",
     icon: React.createElement(Database, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
@@ -127,7 +127,7 @@ export const combinedPackages: ServicePackage[] = [
   {
     title: "CX & Tech Accelerator Program",
     description: "A blended approach that covers strategy, leadership, and key technology implementations over a defined timeline.",
-    price: "Schedule a Consultation",
+    price: "Contact Us",
     duration: "total (4–6 month program)",
     icon: React.createElement(Workflow, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
@@ -145,7 +145,7 @@ export const combinedPackages: ServicePackage[] = [
   {
     title: "AI Transformation & Executive Guidance",
     description: "A high-touch package for organizations that want AI-driven initiatives plus C-level strategic support.",
-    price: "Schedule a Consultation",
+    price: "Contact Us",
     duration: "(6–9 month engagement)",
     icon: React.createElement(BrainCircuit, { className: "h-8 w-8 text-primary mb-3" }),
     services: [
