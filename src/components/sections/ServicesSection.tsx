@@ -32,7 +32,7 @@ const features = [
   },
   {
     title: "Managed Helpdesk",
-    description: "24/7 customized support solution with AI-powered responses, seamless system integration, and comprehensive training for your team.",
+    description: "Customized support solution with AI-powered responses, seamless system integration, and comprehensive training for your team.",
     icon: Headphones
   }
 ];
