@@ -1,13 +1,13 @@
 
-import { ArrowRight, Building, ChevronRight, Cog, Globe, Lightbulb, Users } from "lucide-react";
+import { ArrowRight, Building, ChevronRight, Cog, Globe, Headphones, Lightbulb, Users } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const features = [
   {
-    title: "Fractional CX Leadership",
-    description: "Expert leadership to guide your customer experience initiatives on a flexible, as-needed basis.",
+    title: "Fractional CX & Strategic Leadership",
+    description: "Expert leadership and strategic guidance to align your customer experience initiatives with business objectives.",
     icon: Users
   },
   {
@@ -31,9 +31,9 @@ const features = [
     icon: Lightbulb
   },
   {
-    title: "Strategic Consulting",
-    description: "Comprehensive strategic guidance to align your technology investments with business objectives.",
-    icon: ChevronRight
+    title: "Managed Helpdesk",
+    description: "Full-service support solutions with dedicated agents, intelligent routing, and comprehensive reporting.",
+    icon: Headphones
   }
 ];
 
