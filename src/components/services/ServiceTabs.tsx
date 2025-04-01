@@ -23,7 +23,7 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
       {isMobile ? (
         <div className="mb-8">
           <Select value={activeTab} onValueChange={setActiveTab}>
-            <SelectTrigger className="w-full bg-secondary/30 border rounded-lg py-2 px-4">
+            <SelectTrigger className="w-full bg-secondary/30 border rounded-lg py-2 px-4 transition-all duration-300 hover:bg-secondary/40">
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
             <SelectContent>
@@ -41,9 +41,9 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
             <TabsTrigger
               key={service.id}
               value={service.id}
-              className="text-sm py-2 px-3 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md h-full flex items-center justify-center text-center"
+              className="text-sm py-2 px-3 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md h-full flex items-center justify-center text-center transition-all duration-300 hover:bg-background/60"
             >
-              <service.icon className="h-5 w-5 mr-2 flex-shrink-0" />
+              <service.icon className="h-5 w-5 mr-2 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
               <span className="hidden md:block">{service.title.split(' ')[0]}</span>
             </TabsTrigger>
           ))}
@@ -51,7 +51,11 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
       )}
 
       {services.map((service) => (
-        <TabsContent key={service.id} value={service.id} className="mt-6">
+        <TabsContent 
+          key={service.id} 
+          value={service.id} 
+          className="mt-6 transition-all duration-500"
+        >
           <ServiceTabContent service={service} />
         </TabsContent>
       ))}
