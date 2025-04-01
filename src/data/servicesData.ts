@@ -26,7 +26,7 @@ export const services: Service[] = [
       "Develop internal leadership capabilities through mentorship"
     ],
     callToAction: "Book a Strategy Call",
-    actionLink: "/#contact",
+    actionLink: "https://calendly.com/yourdomain/30min",
     icon: Users
   },
   {
@@ -41,7 +41,7 @@ export const services: Service[] = [
       "Scale support operations up or down as needed"
     ],
     callToAction: "Get Support Solutions",
-    actionLink: "/#contact",
+    actionLink: "https://calendly.com/yourdomain/30min",
     icon: Headphones
   },
   {
@@ -56,7 +56,7 @@ export const services: Service[] = [
       "Increase team productivity with streamlined workflows"
     ],
     callToAction: "Schedule a Tech Assessment",
-    actionLink: "/#contact",
+    actionLink: "https://calendly.com/yourdomain/30min",
     icon: Building
   },
   {
@@ -71,7 +71,7 @@ export const services: Service[] = [
       "Build a culture of continuous improvement"
     ],
     callToAction: "Explore Training Options",
-    actionLink: "/#contact",
+    actionLink: "https://calendly.com/yourdomain/30min",
     icon: Cog
   },
   {
@@ -86,7 +86,7 @@ export const services: Service[] = [
       "Optimize configurations for your specific needs"
     ],
     callToAction: "Request a Tool Audit",
-    actionLink: "/#contact",
+    actionLink: "https://calendly.com/yourdomain/30min",
     icon: Globe
   },
   {
@@ -101,7 +101,7 @@ export const services: Service[] = [
       "Scale operations without proportional cost increases"
     ],
     callToAction: "Discover AI Solutions",
-    actionLink: "/#contact",
+    actionLink: "https://calendly.com/yourdomain/30min",
     icon: Lightbulb
   }
 ];
