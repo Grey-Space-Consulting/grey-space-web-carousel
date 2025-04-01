@@ -53,13 +53,7 @@ const Navbar = () => {
           )}>
             Case Studies
           </Link>
-          {/* Industries link removed from desktop navigation */}
-          <Link to="/services" className={cn(
-            "transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all",
-            scrolled ? "text-foreground hover:text-primary" : "text-foreground/80 hover:text-foreground"
-          )}>
-            Services
-          </Link>
+          {/* Services link removed from desktop navigation */}
           <Link to="/causes" className={cn(
             "transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary hover:after:w-full after:transition-all",
             scrolled ? "text-foreground hover:text-primary" : "text-foreground/80 hover:text-foreground"
@@ -95,10 +89,7 @@ const Navbar = () => {
           <Link to="/case-studies" className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border" onClick={() => setIsMenuOpen(false)}>
             Case Studies
           </Link>
-          {/* Industries link removed from mobile menu */}
-          <Link to="/services" className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border" onClick={() => setIsMenuOpen(false)}>
-            Services
-          </Link>
+          {/* Services link removed from mobile menu */}
           <Link to="/causes" className="text-lg text-foreground/80 hover:text-foreground transition-colors py-2 border-b border-border" onClick={() => setIsMenuOpen(false)}>
             Causes We Support
           </Link>
