@@ -1,4 +1,3 @@
-
 import { ArrowRight, Building, ChevronRight, Cog, Globe, Headphones, Lightbulb, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
-// Services data with expanded content
 const services = [
   {
     id: "leadership",
@@ -182,29 +180,18 @@ const ServicesSection = ({ sectionRef }: ServicesSectionProps) => {
                   </Link>
                 </div>
 
-                <div className="space-y-8">
-                  <div className="glass-card rounded-xl p-6 md:p-8">
-                    <h4 className="text-xl font-semibold mb-4">Key Benefits</h4>
-                    <ul className="space-y-3">
-                      {service.benefits.map((benefit, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <ChevronRight className="h-4 w-4 text-primary" />
-                          </div>
-                          <span className="text-muted-foreground">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex justify-center mt-6">
-                    <Link to="/#contact">
-                      <Button variant="outline" size="lg" className="gap-2">
-                        Request Information
-                        <ArrowRight className="h-5 w-5" />
-                      </Button>
-                    </Link>
-                  </div>
+                <div className="glass-card rounded-xl p-6 md:p-8">
+                  <h4 className="text-xl font-semibold mb-4">Key Benefits</h4>
+                  <ul className="space-y-3">
+                    {service.benefits.map((benefit, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <ChevronRight className="h-4 w-4 text-primary" />
+                        </div>
+                        <span className="text-muted-foreground">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </TabsContent>
@@ -243,15 +230,6 @@ const ServicesSection = ({ sectionRef }: ServicesSectionProps) => {
             </CollapsibleContent>
           </Collapsible>
         )}
-
-        <div className="mt-16 text-center">
-          <Link to="/#contact">
-            <Button variant="default" size="lg" className="gap-2 font-medium text-base">
-              Get in Touch
-              <ArrowRight className="h-5 w-5" />
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
   );
