@@ -28,8 +28,8 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
     
     return (
       <>
-        <span className="block">{firstLine}</span>
-        <span className="block">{secondLine}</span>
+        <span className="block font-bold">{firstLine}</span>
+        <span className="block font-bold">{secondLine}</span>
       </>
     );
   };
@@ -43,7 +43,7 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
       {isMobile ? (
         <div className="mb-8">
           <Select value={activeTab} onValueChange={setActiveTab}>
-            <SelectTrigger className="w-full bg-secondary/30 border rounded-lg py-2 px-4 transition-all duration-300 hover:bg-secondary/40">
+            <SelectTrigger className="w-full bg-secondary/30 rounded-lg py-2 px-4 transition-all duration-300 hover:bg-secondary/40">
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
             <SelectContent>
@@ -56,12 +56,12 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
           </Select>
         </div>
       ) : (
-        <TabsList className="w-full md:w-auto grid grid-cols-3 lg:grid-cols-6 gap-2 bg-secondary/30 border rounded-lg p-1 h-auto mb-8">
+        <TabsList className="w-full md:w-auto grid grid-cols-3 lg:grid-cols-6 gap-2 bg-secondary/30 rounded-lg p-1 h-auto mb-8">
           {services.map((service) => (
             <TabsTrigger
               key={service.id}
               value={service.id}
-              className="text-sm py-3 px-3 rounded-lg border border-border/50 data-[state=active]:bg-background data-[state=active]:shadow-md data-[state=active]:border-primary/30 h-auto min-h-[4rem] 
+              className="text-sm py-3 px-3 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md h-auto min-h-[4rem] 
                         flex flex-col items-center justify-center text-center transition-all duration-300
                         hover:bg-background/60"
             >
