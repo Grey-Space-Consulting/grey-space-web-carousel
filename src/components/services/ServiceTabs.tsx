@@ -41,10 +41,10 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
             <TabsTrigger
               key={service.id}
               value={service.id}
-              className="text-sm py-2 px-3 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md h-full flex items-center justify-center text-center transition-all duration-300 hover:bg-background/60"
+              className="text-sm py-3 px-3 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md h-auto min-h-[4rem] flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-background/60"
             >
-              <service.icon className="h-5 w-5 mr-2 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
-              <span className="hidden md:block">{service.title.split(' ')[0]}</span>
+              <service.icon className="h-5 w-5 mb-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+              <span className="line-clamp-2">{service.title}</span>
             </TabsTrigger>
           ))}
         </TabsList>

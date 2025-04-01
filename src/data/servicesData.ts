@@ -1,5 +1,5 @@
 
-import { ArrowRight, Building, ChevronRight, Cog, Globe, Headphones, Lightbulb, Users } from "lucide-react";
+import { Building, Cog, Globe, Headphones, Lightbulb, Users } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
 export interface Service {
@@ -16,7 +16,7 @@ export interface Service {
 export const services: Service[] = [
   {
     id: "leadership",
-    title: "Fractional CX & Strategic Leadership",
+    title: "Fractional Leadership",
     description: "Expert leadership and strategic guidance to align your customer experience initiatives with business objectives.",
     expandedDescription: "Our fractional leadership team brings decades of executive experience to your organization without the overhead of full-time hires. We provide strategic direction, stakeholder alignment, and hands-on guidance to transform your customer experience operations.",
     benefits: [
@@ -31,7 +31,7 @@ export const services: Service[] = [
   },
   {
     id: "integration",
-    title: "System Integration & Workflows",
+    title: "System Integrations",
     description: "Seamlessly connect your systems and optimize workflows for maximum operational efficiency.",
     expandedDescription: "We specialize in connecting disparate systems into a cohesive technology ecosystem. Our integration experts eliminate data silos, automate manual processes, and create unified workflows that drive operational excellence.",
     benefits: [
@@ -46,7 +46,7 @@ export const services: Service[] = [
   },
   {
     id: "training",
-    title: "Training & Process Optimization",
+    title: "Training & Education",
     description: "Enhance team capabilities and streamline processes through comprehensive training and optimization.",
     expandedDescription: "Our training programs combine technical skills development with process optimization to ensure your team can fully leverage your technology investments. We create custom playbooks, deliver hands-on workshops, and implement continuous improvement frameworks.",
     benefits: [
@@ -61,7 +61,7 @@ export const services: Service[] = [
   },
   {
     id: "tools",
-    title: "Tool Selections, Audits, & Migrations",
+    title: "Tooling Audits & RFPs",
     description: "Expert guidance in selecting, auditing, and migrating to the right tools for your business needs.",
     expandedDescription: "Choosing the right technology stack is critical for operational success. We guide you through vendor selection, perform detailed technical audits, and execute smooth migrations that minimize disruption while maximizing ROI.",
     benefits: [
@@ -76,7 +76,7 @@ export const services: Service[] = [
   },
   {
     id: "automation",
-    title: "Intelligent Automation & AI",
+    title: "Intelligent Automation",
     description: "Leverage cutting-edge AI and automation solutions to enhance operational efficiency and innovation.",
     expandedDescription: "We implement AI-powered solutions that transform customer experience while reducing operational costs. From conversational AI and predictive analytics to intelligent routing and process automation, we help you harness the power of artificial intelligence.",
     benefits: [

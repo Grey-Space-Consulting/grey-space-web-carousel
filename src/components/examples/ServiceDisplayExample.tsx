@@ -9,7 +9,7 @@ const ServiceDisplayExample = () => {
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <ServiceDisplay 
-          title="Strategic Leadership"
+          title="Fractional Leadership"
           description="Expert leadership and strategic guidance to align your customer experience initiatives with business objectives."
           icon={Users}
           ctaText="Schedule a Call"
@@ -18,7 +18,7 @@ const ServiceDisplayExample = () => {
         />
         
         <ServiceDisplay 
-          title="System Integration"
+          title="System Integrations"
           description="Seamlessly connect your systems and optimize workflows for maximum operational efficiency."
           icon={Globe}
           ctaText="Get Started"
