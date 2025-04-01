@@ -30,6 +30,21 @@ export const services: Service[] = [
     icon: Users
   },
   {
+    id: "helpdesk",
+    title: "Managed Helpdesk",
+    description: "Customized support solution with AI-powered responses, seamless system integration, and comprehensive training for your team.",
+    expandedDescription: "Our managed helpdesk service provides 24/7 technical support with AI-powered automation and seamless integration with your existing systems. We handle everything from initial setup and configuration to ongoing maintenance and optimization.",
+    benefits: [
+      "Provide 24/7 support without staffing challenges",
+      "Reduce resolution times with AI-powered responses",
+      "Maintain data consistency across platforms",
+      "Scale support operations up or down as needed"
+    ],
+    callToAction: "Get Support Solutions",
+    actionLink: "/#contact",
+    icon: Headphones
+  },
+  {
     id: "integration",
     title: "System Integrations",
     description: "Seamlessly connect your systems and optimize workflows for maximum operational efficiency.",
@@ -88,20 +103,6 @@ export const services: Service[] = [
     callToAction: "Discover AI Solutions",
     actionLink: "/#contact",
     icon: Lightbulb
-  },
-  {
-    id: "helpdesk",
-    title: "Managed Helpdesk",
-    description: "Customized support solution with AI-powered responses, seamless system integration, and comprehensive training for your team.",
-    expandedDescription: "Our managed helpdesk service provides 24/7 technical support with AI-powered automation and seamless integration with your existing systems. We handle everything from initial setup and configuration to ongoing maintenance and optimization.",
-    benefits: [
-      "Provide 24/7 support without staffing challenges",
-      "Reduce resolution times with AI-powered responses",
-      "Maintain data consistency across platforms",
-      "Scale support operations up or down as needed"
-    ],
-    callToAction: "Get Support Solutions",
-    actionLink: "/#contact",
-    icon: Headphones
   }
 ];
+
