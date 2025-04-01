@@ -43,7 +43,6 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
               value={service.id}
               className="text-sm py-3 px-3 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md h-auto min-h-[4rem] flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-background/60"
             >
-              <service.icon className="h-5 w-5 mb-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
               <span className="line-clamp-2">{service.title}</span>
             </TabsTrigger>
           ))}
