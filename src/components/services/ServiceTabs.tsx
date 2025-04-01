@@ -14,6 +14,26 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
   const [activeTab, setActiveTab] = useState(services[0].id);
   const isMobile = useIsMobile();
 
+  // Function to add a line break to tab titles
+  const formatTabTitle = (title: string) => {
+    const words = title.split(' ');
+    
+    if (words.length <= 1) return title;
+    
+    // Find the middle point to break the line
+    const midPoint = Math.ceil(words.length / 2);
+    
+    const firstLine = words.slice(0, midPoint).join(' ');
+    const secondLine = words.slice(midPoint).join(' ');
+    
+    return (
+      <>
+        <span className="block">{firstLine}</span>
+        <span className="block">{secondLine}</span>
+      </>
+    );
+  };
+
   return (
     <Tabs
       value={activeTab}
@@ -45,7 +65,7 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
                         flex flex-col items-center justify-center text-center transition-all duration-300
                         hover:bg-background/60"
             >
-              <span className="line-clamp-2">{service.title}</span>
+              {formatTabTitle(service.title)}
             </TabsTrigger>
           ))}
         </TabsList>
