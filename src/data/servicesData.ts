@@ -26,7 +26,7 @@ export const services: Service[] = [
       "Develop internal leadership capabilities through mentorship"
     ],
     callToAction: "Book a Strategy Call",
-    actionLink: "https://calendly.com/greyspace-hudson/30min",
+    actionLink: "https://calendly.com/greyspace-hudson/grey-space-introductory-call",
     icon: Users
   },
   {
@@ -41,7 +41,7 @@ export const services: Service[] = [
       "Scale support operations up or down as needed"
     ],
     callToAction: "Get Support Solutions",
-    actionLink: "https://calendly.com/greyspace-hudson/30min",
+    actionLink: "https://calendly.com/greyspace-hudson/grey-space-introductory-call",
     icon: Headphones
   },
   {
@@ -56,7 +56,7 @@ export const services: Service[] = [
       "Increase team productivity with streamlined workflows"
     ],
     callToAction: "Schedule a Tech Assessment",
-    actionLink: "https://calendly.com/greyspace-hudson/30min",
+    actionLink: "https://calendly.com/greyspace-hudson/grey-space-introductory-call",
     icon: Building
   },
   {
@@ -71,7 +71,7 @@ export const services: Service[] = [
       "Build a culture of continuous improvement"
     ],
     callToAction: "Explore Training Options",
-    actionLink: "https://calendly.com/greyspace-hudson/30min",
+    actionLink: "https://calendly.com/greyspace-hudson/grey-space-introductory-call",
     icon: Cog
   },
   {
@@ -86,7 +86,7 @@ export const services: Service[] = [
       "Optimize configurations for your specific needs"
     ],
     callToAction: "Request a Tool Audit",
-    actionLink: "https://calendly.com/greyspace-hudson/30min",
+    actionLink: "https://calendly.com/greyspace-hudson/grey-space-introductory-call",
     icon: Globe
   },
   {
@@ -101,7 +101,7 @@ export const services: Service[] = [
       "Scale operations without proportional cost increases"
     ],
     callToAction: "Discover AI Solutions",
-    actionLink: "https://calendly.com/greyspace-hudson/30min",
+    actionLink: "https://calendly.com/greyspace-hudson/grey-space-introductory-call",
     icon: Lightbulb
   }
 ];
