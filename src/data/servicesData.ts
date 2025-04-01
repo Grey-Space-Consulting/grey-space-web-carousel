@@ -33,10 +33,10 @@ export const services: Service[] = [
     id: "helpdesk",
     title: "Managed Helpdesk",
     description: "Customized support solution with AI-powered responses, seamless system integration, and comprehensive training for your team.",
-    expandedDescription: "Our managed helpdesk service provides 24/7 technical support with AI-powered automation and seamless integration with your existing systems. We handle everything from initial setup and configuration to ongoing maintenance and optimization.",
+    expandedDescription: "Our managed helpdesk service provides technical support with AI-powered automation and seamless integration with your existing systems. We handle everything from initial setup and configuration to ongoing maintenance and optimization.",
     benefits: [
-      "Provide 24/7 support without staffing challenges",
-      "Reduce resolution times with AI-powered responses",
+      "Fast and efficient setup of your preferred helpdesk",
+      "Ongoing support and maintenance",
       "Maintain data consistency across platforms",
       "Scale support operations up or down as needed"
     ],
