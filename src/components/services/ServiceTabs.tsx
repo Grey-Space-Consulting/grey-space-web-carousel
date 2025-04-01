@@ -10,16 +10,6 @@ interface ServiceTabsProps {
   services: Service[];
 }
 
-// Colors for different tabs to create visual distinction
-const tabColors = [
-  "from-primary/20 to-primary/5",
-  "from-accent/20 to-accent/5",
-  "from-info/20 to-info/5",
-  "from-tertiary/20 to-tertiary/5",
-  "from-secondary/30 to-secondary/10",
-  "from-destructive/20 to-destructive/5",
-];
-
 const ServiceTabs = ({ services }: ServiceTabsProps) => {
   const [activeTab, setActiveTab] = useState(services[0].id);
   const isMobile = useIsMobile();
@@ -47,14 +37,13 @@ const ServiceTabs = ({ services }: ServiceTabsProps) => {
         </div>
       ) : (
         <TabsList className="w-full md:w-auto grid grid-cols-3 lg:grid-cols-6 gap-2 bg-secondary/30 border rounded-lg p-1 h-auto mb-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <TabsTrigger
               key={service.id}
               value={service.id}
-              className={`text-sm py-3 px-3 rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-md h-auto min-h-[4rem] 
+              className="text-sm py-3 px-3 rounded-lg border border-border/50 data-[state=active]:bg-background data-[state=active]:shadow-md data-[state=active]:border-primary/30 h-auto min-h-[4rem] 
                         flex flex-col items-center justify-center text-center transition-all duration-300
-                        hover:bg-gradient-to-b hover:from-white hover:to-background
-                        bg-gradient-to-b ${tabColors[index % tabColors.length]}`}
+                        hover:bg-background/60"
             >
               <span className="line-clamp-2">{service.title}</span>
             </TabsTrigger>
