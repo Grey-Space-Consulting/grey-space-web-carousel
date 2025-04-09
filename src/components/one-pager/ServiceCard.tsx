@@ -6,11 +6,13 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
+  const Icon = service.icon;
+  
   return (
     <div className="border border-border rounded-lg p-4">
       <div className="flex items-start gap-3 mb-2">
         <div className="p-1.5 rounded-md bg-primary/10 text-primary">
-          <service.icon />
+          <Icon size={16} />
         </div>
         <h3 className="text-lg font-semibold">{service.title}</h3>
       </div>
