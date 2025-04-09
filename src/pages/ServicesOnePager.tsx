@@ -147,7 +147,7 @@ const ServicesOnePager = () => {
         {/* Title */}
         <div className="text-center mb-6">
           <h2 className="text-2xl font-bold">Our Services</h2>
-          <p className="text-muted-foreground">Comprehensive solutions to transform your business operations</p>
+          <p className="text-muted-foreground">Comprehensive solutions to transform your CX operations</p>
         </div>
         
         {/* Services Grid */}
