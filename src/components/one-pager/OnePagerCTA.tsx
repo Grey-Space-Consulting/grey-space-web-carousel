@@ -1,10 +1,10 @@
 
 const OnePagerCTA = () => {
   return (
-    <div className="bg-primary/10 rounded-lg p-3 text-center mb-4">
-      <h3 className="text-base font-semibold mb-1">Ready to transform your operations?</h3>
-      <p className="text-xs mb-1">Schedule a free consultation call with our experts.</p>
-      <p className="font-medium text-sm">
+    <div className="bg-primary/10 rounded-lg p-4 text-center mb-5">
+      <h3 className="text-lg font-semibold mb-1.5">Ready to transform your operations?</h3>
+      <p className="text-sm mb-1.5">Schedule a free consultation call with our experts.</p>
+      <p className="font-medium text-base">
         <a 
           href="https://calendly.com/greyspace-hudson/grey-space-introductory-call" 
           target="_blank" 

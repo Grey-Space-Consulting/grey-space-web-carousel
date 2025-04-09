@@ -45,7 +45,7 @@ const ServicesOnePager = () => {
       {/* Actual PDF content */}
       <div 
         ref={pageRef} 
-        className="w-full max-w-[8.5in] mx-auto bg-white shadow-lg print:shadow-none p-5 print:p-4" 
+        className="w-full max-w-[8.5in] mx-auto bg-white shadow-lg print:shadow-none p-6 print:p-5" 
         style={{
           minHeight: "11in",
           aspectRatio: "8.5/11"
@@ -59,13 +59,13 @@ const ServicesOnePager = () => {
         />
         
         {/* Title */}
-        <div className="text-center mb-4">
-          <h2 className="text-xl font-bold">Our Services</h2>
+        <div className="text-center mb-5">
+          <h2 className="text-2xl font-bold">Our Services</h2>
           <p className="text-muted-foreground text-sm">Comprehensive solutions to transform your CX operations</p>
         </div>
         
         {/* Services Grid */}
-        <div className="grid grid-cols-2 gap-3 mb-4">
+        <div className="grid grid-cols-2 gap-4 mb-5">
           {onePagerServices.map(service => (
             <ServiceCard key={service.id} service={service} />
           ))}

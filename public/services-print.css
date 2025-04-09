@@ -7,7 +7,7 @@
   
   /* Reset page margins */
   @page {
-    margin: 0.25cm;
+    margin: 0.3cm;
     size: letter portrait;
   }
   
@@ -20,8 +20,8 @@
   }
   
   /* Ensure the content fits on one page */
-  .print\\:p-4 {
-    padding: 1rem !important;
+  .print\\:p-5 {
+    padding: 1.25rem !important;
   }
   
   /* Better text rendering for print */
