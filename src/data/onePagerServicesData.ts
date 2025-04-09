@@ -34,9 +34,10 @@ export const onePagerServices: OnePagerService[] = [
   {
     id: "integration",
     title: "System Integrations",
-    description: "Seamlessly connect your systems and optimize workflows for maximum operational efficiency.",
+    description: "Seamlessly connect your in-house systems with your CRM and optimize workflows.",
     benefits: [
       "Eliminate duplicate data entry and manual processes",
+      "Build native-feeling integrations with your CRM of choice",
       "Create seamless customer journeys across channels"
     ],
     icon: Boxes
@@ -44,7 +45,7 @@ export const onePagerServices: OnePagerService[] = [
   {
     id: "training",
     title: "Training & Education",
-    description: "Enhance team capabilities and streamline processes through comprehensive training and optimization.",
+    description: "Enhance team capabilities through comprehensive training and optimization.",
     benefits: [
       "Improve team adoption of new technologies",
       "Standardize processes for consistent customer experiences"
@@ -56,6 +57,7 @@ export const onePagerServices: OnePagerService[] = [
     title: "Tooling Audits & RFPs",
     description: "Expert guidance in selecting, auditing, and migrating to the right tools for your business needs.",
     benefits: [
+      "Fast and actionable audit reports with clear next steps",
       "Make confident technology investment decisions",
       "Identify improvement opportunities in existing systems"
     ],
