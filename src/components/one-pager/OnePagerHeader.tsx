@@ -17,7 +17,7 @@ const OnePagerHeader = ({ logoUrl, avatarUrl, onAvatarUpload }: OnePagerHeaderPr
             <AvatarImage 
               src={avatarUrl || ""} 
               alt="Avatar" 
-              className="object-cover"
+              className="object-contain" 
             />
             <AvatarFallback className="bg-primary text-white font-bold">GS</AvatarFallback>
           </Avatar>
