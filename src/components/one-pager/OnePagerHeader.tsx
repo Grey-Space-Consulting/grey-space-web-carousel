@@ -10,19 +10,19 @@ interface OnePagerHeaderProps {
 
 const OnePagerHeader = ({ logoUrl, avatarUrl, onAvatarUpload }: OnePagerHeaderProps) => {
   return (
-    <div className="flex justify-between items-center border-b border-border pb-4 mb-6">
-      <div className="flex items-center gap-3">
-        <div className="relative group w-10 h-10">
+    <div className="flex justify-between items-center border-b border-border pb-3 mb-4">
+      <div className="flex items-center gap-2">
+        <div className="relative group w-8 h-8">
           <Avatar className="w-full h-full rounded-md overflow-hidden">
             <AvatarImage 
               src={avatarUrl || ""} 
               alt="Avatar" 
               className="object-contain" 
             />
-            <AvatarFallback className="bg-primary text-white font-bold">GS</AvatarFallback>
+            <AvatarFallback className="bg-primary text-white font-bold text-xs">GS</AvatarFallback>
           </Avatar>
           <label htmlFor="avatar-upload" className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/40 rounded-md flex items-center justify-center transition-opacity cursor-pointer">
-            <span className="text-white text-xs">Change</span>
+            <span className="text-white text-[8px]">Change</span>
           </label>
           <input
             id="avatar-upload"
@@ -33,13 +33,13 @@ const OnePagerHeader = ({ logoUrl, avatarUrl, onAvatarUpload }: OnePagerHeaderPr
           />
         </div>
         <div>
-          <h1 className="text-2xl font-semibold">GREY SPACE</h1>
-          <p className="text-muted-foreground">Operations Technology Consultants</p>
+          <h1 className="text-xl font-semibold">GREY SPACE</h1>
+          <p className="text-xs text-muted-foreground">Operations Technology Consultants</p>
         </div>
       </div>
       <div className="text-right">
-        <p className="text-sm font-medium">greyspace.co</p>
-        <p className="text-sm text-muted-foreground">hudson@greyspace.co</p>
+        <p className="text-xs font-medium">greyspace.co</p>
+        <p className="text-xs text-muted-foreground">hudson@greyspace.co</p>
       </div>
     </div>
   );
