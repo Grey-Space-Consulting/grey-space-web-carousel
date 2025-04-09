@@ -1,5 +1,6 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface OnePagerHeaderProps {
   logoUrl: string | null;
@@ -11,9 +12,13 @@ const OnePagerHeader = ({ logoUrl, avatarUrl, onAvatarUpload }: OnePagerHeaderPr
   return (
     <div className="flex justify-between items-center border-b border-border pb-4 mb-6">
       <div className="flex items-center gap-3">
-        <div className="relative group">
-          <Avatar className="w-10 h-10 rounded-md">
-            <AvatarImage src={avatarUrl || ""} alt="Avatar" />
+        <div className="relative group w-10 h-10">
+          <Avatar className="w-full h-full rounded-md overflow-hidden">
+            <AvatarImage 
+              src={avatarUrl || ""} 
+              alt="Avatar" 
+              className="object-cover"
+            />
             <AvatarFallback className="bg-primary text-white font-bold">GS</AvatarFallback>
           </Avatar>
           <label htmlFor="avatar-upload" className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-black/40 rounded-md flex items-center justify-center transition-opacity cursor-pointer">
