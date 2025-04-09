@@ -25,7 +25,7 @@ const onePagerServices = [
   {
     id: "helpdesk",
     title: "Managed Helpdesk",
-    description: "Customized support solution with AI-powered responses, seamless system integration, and comprehensive training for your team.",
+    description: "Customized support solution covering net new implementations, ongoing maintenance and administration, and a true `part of your team` feel.",
     benefits: [
       "Fast and efficient setup of your preferred helpdesk",
       "Ongoing support and maintenance"
