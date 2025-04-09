@@ -10,6 +10,7 @@ import OnePagerFooter from "@/components/one-pager/OnePagerFooter";
 const ServicesOnePager = () => {
   const pageRef = useRef<HTMLDivElement>(null);
   const [logoUrl, setLogoUrl] = useState<string | null>(null);
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
   
   useEffect(() => {
     // Set the document title for better PDF naming
@@ -28,6 +29,14 @@ const ServicesOnePager = () => {
     }
   };
   
+  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      const imageUrl = URL.createObjectURL(file);
+      setAvatarUrl(imageUrl);
+    }
+  };
+  
   return (
     <div className="min-h-screen bg-background p-6 px-[36px] mx-0">
       {/* Control buttons - these won't appear in print */}
@@ -43,7 +52,11 @@ const ServicesOnePager = () => {
         }}
       >
         {/* Header */}
-        <OnePagerHeader logoUrl={logoUrl} />
+        <OnePagerHeader 
+          logoUrl={logoUrl} 
+          avatarUrl={avatarUrl} 
+          onAvatarUpload={handleAvatarUpload} 
+        />
         
         {/* Title */}
         <div className="text-center mb-6">
