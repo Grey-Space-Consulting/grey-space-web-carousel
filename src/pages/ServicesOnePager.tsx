@@ -1,7 +1,8 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FileDown } from "lucide-react";
+import { FileDown, Upload } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 // Independent data for the one-pager
 const onePagerServices = [
@@ -108,23 +109,50 @@ const onePagerServices = [
 
 const ServicesOnePager = () => {
   const pageRef = useRef<HTMLDivElement>(null);
+  const [logoUrl, setLogoUrl] = useState<string | null>(null);
+  
   useEffect(() => {
     // Set the document title for better PDF naming
     document.title = "Grey Space Services - One Pager";
   }, []);
+  
   const handlePrint = () => {
     window.print();
   };
+
+  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      const imageUrl = URL.createObjectURL(file);
+      setLogoUrl(imageUrl);
+    }
+  };
+  
   return <div className="min-h-screen bg-background p-6 px-[36px] mx-0">
       {/* Control buttons - these won't appear in print */}
       <div className="print:hidden mb-6 flex justify-between items-center">
         <Button variant="outline" onClick={() => window.history.back()}>
           Back
         </Button>
-        <Button onClick={handlePrint} className="flex items-center gap-2">
-          <FileDown size={16} />
-          Download PDF
-        </Button>
+        <div className="flex gap-2">
+          <label htmlFor="logo-upload" className="cursor-pointer">
+            <Button variant="outline" className="flex items-center gap-2" as="span">
+              <Upload size={16} />
+              Upload Logo
+            </Button>
+            <input
+              id="logo-upload"
+              type="file"
+              accept="image/*"
+              onChange={handleLogoUpload}
+              className="hidden"
+            />
+          </label>
+          <Button onClick={handlePrint} className="flex items-center gap-2">
+            <FileDown size={16} />
+            Download PDF
+          </Button>
+        </div>
       </div>
 
       {/* Actual PDF content */}
@@ -136,9 +164,10 @@ const ServicesOnePager = () => {
         <div className="flex justify-between items-center border-b border-border pb-4 mb-6">
           <div className="flex items-center gap-3">
             {/* Logo */}
-            <div className="w-10 h-10 rounded-md bg-primary flex items-center justify-center text-white font-bold">
-              GS
-            </div>
+            <Avatar className="w-10 h-10 rounded-md">
+              <AvatarImage src={logoUrl || ""} alt="Grey Space Logo" />
+              <AvatarFallback className="bg-primary text-white font-bold">GS</AvatarFallback>
+            </Avatar>
             <div>
               <h1 className="text-2xl font-semibold">GREY SPACE</h1>
               <p className="text-muted-foreground">Operations Technology Consultants</p>
@@ -199,4 +228,3 @@ const ServicesOnePager = () => {
     </div>;
 };
 export default ServicesOnePager;
-
