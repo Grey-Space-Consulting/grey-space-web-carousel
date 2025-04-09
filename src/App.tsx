@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import CaseStudies from "./pages/CaseStudies";
 import Industries from "./pages/Industries";
 import Services from "./pages/Services";
+import ServicesOnePager from "./pages/ServicesOnePager";
 import Causes from "./pages/Causes";
 import NotFound from "./pages/NotFound";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/industries" element={<Industries />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services-one-pager" element={<ServicesOnePager />} />
           <Route path="/causes" element={<Causes />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
