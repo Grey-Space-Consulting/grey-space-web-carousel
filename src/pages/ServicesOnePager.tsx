@@ -134,9 +134,15 @@ const ServicesOnePager = () => {
     }}>
         {/* Header */}
         <div className="flex justify-between items-center border-b border-border pb-4 mb-6">
-          <div>
-            <h1 className="text-2xl font-semibold">GREY SPACE</h1>
-            <p className="text-muted-foreground">Operations Technology Consultants</p>
+          <div className="flex items-center gap-3">
+            {/* Logo */}
+            <div className="w-10 h-10 rounded-md bg-primary flex items-center justify-center text-white font-bold">
+              GS
+            </div>
+            <div>
+              <h1 className="text-2xl font-semibold">GREY SPACE</h1>
+              <p className="text-muted-foreground">Operations Technology Consultants</p>
+            </div>
           </div>
           <div className="text-right">
             <p className="text-sm font-medium">greyspace.co</p>
@@ -193,3 +199,4 @@ const ServicesOnePager = () => {
     </div>;
 };
 export default ServicesOnePager;
+
