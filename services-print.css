@@ -1,0 +1,33 @@
+
+@media print {
+  /* Hide non-printable elements */
+  .print\\:hidden {
+    display: none !important;
+  }
+  
+  /* Reset page margins */
+  @page {
+    margin: 0.3cm;
+    size: letter portrait;
+  }
+  
+  /* Remove background colors and shadows for better printing */
+  body {
+    background: white !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Ensure the content fits on one page */
+  .print\\:p-5 {
+    padding: 1.25rem !important;
+  }
+  
+  /* Better text rendering for print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
