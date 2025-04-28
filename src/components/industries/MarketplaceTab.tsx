@@ -35,7 +35,7 @@ const MarketplaceTab = () => {
   const marketplaceStudy: CaseStudyPreview = {
     title: "HelloTech: Post-Acquisition Integration",
     description: "Completed a Kustomer to Gladly migration with significant cost savings and improved performance.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070",
+    image: "", // Empty image property
     industry: "Marketplace",
     metrics: [
       { icon: <Users size={16} className="text-primary" />, text: "2-Sided Marketplace" },

@@ -121,13 +121,6 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
       }}
       aria-label={`View case study: ${study.title}`}
     >
-      <div className="h-28 bg-card/80 overflow-hidden">
-        <img 
-          src={study.image} 
-          alt={study.title} 
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-      </div>
       <div className="p-3 flex-1 flex flex-col">
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-1 text-primary text-xs">

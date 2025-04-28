@@ -20,24 +20,13 @@ const DetailedCaseStudy: React.FC<DetailedCaseStudyProps> = ({ study, isActive }
       )}
     >
       <Card className="overflow-hidden border-0 shadow-lg w-full">
-        <div className="h-56 sm:h-64 md:h-72 w-full relative">
-          <img
-            src={study.heroImage} 
-            alt={study.title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-            <div className="p-5 text-white">
-              <div className="flex items-center gap-2 text-primary-foreground/80 text-sm mb-2">
-                <Briefcase size={16} />
-                <span>{study.category}</span>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">{study.title}</h2>
-            </div>
-          </div>
-        </div>
-        
         <CardContent className="p-5">
+          <div className="flex items-center gap-2 text-primary/80 text-sm mb-2">
+            <Briefcase size={16} />
+            <span>{study.category}</span>
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">{study.title}</h2>
+          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div className="space-y-2">
               <h3 className="text-sm font-semibold">Client</h3>

@@ -12,8 +12,6 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
   const { selectedSolutions, isFiltering } = useContext(FilterContext);
   const navigate = useNavigate();
   
-  // We're no longer filtering, so we always show all cards
-
   // Navigate to case studies page when the card is clicked
   const handleCardClick = () => {
     navigate('/case-studies');
@@ -32,14 +30,6 @@ const IndustryCaseStudyCard = ({ study }: IndustryCaseStudyCardProps) => {
         }
       }}
     >
-      <div className="relative h-40 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent z-10"></div>
-        <img 
-          src={study.image} 
-          alt={study.title} 
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-        />
-      </div>
       <div className="p-4 flex-grow flex flex-col">
         <span className="text-xs text-primary font-medium mb-1">{study.industry}</span>
         <h3 className="text-lg font-semibold mb-2">{study.title}</h3>
