@@ -59,7 +59,7 @@ const CaseStudies = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 animate-fade-in" style={{ animationDelay: "200ms" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 animate-fade-in" style={{ animationDelay: "200ms" }}>
             {caseStudies.map((study) => (
               <CaseStudyCard 
                 key={study.id} 

@@ -60,7 +60,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
     // Only include results, not timeframes
     if (detailedStudy.results) {
       stats.push({
-        icon: <DollarSign size={14} className="text-primary" />,
+        icon: <DollarSign size={16} className="text-primary" />,
         text: detailedStudy.results
       });
     }
@@ -70,35 +70,35 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
       // No additional Turo-specific stats needed
     } else if (study.id === "sweetgreen") {
       stats.push({
-        icon: <BarChart size={14} className="text-primary" />,
+        icon: <BarChart size={16} className="text-primary" />,
         text: "35% auto-deflection"
       });
     } else if (study.id === "springhealth") {
       stats.push({
-        icon: <Clock size={14} className="text-primary" />,
+        icon: <Clock size={16} className="text-primary" />,
         text: "69% faster wait times"
       });
     } else if (study.id === "hopskipdrive") {
       stats.push({
-        icon: <Clock size={14} className="text-primary" />,
+        icon: <Clock size={16} className="text-primary" />,
         text: "45% reduced wait times"
       });
     } else if (study.id === "hellotech") {
       stats.push({
-        icon: <Clock size={14} className="text-primary" />,
+        icon: <Clock size={16} className="text-primary" />,
         text: "Accelerated deployment schedule"
       });
       stats.push({
-        icon: <MessageSquare size={14} className="text-primary" />,
+        icon: <MessageSquare size={16} className="text-primary" />,
         text: "Reduced wait times"
       });
     } else if (study.id === "seedhealth") {
       stats.push({
-        icon: <MessageSquare size={14} className="text-primary" />,
+        icon: <MessageSquare size={16} className="text-primary" />,
         text: "Improved response times"
       });
       stats.push({
-        icon: <BarChart size={14} className="text-primary" />,
+        icon: <BarChart size={16} className="text-primary" />,
         text: "Reduced cost per interaction"
       });
     }
@@ -121,35 +121,35 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, onClick }) => {
       }}
       aria-label={`View case study: ${study.title}`}
     >
-      <div className="p-3 flex-1 flex flex-col">
-        <div className="flex items-center justify-between mb-1">
-          <div className="flex items-center gap-1 text-primary text-xs">
-            <Briefcase size={12} />
-            <span className="truncate">{study.category}</span>
+      <div className="p-4 flex-1 flex flex-col">
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-1.5 text-primary text-sm">
+            <Briefcase size={16} />
+            <span className="font-medium">{study.category}</span>
           </div>
         </div>
         
         {detailedStudy && (
-          <div className="font-bold text-sm text-primary mb-1 truncate">
+          <div className="font-bold text-base text-primary mb-2">
             {detailedStudy.client}
           </div>
         )}
         
-        <h3 className="text-sm font-semibold mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-3">{study.title}</h3>
+        <h3 className="text-lg font-semibold mb-4 group-hover:text-primary transition-colors duration-300 line-clamp-3">{study.title}</h3>
         
         {stats.length > 0 && (
-          <div className="grid grid-cols-1 gap-1 mb-2">
+          <div className="grid grid-cols-1 gap-2 mb-3">
             {stats.map((stat, index) => (
-              <div key={index} className="flex items-center gap-1">
+              <div key={index} className="flex items-center gap-2">
                 {stat.icon}
-                <span className="text-xs truncate">{stat.text}</span>
+                <span className="text-sm">{stat.text}</span>
               </div>
             ))}
           </div>
         )}
         
-        <div className="flex items-center gap-1 text-primary text-xs hover:underline mt-auto">
-          Read Case Study <ChevronRight size={12} />
+        <div className="flex items-center gap-1 text-primary text-sm hover:underline mt-auto">
+          Read Case Study <ChevronRight size={16} />
         </div>
       </div>
     </div>
