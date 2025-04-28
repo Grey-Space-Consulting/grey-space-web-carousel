@@ -91,16 +91,16 @@ export const services: Service[] = [
   },
   {
     id: "automation",
-    title: "Intelligent Automation",
-    description: "Leverage cutting-edge AI and automation solutions to enhance operational efficiency and innovation.",
-    expandedDescription: "We implement AI-powered solutions that transform customer experience while reducing operational costs. From conversational AI and predictive analytics to intelligent routing and process automation, we help you harness the power of artificial intelligence.",
+    title: "AI Readiness Exercises",
+    description: "Ensure your brand and tech stack are set up for success when evaluating AI vendors, with focus on data quality, agent processes, reporting, and defined business outcomes.",
+    expandedDescription: "We help organizations prepare for AI implementation by assessing their current technology ecosystem, data quality, and operational processes. Our readiness exercises identify gaps, establish clear business outcomes, and create a roadmap for successful AI adoption.",
     benefits: [
-      "Increase self-service resolution rates",
-      "Reduce response times with intelligent routing",
-      "Anticipate customer needs with predictive analytics",
-      "Scale operations without proportional cost increases"
+      "Evaluate data quality and integration readiness",
+      "Define clear business outcomes for AI initiatives",
+      "Optimize agent processes for AI collaboration",
+      "Establish proper reporting frameworks to measure AI impact"
     ],
-    callToAction: "Discover AI Solutions",
+    callToAction: "Schedule AI Readiness Assessment",
     actionLink: "https://calendly.com/greyspace-hudson/grey-space-introductory-call",
     icon: Lightbulb
   }

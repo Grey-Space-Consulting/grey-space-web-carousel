@@ -1,5 +1,5 @@
 
-import { Globe, Headphones, Users } from "lucide-react";
+import { Globe, Headphones, Lightbulb, Users } from "lucide-react";
 import ServiceDisplay from "../ServiceDisplay";
 
 const ServiceDisplayExample = () => {
@@ -27,9 +27,9 @@ const ServiceDisplayExample = () => {
         />
         
         <ServiceDisplay 
-          title="Managed Helpdesk"
-          description="Customized support solution with AI-powered responses, seamless system integration, and comprehensive training."
-          icon={Headphones}
+          title="AI Readiness Exercises"
+          description="Ensure your brand and tech stack are set up for success when evaluating AI vendors, with focus on data quality, agent processes, reporting, and defined business outcomes."
+          icon={Lightbulb}
           ctaText="Learn More"
           ctaLink="/#contact"
           variant="glass"
