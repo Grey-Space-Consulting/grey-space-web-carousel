@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import CTASection from "@/components/sections/CTASection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
 import TechnologiesSection from "@/components/sections/TechnologiesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 
@@ -15,6 +16,7 @@ const Index = () => {
   // Create individual refs for each section
   const testimonialsSectionRef = useRef<HTMLElement>(null);
   const servicesSectionRef = useRef<HTMLElement>(null);
+  const certificationsSectionRef = useRef<HTMLElement>(null);
   const technologiesSectionRef = useRef<HTMLElement>(null);
   const ctaSectionRef = useRef<HTMLElement>(null);
 
@@ -22,6 +24,7 @@ const Index = () => {
   const sectionRefs = [
     testimonialsSectionRef,
     servicesSectionRef,
+    certificationsSectionRef,
     technologiesSectionRef,
     ctaSectionRef
   ];
@@ -63,6 +66,7 @@ const Index = () => {
       <HeroSection />
       <ServicesSection sectionRef={servicesSectionRef} />
       <TestimonialsSection sectionRef={testimonialsSectionRef} />
+      <CertificationsSection sectionRef={certificationsSectionRef} />
       <TechnologiesSection sectionRef={technologiesSectionRef} />
       <CTASection sectionRef={ctaSectionRef} />
       
