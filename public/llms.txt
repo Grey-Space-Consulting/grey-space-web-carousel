@@ -1,0 +1,43 @@
+
+# Grey Space - Operations Technology Consultants
+
+## Company Overview
+Grey Space is a specialized consulting firm that transforms operations through innovative technology solutions. We help companies optimize their operational processes with cutting-edge technology solutions tailored to their unique challenges.
+
+## What We Do
+We are operations technology consultants who specialize in:
+- Fractional Leadership & Strategic Guidance
+- System Integrations & Workflow Optimization
+- AI Readiness Exercises & Implementation
+- Managed Helpdesk Services
+- Training & Education Programs
+- Tooling Audits & RFP Management
+
+## Our Approach
+We focus on aligning customer experience initiatives with business objectives, eliminating data silos, automating manual processes, and creating unified workflows that drive operational excellence.
+
+## Industries Served
+- E-commerce & Retail
+- Healthcare & Wellness
+- Technology & SaaS
+- Marketplace & Platforms
+- Professional Services
+
+## Key Differentiators
+- Decades of executive experience without full-time overhead
+- Proven frameworks for accelerating CX improvements
+- Expertise in connecting disparate systems into cohesive ecosystems
+- Focus on ROI and measurable business outcomes
+- Comprehensive training and continuous improvement programs
+
+## Contact Information
+Email: hello@greyspace.co
+Website: https://greyspace.co
+Scheduling: https://calendly.com/greyspace-hudson/grey-space-introductory-call
+
+## Content Files
+- /content/hero-section.md - Main value proposition and hero messaging
+- /content/services.md - Detailed service descriptions and benefits
+- /content/testimonials.md - Client success stories and feedback
+- /content/case-studies.md - Detailed project examples and outcomes
+- /content/company-info.md - About us and company information
